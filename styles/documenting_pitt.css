@@ -1,0 +1,1017 @@
+/* CSS document for Documenting Pitt site */
+
+
+/* ________ GLOBAL ________ */
+
+html {
+	overflow-y: scroll;
+}
+
+#page-landing{
+	width: 100%;
+	margin: 0px auto;
+	background-color: #3f5678;
+	background-repeat:no-repeat;
+	background-position:left top;
+
+	}
+#page-secondary {
+	width:100%;
+	margin: 0px auto;
+	background-color: #3f5678;
+	background-repeat:no-repeat;
+	background-position: left top;
+
+
+}
+
+body {
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	font: 100% Arial, Helvetica, sans-serif;
+	background: #CC9;
+	color: #cc9;
+}
+
+h1 {
+	font-family: Garamond,Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	font-size: 2em;
+	color: #cc9;
+	padding-top: 10px;
+	padding-bottom: 2px;
+	padding-left: 0px;
+	margin-bottom: 10px;
+	background-position: left center;
+	font-variant: normal;
+	margin-top:0px;
+}
+
+h3 {
+	font-size: 1.5em;
+font-family: "museo-slab","MuseoSlab500Regular","Rockwell","Crete Round",sans-serif;
+margin-top: 10px;
+margin-bottom:10px;
+font-style: normal;
+font-weight: normal;
+color:#000;
+}
+h4 {
+		font-size: 1.5em;
+font-family: "museo-slab","MuseoSlab500Regular","Rockwell","Crete Round",sans-serif;
+margin-top: 10px;
+margin-bottom:10px;
+font-style: normal;
+font-weight: normal;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.caption {
+	margin-top: -1em;
+	font-size: 75%;
+	font-weight: bold;
+}
+
+/* ________ PAGE COLUMNS AND PAGE WRAPPERS ________ */ 
+	
+
+#two-col-right-main {
+font-size: 90%;
+margin: 0px auto;
+width: 100%;
+max-width: 960px;
+min-width: 700px;
+}
+#two-col-right-main #main-content {
+font-size: 90%;
+margin: 0px auto;
+width: 100%;
+min-height:500px;
+padding-top: 20px;
+float:none;
+}
+#main-content {
+	font-size: 90%;
+width: 980px;
+padding-bottom: 20px;
+margin: 0px auto;
+}
+
+#col2{
+	width:980px;
+	position:relative;
+	margin:0px auto;
+}
+
+#two-col-left-main{
+width: 960px;
+margin: 00px auto 0px;
+}
+
+#two-col-left-main #sidebar {
+	float: left;
+	width: 25%;
+}
+
+#two-col-right-main #sidebar {
+	float: left;
+	width: 30%;
+}
+
+#two-col-left-main  {
+	
+	width: 980px;
+	min-height:500px;
+}
+
+	 
+.islandora-basic-collection-metadata-image {
+	width: 100%;
+	margin: 0 0 1em 0;
+}
+
+.islandora-basic-collection-metadata-image img {
+	max-width: 100%;
+}
+
+.islandora-solr-content {
+	margin:0px auto;
+	width:60%;
+	float:left;
+	margin-left:3em;
+}
+
+#block-islandora-solr-basic-facets{
+	width:80%;
+	float:left;
+	margin: 0px 20px 0px 10px;
+padding: 10px;
+background-color: #EFEFEF;
+box-shadow: 0px 0px 2px 1px #001E4C;
+border: 3px solid #001E4C;
+color:#000;
+	
+}
+#block-islandora-solr-basic-facets a{
+color:#000;
+}
+
+.islandora-metadata {
+background: none repeat scroll 0% 0% #EBEBD8;
+box-shadow: 0px 0px 2px 1px #001E4C;
+border: 2px solid #001E4C;
+padding: 15px;
+min-width: 200px;
+float: right;
+margin-top: -20px;
+color: #000;
+}
+
+#block-islandora-solr-advanced {
+margin: 20px 20px 20px 0px;
+padding: 20px 40px 20px 20px;
+background: transparent;
+float:left;
+color:#000;
+min-height:200px;
+background-color: #CBE0F5;
+box-shadow: 0px 0px 2px 1px #001E4C;
+border: 2px solid #001E4C;
+}
+
+.collection-wrapper {
+width: 96%;
+padding: 10px;
+min-height: 170px;
+background-color: #FFF;
+box-shadow: 0px 0px 2px 1px #001E4C;
+border: 2px solid #001E4C;
+margin-bottom: 20px;
+margin-top: 20px;
+color: #000;
+}
+/*----NEWS----*/	
+.news-wrapper {
+	padding: 20px;
+	min-height: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px 1px #001E4C;
+	border: 2px solid #001E4C;
+	width: 100%;
+	margin-bottom:20px;
+	margin-top:20px;
+		color: #000;
+}
+
+.news-wrapper a{
+	color:#bcb582; 
+	font-size:1.5em;
+}
+
+.news-wrapper h4 {
+	border-bottom:thin solid #000;
+	margin-bottom: 10px;
+}
+/*END NEWS*/
+
+/* -----Exhibits ------*/
+.exhibit-wrapper{
+width: 96%;
+padding: 10px;
+min-height: 170px;
+background-color: #FFF;
+box-shadow: 0px 0px 2px 1px #001E4C;
+border: 2px solid #001E4C;
+margin-bottom:20px;
+margin-top:20px;
+color: #000;
+overflow:hidden;
+}
+.exhibit-wrapper img{
+float: left;
+margin: 10px 15px 5px 10px;
+height: 200px;
+width: auto;
+}
+.exhibit-wrapper h4 a{
+	font-size: 1.2em;
+font-family: 75% "museo-slab","MuseoSlab500Regular","Rockwell","Crete Round",sans-serif;
+font-style: normal;
+font-weight: normal;
+color:#000;
+}
+.exhibit-wrapper a{
+	color:#3F5678;
+}
+.exhibit-wrapper p{
+	line-height: 1.5em;
+	font-size:1em;
+}
+/*END EXHIBIT*/
+
+#block-block-20{
+	float:left;
+	width:98%;
+	text-align:justify;
+	font-size:16px;
+}
+/*______Homepage Mosaic_______*/
+
+
+ #block-block-18 {
+	 margin:0px auto;
+	 width:100%;
+	 overflow:hidden;
+	 margin-bottom:50px;
+ }
+ #block-block-18 h2{
+	 padding:10px;
+ }
+ .hover-grid .hover-grid-item {
+	width: 235px;
+	height: 175px;
+	margin: 3px;
+	float: left;
+	/*-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;*/
+	overflow:hidden;
+	position:relative;
+	cursor:default;
+	border: thin solid #fff;
+}
+
+.hover-grid img {
+	/*-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;*/
+	border:0;
+	position:absolute;
+	margin: 0;
+	padding: 0;
+}
+
+.hover-grid-item .caption {
+	background-color: #0c2340;
+	opacity:.8;
+	width:235px;
+	height:175px;
+	padding: 10px;
+	position:absolute;
+	color: yellow;
+	float:left;
+	display:none;
+	line-height:1.1;
+	/*-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;*/
+}
+
+.hover-grid-item .caption p {
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 400;
+	color: yellow;
+	padding:0px 20px;
+}
+
+.hover-grid-item .caption a {
+
+}
+		/*______End Homepage Mosaic_______*/
+
+/* ________ BANNER & PRIMARY NAVIGATION ________ */
+#topbanner{
+	background: #fff ;
+	height: 58px;
+	margin: 0px auto;
+	padding: 0px;
+	width: 100%;
+	border-bottom:10px solid #001E4C;
+}
+
+#pitt{
+	width: 980px;
+	margin:0px auto;
+	color: #001E4C;
+}
+
+	/*Top navbar*/
+.topnav {
+	width:980px;
+	font-size: 14px;
+	margin: 0px auto;
+	padding:5px 0 0 0;
+	color: #001E4C;
+}
+
+.topnav a {
+	color: #001E4C;
+}
+
+.topnav ul {
+	margin: 0px auto;
+	list-style-type: none;
+}
+
+.topnav li {
+	display: inline;
+	padding: 5px;
+	color: #001E4C;
+	float:right;
+	margin-top:10px;
+}
+
+.topnav ul li {
+	list-style-type: none;
+	color: #001E4C;
+}
+.primary-nav li.menu-2539 {
+    padding-left: 180px;}
+/*end footer navbar*/
+
+.banner {
+	width: 980px;
+	margin:0px auto;
+}
+#bannerwrap {
+	width:100%;
+	background: #839AB1;
+	height:150px;
+}
+
+#wrap_mainmenu{
+	width: 100%;
+	background: #001E4C;
+}
+#nav {
+	height: 1.8em;
+	margin: 0px auto;
+	padding: .5em 0 0 0;
+	border: none;
+	width: 980px;
+	background:#001E4C;
+}
+
+.primary-nav a {
+	color: #fff;
+	text-decoration:none;
+}
+
+.primary-nav {
+	margin: -1px 0px 0px -2.5em;
+	width: 100%;
+	color: #fff;
+	font-weight: normal;
+	font-size:larger;
+	color: #fff;
+
+}
+
+.primary-nav a:hover {
+	text-decoration: none;
+	color: #cc9;
+}
+
+.primary-nav a.active {
+	color: #cc9;
+}
+
+.primary-nav li {
+	margin-right: -.2em;
+	padding: 0 1.2%;
+	list-style: none;
+	display: inline;
+	font-size: 80%;
+	background: none;
+	border: none;
+	color: #fff;
+
+}
+
+.tabs{
+	max-width: 980px;
+margin: 0px auto;
+}
+
+#nav form {
+	float: right;
+	margin: -1.6em .2em 0 0;
+	font-size: 90%;
+}
+#block-islandora-solr-simple {
+	float:right;
+	padding-right:120px;
+}
+/*Advanced Search Nav Text */
+#block-block-19{
+	float:right;
+	font-weight:normal;
+	color: #fff !important;
+	padding-left:10px;
+	margin-top:-33px;
+	font-size:14px;
+}
+#block-block-19 a {
+	float:right;
+	font-weight:normal;
+	color: #fff
+	}
+#block-block-19 a:hover {
+		color: #cc9!important;
+	text-decoration: none;
+}
+/*End Advanced Search Nav */
+.search-advanced .criterion{
+	float:left;
+	margin-left:50px;
+	margin-right:20px;
+}
+.search-advanced .action{
+	float:left;
+	margin-left:50px;
+}
+/*--------contact-------*/
+#block-block-15 {
+	float: right;
+	min-width: 500px;
+	max-width:600px;
+	height:100px;
+	margin: 20px 0px 0px 20px;
+	padding: 0px 0px 0px;
+	color:#001E4C;
+	font-size:12px;
+}
+#block-block-15  p, h2{
+	padding-left:10px;
+}
+#block-block-15 a {
+	color: blue;
+	}
+
+
+/* ________ SIDEBARS & FOOTER ________ */
+/*#search {
+	width: 300px;
+	float:right;
+    margin: 0px auto;
+    padding-right: 70px;
+    padding-top: 19px;
+}*/
+
+
+.widget {
+	border: 0px solid #000;
+	padding: 0 .3em .8em .7em;
+	margin: 0 0 2em 0;
+	background: none;
+	width: 92%; /* BTB - 7/10/14 */
+	min-width: 180px;
+}
+
+.widget h3 {
+	margin-top: -.2em;
+}
+
+.widget .social-icons {
+	width: 70%;
+}
+
+.widget .social-icons li {
+	display: inline;
+}
+
+.news_hdr4 {
+	border-top: 1px solid #000;
+}
+
+#footer {
+	background: #cc9;
+	padding: 0px;
+	margin:0px auto;
+	min-height: 100px;
+	width: 100%;
+	font-size: 10px;
+	border-top: 5px solid #001E4C;
+	border-bottom: none;
+	border-right:none;
+	border-left:none;
+	overflow: visible;
+}
+
+#footer-col1 {
+	float: left;
+	width: 50%;
+	margin-top: .5em;
+}
+
+#footer-col2 {
+	float: right;
+	width: 50%;
+	margin-top: .5em;
+}
+
+#footer-col2 ul {
+	margin-top: -1em;
+}
+
+/* ________ MISCELLANY ________ */
+
+#node-422{
+	padding-top:20px;
+}
+
+h3 a{
+	color:#000;
+}
+
+.islandora-objects-list-item{
+width: 96%;
+padding: 10px;
+min-height: 170px;
+background-color: #FFF;
+box-shadow: 0px 0px 2px 1px #001E4C;
+border: 2px solid #001E4C;
+margin-bottom: 20px;
+margin-top: 20px;
+color: #000;
+}
+
+.islandora-objects-list-item a{
+	color:#000;
+	font-weight:normal;
+	font-size:24px;
+	font-family: "museo-slab","MuseoSlab500Regular","Rockwell","Crete Round",sans-serif;
+}
+.islandora-objects-grid dd {
+	padding:5px 25px 0px;
+	text-align:center;
+	width:200px;
+}
+.islandora-objects-list-item dl dd {
+	margin: 0px 0px 0px 130px;
+}
+
+.islandora-objects-list-item dl dt {
+	clear:left;
+	float:left;
+	width: 350px;
+}
+
+ul.primary{
+	margin:0px;
+	padding-top:20px;
+}
+
+.subtitle-first {
+	margin-bottom: -.8em;
+}
+
+.item-title {
+	margin-bottom: .1em;
+	margin-left:0%;
+}
+
+#additions {
+	clear: both;
+	-webkit-box-shadow: 0 1px 1px #ccc;
+  	-moz-box-shadow: 0 1px 1px #ccc;
+  	box-shadow: 0 4px 4px #ccc;
+	padding: .1em .6em;
+}
+
+#additions img {
+	padding: .4em;
+}
+
+.contributions {
+	padding: .1em .6em;
+	background: #d0dadd
+}
+
+.li-no-list-type {
+	list-style-type: none;
+}
+
+.li-no-margin {
+	margin-left: 0;
+}
+	
+.ul-no-margin {
+	margin-left: -2.4em;
+}
+
+.collection-wrapper img {
+float: left;
+margin: 10px;
+height: 150px;
+width: auto;
+}
+
+.collection-wrapper a {
+	font-weight: normal;
+	color:#000;
+	font-size:24px;
+}
+
+.collection-wrapper ul {
+	float: left;
+	margin: .3em 0 0 -2.7em;
+}
+
+.collection-wrapper ul li {
+	width: 300px;
+}
+
+.fieldset-wrapper {
+	margin-left: -3em;
+	font-size: 90%;
+}
+
+
+.creator-subtitle {
+	margin-top: -1em;
+}
+
+.p-reduced-top-margin {
+	margin-top: -1.8em;
+	margin-bottom: 1em;
+}
+
+.p-reduced-top-margin {
+	margin-bottom: -.6em;
+}
+
+.taxonomy-widget {
+	margin: -1em 0 0 -.3em;
+	list-style: square;
+}
+
+table {
+	border-collapse: collapse; /* <= ie 7 */
+	border-spacing: 0;
+	width: 100%;
+	margin-top: 2em;
+}
+
+.bordered {
+  -webkit-box-shadow: 0 1px 1px #ccc;
+  -moz-box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 4px 4px #ccc;
+}
+
+.bordered a:hover {
+	color: #263A58;
+	text-decoration: underline;
+}
+
+.bordered th {
+	color: #000;
+	height: 1.7em;
+  	background-color: #263a58;
+  	background-image: -webkit-gradient(linear, left top, left bottom, from(#899aa8), to(#263a58));
+  	background-image: -webkit-linear-gradient(top, #e9edee, #bccbd0);
+  	background-image: -moz-linear-gradient(top, #e9edee, #bccbd0);
+  	background-image:  -ms-linear-gradient(top, #e9edee, #bccbd0);
+  	background-image:  -o-linear-gradient(top, #e9edee, #bccbd0);
+  	background-image:  linear-gradient(top, #e9edee, #bccbd0);
+  	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+  	-moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+  	box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+  	border-top: none;
+}
+
+.bordered tr:hover {
+	background: #bccbd0;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.bordered td:first-child, .bordered th:first-child {
+  border-left: none;
+}
+
+.bordered td {
+	text-align: center;
+	padding: .2em .1em;
+}
+
+.background_shading {
+	background: #d0dadd;
+}
+
+#islandora-solr-result-count { /* search count that shows up just under the Search results title on the search page */
+	margin-top: -1.6em;
+}
+
+#islandora-solr-top {
+	margin-bottom: -.3em; /* added 10/23 to shorten the space between the search count and the main column.*/
+	margin-left:20px;
+	margin-top:25px;
+	}
+
+.islandora-basic-collection-metadata-desc {
+	margin-top: -3em;
+	width:95%;
+}
+.islandora-solr-search-result {
+   width: 96%;
+padding: 10px;
+min-height: 170px;
+background-color: #FFF;
+box-shadow: 0px 0px 2px 1px #001E4C;
+border: 2px solid #001E4C;
+margin-bottom: 20px;
+margin-top: 20px;
+color: #000;
+}
+	
+
+.islandora-solr-search-result a{
+	font-size:18px;
+	color:#000;
+}
+.pager {
+	border: 0px solid #000;
+	width: 99%;
+}
+.item-list {
+
+}
+.item-list .pager {
+	text-align: center;
+	border: 0px;
+	margin-left:-2%;
+	margin-bottom:5%;
+	font-size:16px;;
+	
+}
+.item-list .pager li {
+	display:inline;
+	list-style-type:none;
+	padding:0px;
+}
+.item-list ul li {
+	padding: 0px;
+}
+
+/* ________ MEDIA QUERIES ________ */
+
+@media screen and (max-width: 1280px) {
+#block-block-18{
+	width:85%;
+	float:left;
+}
+#nav {
+	height: 1.8em;
+	margin: 0px auto;
+	padding: .5em 0 0 0;
+	border: none;
+	width: 85%;
+	background:#001E4C;
+}
+#block-block-15{
+	margin:0px -30px 0px 0px;
+}
+#block-block-20{
+	float:left;
+	width:98%;
+	text-align:justify;
+	font-size:16px;
+}
+	
+@media only screen and (min-width:768px) and (max-width: 991px) {
+
+#block-block-18{
+	width:50%;
+	float:left;
+}
+
+.primary-nav li {
+	margin: 0 0 .2em 0;
+	padding: .2em .1em;
+	list-style: none;
+	display: block;
+	font-size: 100%;
+	background: none;
+	width: 100%;
+}
+	
+.primary-nav li {
+	background: #001E4C;
+	min-width: 100%;
+}
+
+#nav {
+	height: 12em;
+	margin-left:5%;
+}
+
+.primary-nav a:hover {
+	text-decoration: none;
+}
+
+#nav form {
+	float: right;
+	margin: -1.5em 0.2em 0em 0em;
+	font-size: 90%;
+
+/*#two-col-right-main #sidebar {
+	width: 26%;
+	float: left;
+	font-size: 90%;
+	min-width: 10%;
+	padding: 1.8em 2em 0 0;
+	}
+	
+#two-col-right-main {
+  font-size: 90%;
+	width: 69%;
+	float: left;
+	}*/
+	
+#two-col-left-main #sidebar {
+	float: left;
+	width: 25%;
+	min-width: 200px;
+}
+
+#two-col-left-main  {
+	float: left;
+	width: 100%;
+}
+#block-block-20{
+	float:left;
+	width:58%;
+	text-align:justify;
+	font-size:16px;
+}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {	
+#two-col-right-main #sidebar {
+	width: 26%;
+	float: left;
+	font-size: 90%;
+	min-width: 10%;
+	padding: 1.8em 2em 0 0;
+}
+	
+#two-col-right-main  {
+  font-size: 90%;
+	width: 96%;
+	float: left;
+}
+#block-block-20{
+	float:left;
+	width:38%;
+	text-align:justify;
+	font-size:16px;
+}
+}
+
+/* ________ TEMPLATE SPECIFIC ________ */
+
+/* ________ islandora-solr-metadata-display.tpl ________ */
+
+.metadata-label {
+	font-weight: bold;
+}
+
+.metadata-field {
+	margin-bottom: .4em;
+}
+
+/* ________ islandora-solr.tpl ________ */
+
+.islandora-solr-search-result {
+	border: 0px solid #cad6d9;
+	padding: .4em;
+}
+
+.search-result-wrapper {
+  height: 250px;
+  width: 250px;
+  position: relative;
+  float: left;
+	padding: 0;
+	margin-right: .4em;
+}
+
+/* ________ islandora-upitt-view.tpl ________ */
+
+#object-pg-left-col {
+	font-size: 100%;
+	width: 49%;
+	max-width: 500px;
+	float: left;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+#object-pg-left-col img {
+	max-width: 100%;
+}
+
+#object-pg-right-col {
+	width: 49%;
+	float: right;
+	font-size: 100%;
+	margin-top: 0;
+	margin-bottom: 1em;
+	min-width: 180px;
+	padding-left: 0;
+}
+
+/* ________ Drupal/Islandora CSS overrides ________ */
+
+.pager {
+	border: 0px solid #000;
+	width: 99%;
+}
+
+
+.islandora-large-image-content {
+	margin-bottom: 2em;
+}
+	
+.islandora-basic-collection-metadata-desc {
+	margin-top: -3em;
+	width:95%;
+}
+
+body.no-sidebars .islandora-large-image-content {
+	width: 100%;
+}
+
+.islandora-metadata {
+	margin-bottom: 3em;
+}
+
+body.no-sidebars .islandora-large-image-sidebar ul li {
+	margin-left: -3em;
+}
+
+#clip {
+	display: block;
+	margin-bottom: .3em;
+}
+
+/* ________ EXPERIMENTATION ________ */
