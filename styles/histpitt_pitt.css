@@ -1,0 +1,981 @@
+/* CSS document for Histitoric Pittsburgh site */
+
+/*
+Design and styled by: Mike Johnston
+Designer Website:
+University Library System | University of Pittsburgh
+*/
+
+/*Reset it and forget it...*/
+@import url("../css/normalize.css");
+
+/* GLOBAL Type *********************************************************************************************************************/
+
+body { font: 62.5%  Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; text-align: left; color: #000; }
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ul, ol, pre, table, address, fieldset, span { font-size: 1.6em; margin: 0 0 10px 0; line-height: 24px; }
+
+blockquote { font-size: 1.5em; text-align: center; }
+
+/* Links */
+a:link { color: #1DADD9; text-decoration:none; }
+a:hover { color: #106079; border-bottom: 1px dashed #106079; }
+a:visited { color: #106079; border-bottom: 1px dashed #106079; }
+
+/* Headings */
+h1 { font-size: 2.5em; margin: 0 0 20px 0; padding: 0; }
+h2 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; border-bottom: #25211d solid 1px; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.0em; font-weight: normal; }
+h6 { font-size: 0.6em; }
+
+/* Lists */ 
+ul, ol { list-style-type: square; margin: 5px 0 5x 10px; padding: 0; font-weight: bold; }
+
+ol ol, ul ul, ul ol, ol ul{ list-style-type: disc; margin: 10px 0 10px 20px; font-size: 1.0em; }
+
+li { margin: 5px 0 10px 20px; font-weight: normal; }
+
+/* Other Type classes */ 
+.caption { margin-top: -1em; font-size: 1.2em; font-weight: bold; }
+.strike { text-decoration: line-through; }
+
+/* Structure ***********************************************************************************************************************/
+
+html {
+	overflow-y: scroll; }
+
+body {
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	background: url(../images/histpittv3_contentbackground.jpg) top center repeat; 
+}
+
+/* Layout **************************************************************************************************************************/
+
+#page-landing, #page-secondary { margin: 0 auto; }
+
+#two-col-right-main, #two-col-left-main, #one-col-main{
+	width: 98%;
+	background: #fff;  
+	margin: 0 auto;
+	padding: 1%;
+	max-width: 1280px;
+	min-height: 700px;
+
+}
+
+#islandora-object-main {
+	width: 100%;
+	background: #fff; 
+	margin: 0 auto;
+	padding: 1% 2%;
+	max-width: 1280px;
+	min-height: 700px;
+}	
+
+#islandora-object-main #two-col-left-main { background: none; box-shadow: 0px 0px 0px 0px #CCC; border: 0px solid #406164; max-width: 1280px; min-height: 700px; }
+
+#two-col-right-main #sidebar, #two-col-left-main #sidebar {
+	float: right;
+	width: 25%;
+	margin: 0 auto;
+	padding: 0;
+	}
+
+#fullsidebar {
+	width: 100%;
+	margin: 30px 0;
+	float: none;
+	font-size: 100%
+	}
+	
+	#fullsidebar h2 { display: none; }
+	
+	#fullsidebar form { float: left; margin: 0; font-size: 1.3em; }
+	
+	#fullsidebar input { background: #C2C2C2; border: 1px solid #000; }
+	#fullsidebar #edit-submit { background-color: #fff; border: 1px solid #000; }
+	
+#leftsidebar {
+	float: left;
+	width: 25%;
+	margin: 30px 5% 20px 0;
+	padding: 0;
+	}
+
+#rightsidebar {
+	float: right;
+	width: 25%;
+	margin: 30px 5% 20px 0;
+	padding: 0;
+	}
+	
+#rightsidebarfront {
+	float: right;
+	width: 30%;
+	margin: 5px 10% 20px 0;
+	padding: 0;
+	}
+	
+#two-col-right-main #main-content {
+	width: 63%;
+	margin: 0 auto;
+	float: left;
+	}
+
+#two-col-left-main #main-content {
+	width: 67%;
+	margin: 0 auto;
+	float: left;
+	}
+		
+	#two-col-left-main #front-main-content {
+	width: 35%;
+	margin: 0px 5% 5px 0;
+	float: right;
+	}
+
+#one-col-main #main-content {
+	width: 100%;
+	margin: 0 auto;
+	float: none;
+	}
+
+/*Page content classes*/
+
+.pagecont { width: 60%; margin: 5px; }
+
+.tablebox { width: 30%; margin: 5px; font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.8em; font-weight: normal; }
+	.tablebox h2 { font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; font-size: 1.9em;  }
+	
+/*Control classes********************************************************************************************************************/
+
+/*img {
+ 	max-width: 100%;
+  	height: auto;
+}*/
+
+.fltrt {
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/* Header & Banner *****************************************************************************************************************/
+
+#header { 	
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	background: url(../images/histpitt_header.jpg) center -18px repeat-x;
+	height: 230px;
+}
+
+.banner { 	
+	margin: 0 auto;
+	width: 100%;
+	background: none;
+	height: 150px; 
+	max-width: 1280px;
+	}
+
+.banner img {
+	display: block;
+	max-width: 320px;
+	height: auto;
+	padding: 10px 0 0 20px;
+	float: left;
+	}
+
+	.banner ul { float: left; }
+	.banner ul li { list-style: none; display: inline; margin: 0 5px 0 5px  padding-right: 0; text-transform: uppercase; }
+	.banner ul li a { text-decoration: none; color: #405a71; }
+	
+ 
+/*Pittbar***************************************************************************************************************************/
+ 
+#pittbar {
+	width:100%;
+	height: 40px;
+	background: rgba(0,0,0,0.30);
+	margin: 0px auto;
+	}
+
+#pittbar img { height: 40px; width: auto; margin: 0; }
+#pittbar a:hover { border-bottom: 0px dashed #106079; }
+
+#pbcontent {
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	}
+
+/*Pittbarnav*/
+
+.pitbarnav {
+	float: right;
+	margin: 8px 0 0 0;
+	display: block;
+	color: #000;
+    font-size: 1.5em;
+}
+
+	.pitbarnav li { display: inline; margin: 0; padding: 0px; }
+	
+	ul.pitbarnav a:link, ul.pitbarnav a:visited { color: #000; background: rgba(255,255,255,0.00); margin: 0; padding: 11px 10px 10px 10px; line-height:normal; }
+	ul.pitbarnav a:hover, ul.pitbarnav a.active { color: #000; background: rgba(255,255,255,0.50); margin: 0; padding: 11px 10px 10px 10px; border-bottom: 0px dashed #106079; line-height:normal; }
+
+
+ a:link.askanarch, a:visited.askanarch { margin: 0; padding: 10px; background: rgba(0,0,0,0.30); color: #000; text-decoration: none; float: right; font-size: 1.6em; font-weight: bold;   }
+ a:hover.askanarch { margin: 0; padding: 10px; background:rgba(0,0,0,0.50); color: #d5d5c7; text-decoration: none; float: right; font-size: 1.6em; font-weight: bold; }
+
+/*Navigation ***********************************************************************************************************************/
+
+#nav {
+	height: 30px;
+	margin: 0 auto;
+	padding: 0 0.5%;
+	max-width: 1280px;
+	border: 0px solid #000;
+	width: 99%;
+	background: none;
+}
+
+.primary-nav {
+	margin: 5px 0 0 0;
+	padding: 0;
+	width: 70%;
+	font-size: 1.9em;
+}
+
+.topnav {
+	margin: 8px 0 0 0;
+	padding: 0;
+	width: 76%;
+    font-size: 1.5em;
+}
+
+	.primary-nav a, .topnav a { color: #000; font-weight: bold; padding: 11px 1%; color: #000; margin: 0; }
+	.topnav a:hover { background: rgba(255,255,255,0.62); padding: 11px 1%; color: #000; margin: 0; text-decoration: none; border-bottom: 0px solid #000; }
+	li a.active { background: rgba(0,0,0,0.30); padding: 11px 1% 11px 1%; color: #c9c9bb; margin: 0; text-decoration: none; }
+	.primary-nav ul, .topnav ul { margin: 0px; padding: 0px; font-weight: normal; }
+	.primary-nav li, .topnav li { padding: 0px; margin: 0px; list-style: none; display: inline; border: 0px solid #000; font-weight: normal; background: transparent; width: 80%; }
+	
+/* Searchbar Style */
+
+#search {
+	width: 350px;
+	height: 40px;
+	float: right;
+	margin: -22px 0 0 0;
+	color: #000;
+	 }
+	
+#nav form { float: left; margin: 0; font-size: 1.4em; }
+
+#nav input { background: #C2C2C2; border: 1px solid #000; }
+#nav #edit-submit { background-color: #fff; border: 1px solid #000; }
+
+.adsearch { float: right; font-size: 1.4em; margin: 3px 0 0 0; }
+	a.adsearch { color: #000; text-decoration: none; }
+	a.adsearch:hover { color: #000; text-decoration: underline; border-bottom: none; }
+	
+.search-advanced .criterion {
+    float: left;
+    margin: 5px 0 0 50px;
+}
+
+/* Sidebars & widgets ***************************************************************************************************************/
+
+.widget {
+	border: none;
+	padding: 5px;
+	margin: 0 0 5px 0;
+	background: #fff;
+	width: 100%;
+	min-width: 180px;
+	font-size: 1.1em;
+}
+
+.widget .content { margin: 13px; }
+
+#block-block-15 { margin: 0 0 30px 0; }
+
+	.widget .social-icons { width: 70%; }
+	.widget .social-icons li { display: inline; }
+	.widget h2 { width: 100%; display: block; background: #8e816f; color: #fff; margin: 0 0 10px 0; padding: 10px 5px; text-decoration: none; border-bottom: #25211d solid 0px; }
+	.widget h3 { font-size: 1.2em; margin: 0; }
+	.widget select, .widget input { font-size: 1.4em; }
+	.widget span { font-size: 100%; margin: 0px 0px 10px; }
+	ul.islandora-solr-facet { margin: 0px 0px 0px -40px; padding: 0px; font-weight: bold; }
+
+.item-list ul li {  margin: 0px; padding: 0px 0px 0px 10px; }
+#block-views-news-archives-by-date-block .item-list ul  {  margin: 0px; padding: 0px 0px 0px 20px; }
+
+.news_hdr4 { border-top: 1px solid #000; }
+
+/* Footer ****************************************************************************************************************************/
+
+#footer {
+	margin: 0;
+	clear: both;
+	display: block;
+	border: none;
+	padding: 10px 0;
+	min-height: 20px;
+	height: 100%;
+	overflow: auto;
+	background: #7d7f69 url(../images/footer_shadow.png) top center no-repeat;
+	color: #000;
+
+}
+	#footer a { color: #fff; }
+	#footer a:hover { border-bottom: 1px dashed #fff; }
+
+	#footer-col1 {
+		float: left;
+		width: 20%;
+		margin: 10px 0 0 5%;
+	}
+	#footer-col2 {
+		float: right;
+		width: 60%;
+		margin: 7px 5% 0 0;
+		font-size: 0.8em;
+	}
+		#footer-col2 p {line-height: 20px;}
+		#footer-col2 ul { margin-top: -1em; }
+
+	#footer img { padding: 0; }
+	#footer-col1 a:hover  { border-bottom: 0px dashed #fff; }
+
+/* Tables*****************************************************************************************************************************/
+
+table {
+	width: 100%;
+	border: 0px solid #005648;
+	font-size: 1.5em;
+}
+
+
+th, td {
+	border: 1px solid #000;
+	border-collapse:collapse;
+}
+
+td { text-align:left; padding:5px; }
+
+th { text-align: center; height:10px; }
+
+td.center {
+	height: 10px;
+	text-align:center;
+}
+
+td.numcell {
+	width: 20px;
+	text-align:center;
+}
+
+table.downloadops {
+	width: 100%;
+	border: 0px solid #005648;
+	font-size: 1.0em;
+	font-weight: normal;
+}
+
+/* Frontpage image roll over and information rollover code****************************************************************************/
+
+#displaybox { width: 55%; max-width: 725px; float: left; margin: 2% 0 0 1%; }
+
+.view {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+	box-shadow: 0px 0px 0px 3px #fff inset;
+}
+.view .mask, .view .content {
+    width:100%;
+	height:250px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    /*text-transform: uppercase;*/
+    color: #fff;
+	width: 100%;
+    text-align: center;
+    position: relative;
+    font-size: 1.8em;
+    padding: 8px 0px 5px 0;
+    background: #5e7181;
+    margin: 10px 0 0 0;
+	border-bottom: #fff solid 2px;
+	font-weight: normal;
+}
+.view p {
+    font-family: Merriweather, serif;
+    font-style: italic;
+    font-size: 1.5em;
+    position: relative;
+    color: #fff;
+    padding: 0px 10px;
+    text-align: center
+}
+.view a.info {
+	width: 100%;
+	height: 300px;
+	float: left;
+	margin: -250px 0 0 0;
+	
+}
+.view a.info:hover {
+	width: 100%;
+	height: 300px;
+	float: left;
+	margin: -250px 0 0 0;
+}
+
+/*Largebox styles************************************************************************************/
+
+.largebox {
+	width: 99%;
+	height: 225px;
+    float: left;
+    border: 4px solid #5e7181;
+	background: #b2b2a8 url(../images/largebox01.jpg) top center no-repeat;
+}
+	
+.largebox img {
+    transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear; /* Safari */
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: linear; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+     width:99%;
+	 height:225px;
+}
+.largebox .mask {
+    opacity: 0;
+    background: url(../images/largebox02.jpg) top center no-repeat;
+    transition: all 0.4s ease-in-out;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+	box-shadow: 0px 0px 0px 3px #fff inset;
+    
+}
+.largebox h2 {
+    transform: translateY(-20px);
+	-webkit-transform: translateY(-20px); /* Safari */
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+
+}
+.largebox p {
+	background: #5e7181;
+	padding: 10px 10px;
+    transform: translateY(100px);
+	-webkit-transform: translateY(100px); /* Safari */
+    opacity: 0;
+    transition: all 0.2s linear;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: linear; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+	
+}
+.largebox a.info{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+
+	
+}
+
+/*Largebox hover transition code*/
+
+.largebox:hover img { 
+    transform: scale(1.1);
+	-webkit-transform: scale(1.1); /* Safari */
+} 
+.largebox:hover .mask { 
+    opacity: 1;
+}
+.largebox:hover h2,
+.largebox:hover p,
+.largebox:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+	-webkit-transform:: translateY(0px); /* Safari */
+	border-bottom: none;
+}
+.largebox:hover p {
+    transition-delay: 1.0s;
+	-webkit-transition-delay: 1.0s; /* Safari */
+}
+.largebox:hover a.info {
+    transition-delay: 0.2s;
+	-webkit-transition-delay: 0.2s; /* Safari */
+}
+
+/*Smallbox styles************************************************************************************/
+
+.smallbox {
+	width:47%;
+	height:200px;
+	float: left;
+    border: 4px solid #406164;
+	background: #b2b2a8 url(../images/smalltestroll_new.jpg) top center no-repeat;
+	
+}
+
+.smallbox img {
+    transition: all 0.2s linear;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+     width:47%;
+	 height:200px;
+}
+.smallbox .mask {
+    opacity: 0;
+    background: url(../images/smalltestroll_old.jpg) top center no-repeat ;
+    transition: all 0.4s ease-in-out;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+	box-shadow: 0px 0px 0px 3px #fff inset;
+}
+.smallbox h2 {
+    transform: translateY(-20px);
+	-webkit-transform: translateY(-20px); /* Safari */
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+
+	
+}
+.smallbox p {
+	background: #495864;
+	padding: 10px 10px;
+    transform: translateY(100px);
+	-webkit-transform: translateY(100px); /* Safari */
+    opacity: 0;
+    transition: all 0.2s linear;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: linear; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+
+}
+.smallbox a.info{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+	-webkit-transition-property: all; /* Safari */
+    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out; /* Safari */
+    -webkit-transition-delay: 0s; /* Safari */
+}
+
+/*Smallbox hover transition code*/
+
+.smallbox:hover img { 
+    transform: scale(1.1);
+	-webkit-transform: scale(1.1); /* Safari */
+} 
+.smallbox:hover .mask { 
+    opacity: 1;
+}
+.smallbox:hover h2,
+.smallbox:hover p,
+.smallbox:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+	-webkit-transform: translateY(0px); /* Safari */
+	border-bottom: none;
+}
+.smallbox:hover p {
+    transition-delay: 1.0s;
+	-webkit-transition-delay: 1.0s; /* Safari */
+}
+.smallbox:hover a.info {
+    transition-delay: 0.2s;
+	-webkit-transition-delay: 0.2s; /* Safari */
+}
+
+
+/*Smallbox color classes*/
+
+.blue { border: 4px solid #495864; margin: 2% 1% 1% 0px; float: left; background: #fff url(../images/smallbox01.jpg) top center no-repeat; }
+	.blue h2 { background: #495864; }
+	.blue .mask { background: url(../images/smallbox01-2.jpg) top center no-repeat; }
+.orange { border: 4px solid #495864; margin: 2% 0px 1% 1%; float: right; background: #fff url(../images/smallbox02.jpg) top center no-repeat; }
+	.orange h2 { background: #495864; }
+	.orange .mask { background: url(../images/smallbox02-2.jpg) top center no-repeat; }
+.green { border: 4px solid #495864; margin: 1% 1% 2% 0px; float: left; background: #fff url(../images/smallbox03.jpg) top center no-repeat; }
+	.green h2 { background: #495864; }
+	.green .mask { background: url(../images/smallbox03-2.jpg) top center no-repeat; }
+.cyan { border: 4px solid #495864; margin: 1% 0px 2% 1%; float: right; background: #fff url(../images/smallbox04.jpg) top center no-repeat; }
+	.cyan h2 { background: #495864; }
+	.cyan .mask { background: url(../images/smallbox04-2.jpg) top center no-repeat; }
+
+/* Islandora styles******************************************************************************************************************/
+
+
+/*Fix collections wrappers and container*/
+
+.collection-wrapper {
+	width: 96%;
+	padding: 10px;
+	min-height: 170px;
+	background-color: #fff;
+	box-shadow: 0px 0px 0px 0px #CCC;
+	border: 2px solid #5e7181;
+}
+
+/*fix odd ul size and margins*/
+.collection-wrapper ul li { width: 100%; margin: 5px 0px 10px 30px; }
+
+/*Fix some random ul float? why?*/
+.collection-wrapper ul { float: none; margin: 30px 0 10px 20px; padding: 0; font-weight: bold; }
+
+/* Change size of collections search results box*/
+.collection-wrapper H3 a { font-size: 1.0em; font-weight: normal; border-bottom: #25211d solid 0px; }
+
+.collection-wrapper img { float: left; margin: 10px; height: 150px; width: auto; }
+
+/*Fix the collection image box, and img*/
+
+.islandora-basic-collection-metadata-image {
+	width: 100%;
+	margin: 5% 5% 10% 5%;
+}
+
+.islandora-basic-collection-metadata-image img {
+    max-width: 100%;
+	margin: 0 0 0 2%;
+}
+
+/*Fix devel bug*/
+
+.devel-themer-wrapper {
+    font-size: 100%;
+}
+
+@media screen and (max-width: 1382px) {
+/*Fix the collection image box, and img*/
+
+.islandora-basic-collection-metadata-image {
+	width: 100%;
+	margin: 5% 0;
+}
+
+.islandora-basic-collection-metadata-image img {
+    max-width: 100%;
+	margin: 0 0 0 0;
+}
+
+}
+
+.islandora-metadata {
+	margin: 0;
+	font-size: 100%;
+}
+
+/* Restyle islandora advanced search form*/
+	
+	#leftsidebar form { float: left; margin: 0; font-size: 1.0em; }
+	
+	#leftsidebar label { font-size: 1.2em; }
+	#leftsidebar input { background: #C2C2C2; border: 1px solid #000; }
+	#leftsidebar .edit-submit { background-color: #fff; border: 1px solid #000; }
+	#leftsidebar .form-submit { background-color: #fff; border: 1px solid #000; margin-top: 10px; }
+
+/* Restyle the gridview and listview links on collection pages*/
+
+/* reset li styles*/
+.islandora-basic-collection-display-switch li {
+    margin: 0;
+	padding: 0;
+}
+
+.islandora-basic-collection-display-switch {
+    float: right;
+	width: 50%;
+	margin: 10px 0;
+	padding: 0;
+	font-size: 1.0em;
+	text-align: right;
+}
+
+.islandora-basic-collection-display-switch a {
+	background: #fff;
+	padding: 1%;
+	color: #1DADD9;
+	margin: 0px;
+	text-decoration: none;
+	border: 1px solid #5e7181;
+}
+
+.islandora-basic-collection-display-switch a:hover, .islandora-basic-collection-display-switch a.active {
+	background: #DBDBDB;
+	padding: 1%;
+	color: #106079;
+	margin: 0px;
+	text-decoration: none;
+	border-bottom: 0px dashed #106079;
+	border: 1px solid #5e7181;
+}
+
+/* Restyle islandora meta data fieldset*/
+
+.fieldset-wrapper {
+    margin-left: 0;
+	padding: 5px;
+    font-size: 100%;
+}
+
+.fieldset-wrapper ul {
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+}
+
+.fieldset-wrapper li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Restyle islandora thumb hover to remove underline	*/
+
+.islandora-basic-collection-thumb a:hover{ border: 0px solid #5e7181; }
+
+/*Fix front page news block view*/
+  #block-views-newsfeed-block .item-list ul {
+	  margin: 0px 0px 0px 20px;
+	  padding: 0px;
+  }
+
+/*Add bottom line to islandora search result sidebar facets*/
+.islandora-solr-facet-wrapper { border-bottom: 1px solid #5e7181; margin: 20px 0; padding: 0 10px; }
+  
+/*fix bad formatting islandora search results -  ul list type*/
+#block-islandora-solr-basic-facets ul{ width: 100%; list-style-type: none; float: left; margin: 0; padding: 0; }
+
+.islandora-solr-search-result ul { width: 60%; list-style-type: none; float: left; margin: 0; padding: 0;  }
+
+/*fix bad formatting islandora search results - increase collection islandora h3 tag size*/
+#block-islandora-solr-basic-facets h3 { font-size: 0.0em; font-size: 1.8em; }
+
+/*fix bad formatting islandora search results - h2 background*/
+#block-islandora-solr-basic-facets h2 { background: #fff; border: 1px solid #5e7181;  }
+
+/*drop count to next line down*/
+.islandora-solr-facet li a { display: block; margin: 5px 0px 0px 0px; border-bottom: 0px dashed #106079;}/*also move li to left*/
+islandora-solr-facet li a:hover { border-bottom: 0px solid #5e7181; }
+
+.islandora-solr-facet li a.plus, .islandora-solr-facet li a.minus { display: inline; }
+
+/*Add some padding to show more link*/
+a.soft-limit { margin: 5px 0; }
+
+/*Fix odd subtitle-first class*/
+.subtitle-first {
+    margin-bottom: -0.2em;
+}
+ 
+/* ________ MEDIA QUERIES ________ */
+
+
+/*Switched from 1200px to 1382px to fit better on Eds screen :) */
+
+@media screen and (max-width: 1382px) {
+
+#two-col-left-main #front-main-content {
+	width: 70%;
+	margin: 30px 1% 0px 1%;
+	float: left;
+	font-size: 100%;
+	}
+
+#rightsidebarfront {
+    float: right;
+    width: 24%;
+    margin: -180px 3% 20px 0px;
+    padding: 0px;
+}
+	
+#displaybox { width: 70%; max-width: 100%; float: left; margin: 1% 0 0 1%; }
+	
+.largebox { 
+	  width: 61%;
+	  height:150px;
+      margin: 1%;
+	  float: left;
+}
+
+
+.smallbox { 
+	  width:29%;
+	  height:150px;
+	  margin: 1%;
+	  float: left;
+
+}
+
+	#footer-col1 {
+		float: left;
+		width: 20%;
+		margin: 10px 0 0 1%;
+	}
+	#footer-col2 {
+		float: right;
+		width: 60%;
+		margin: 7px 1% 0 0;
+		font-size: 0.8em;
+	}
+	
+}
+
+@media screen and (max-width: 960px) {
+
+#two-col-left-main #front-main-content {
+	width: 96%;
+	margin: 30px 0px 0px 2%;
+	float: left;
+	font-size: 100%;
+	}
+
+#rightsidebarfront {
+    float: left;
+    width: 96%;
+    margin: 0px 2% 0 1%;
+    padding: 0px;
+}
+	
+#displaybox { display: block; width: 98%; max-width: 100%; float: left; margin: 1% 0 0 2%; }	
+	
+	
+	
+}
+
+@media screen and (max-width: 400px) {
+
+/*Navigationbar	*/
+.topnav {
+	margin: 2px 0 0 0;
+	padding: 0;
+	width: 100%;
+    font-size: 1.6em;
+}
+	
+/* Searchbar Style */
+
+#search {
+	width: 98%;
+	height: 40px;
+	float: right;
+	margin: 20px 0;
+	padding: 0 10px;
+	color: #000;
+	 }	
+
+.adsearch { float: right; font-size: 1.8em; margin: 9px 0 0 0; background-color: #fff; border: 1px solid #000; padding: 2px 3px;}
+a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
+
+/*Searchbar Style*/
+#nav form {
+	float: left;
+	margin: 10px auto;
+	padding: 0 5px;
+	font-size: 1.8em;
+	width: 100%;
+}
+
+#nav input { background: #C2C2C2; border: 1px solid #000; width: 80%; }
+#nav #edit-submit { background-color: #fff; border: 1px solid #000; width: 90px; padding: 1px 2px;}
+
+#displaybox { display: none; width: 100%; max-width: 725px; float: left; margin: 1% 0 0 1%; }
+
+.largebox { 
+	  width:100%;
+	  height:150px;
+      margin: 1% 0;
+	  float: left;
+}
+
+
+.smallbox { 
+	  width:100%;
+	  height:150px;
+	  margin: 1% 0;
+	  float: left;
+
+}
+
+#two-col-left-main #front-main-content {
+	width: 99%;
+	margin: 30px 1% 0px 1%;
+	float: left;
+	font-size: 100%;
+	}
+
+#rightsidebarfront {
+    float: right;
+    width: 99%;
+    margin: 0px 1% 20px 1%;
+    padding: 0px;
+}
+
+
+	#footer-col1 {
+		float: left;
+		width: 99%;
+		margin: 10px 1% 0 1%;
+	}
+	#footer-col2 {
+		float: right;
+		width: 99%;
+		margin: 7px 1% 0 1%;
+		font-size: 0.8em;
+	}
+	
+}
+
+
