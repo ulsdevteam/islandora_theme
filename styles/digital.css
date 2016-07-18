@@ -65,7 +65,10 @@ font-weight: normal;
 ul {
 	list-style-type: none;
 }
-
+li {
+	margin: 5px 0 10px -5px;
+font-weight: normal;
+}
 a {
 	text-decoration: none;
 	color: #405a71;
@@ -91,8 +94,7 @@ margin:0px auto;
 font-size: 90%;
 margin: 0px auto;
 width: 100%;
-max-width: 960px;
-min-width: 700px;
+max-width: 980px;
 }
 	
 #two-col-right-main #main-content {
@@ -101,6 +103,11 @@ margin: 0px auto;
 width: 100%;
 padding-top: 20px;
 float:none;
+}
+
+#main-content {
+max-width: 980px;
+
 }
 
 #two-col-right-main #sidebar {
@@ -115,49 +122,23 @@ float:none;
 	margin: 20px 0px;
 }
 
-#two-col-left-main {
-	width: 960px;
-	margin: 0px auto;
-	margin-top:20px;
-}
-	
-.islandora-basic-collection-metadata-image {
-	width: 100%;
-	margin: 0 0 1em 0;
-}
+#two-col-left-main{
+max-width: 980px;
 
-.islandora-basic-collection-metadata-image img {
-	max-width: 100%;
-	padding-bottom: 30px;
+margin: 30px auto 0px;
+min-height:500px
 }
+#two-col-left-main #main-content{
+	max-width:980px; 
+	width:auto;}
 
-.islandora-solr-content {
-	margin:0px auto;
-	width:65%;
-	float:left;
-	margin-left:3em;
-}
-
-.islandora-metadata {
-	background: #EBEBD8;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	padding: 15px;
-	min-width: 200px;
-	float: right;
-	margin-top:-20px;
-}
-
-.islandora-basic-collection.clearfix {
-	width:960px;
-}
 	
 .collection-wrapper {
 width: 96%;
 padding: 10px;
 min-height: 170px;
 background-color: #FFF;
-box-shadow: 0px 0px 0px 0px #CCC;
+box-shadow: 2px 3px 2px #CCC;
 border: 2px solid #5E7181;
 }
 	
@@ -185,11 +166,68 @@ border: 2px solid #5E7181;
 }
 	
 #col2 {
-	width: 960px;
+	max-width: 960px;
+	width:100%;
 	position: relative;
 	margin: 0px auto;
 }
+/* ----Islandora Objects ---- */
 
+.islandora-objects-grid dl {
+min-width: 275px;
+min-height: 180px;
+display: -moz-inline-stack;
+display: inline-block;
+vertical-align: top;
+margin: 1.5em 1.84%;
+zoom: 1;
+*display: inline;
+_height: 180px;
+}
+	
+.islandora-basic-collection-metadata-image {
+	width: 100%;
+	margin: 0 0 1em 0;
+}
+
+.islandora-basic-collection-metadata-image img {
+	max-width: 100%;
+	padding-bottom: 30px;
+}
+
+.islandora-solr-content {
+	margin:0px auto;
+	width:65%;
+	float:left;
+margin-top:-10em;
+}
+
+.islandora-metadata {
+	background: #EBEBD8;
+	box-shadow: 0px 0px 2px 1px #CCC;
+	border: 7px solid #FFF;
+	padding: 15px;
+	min-width: 200px;
+	float: right;
+	margin-top:-20px;
+}
+
+.islandora-basic-collection.clearfix {
+	width:100%;
+}
+
+.islandora-objects-display-switch {
+	float:left;
+}
+
+.span-like-link {
+	color: #405a71;
+cursor: pointer;
+text-decoration: underline;
+font: 100% Arial, Helvetica, sans-serif;
+float:none;
+
+}
 
 /* -----Exhibits ------*/
 
@@ -199,7 +237,7 @@ width: 96%;
 padding: 10px;
 min-height: 170px;
 background-color: #FFF;
-box-shadow: 0px 0px 0px 0px #CCC;
+box-shadow: 2px 3px 2px #CCC;
 border: 2px solid #5E7181;#FFF;
 margin-bottom:20px;
 margin-top:20px;
@@ -226,85 +264,15 @@ padding-left:.5em;
 }
 
 
-/* -----OLD Exhibit css 
 
-.point {
-	overflow: hidden;
-	padding: .4em .6em .8em .6em;
-	min-height: 170px;
-	background-color: #efefef;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	width: 100%;
-	margin-bottom:20px;
-	margin-top:20px;
-}
-	
-.ww1 {
-	overflow: hidden;
-	padding: .4em .6em .8em .6em;
-	min-height: 170px;
-	background-color: #efefef;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	width: 100%;
-	margin-bottom:20px;
-	margin-top:20px;
-}
-	
-.oakland {
-	overflow: hidden;
-	padding: .4em .6em .8em .6em;
-	min-height: 170px;
-	margin-bottom:20px;
-	margin-top:20px;
-	background-color: #efefef;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	width: 100%;
-}
-	
-.football{
-	overflow: hidden;
-	padding: .4em .6em .8em .6em;
-	min-height: 170px;
-	background-color: #efefef;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	width: 100%;
-	margin-bottom:20px;
-	margin-top:20px;
-}
-	.starzl{
-	overflow: hidden;
-	padding: .4em .6em .8em .6em;
-	min-height: 170px;
-	background-color: #efefef;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	width: 100%;
-	margin-bottom:20px;
-	margin-top:20px;
-}
-.freeatlast{
-	overflow: hidden;
-	padding: .4em .6em .8em .6em;
-	min-height: 170px;
-	background-color: #efefef;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	width: 100%;
-	margin-bottom:20px;
-	margin-top:20px;
-}
-------*/
 
 
 /* ________ BANNER & PRIMARY NAVIGATION ________ */
 
 #pittbar {
-	width:980px;
+	width:100%;
 	margin:0px auto;
+	max-width:980px
 }
 
 #wrap_headers {
@@ -334,7 +302,7 @@ padding-left:.5em;
 	margin: 0px auto;
 	max-width: 960px;
 	width:100%;
-	max-height: 79px;
+	height: auto;
 	padding-bottom: 0em;
 	padding-top: 5px;
 }
@@ -344,7 +312,7 @@ padding-left:.5em;
 #homesearch{
 	width:50%;
 	height:100%;
-	margin: -33% 0px 30px 20px;
+	margin: -32% 0px 30px 20px;
 	padding: 10px 15px 5px;
 	background-color: #CBE0F5;
 	box-shadow: 0px 0px 2px 1px #CCC;
@@ -372,12 +340,8 @@ padding-left:.5em;
 
 #wrap_banner {
 	width: 100%;
-	min-height: 200px;
-	max-height:200px;
 	margin : 0px auto;
 	background-color: #006;
-	padding-bottom: 10px;
-	margin-top:-4px;
 	padding-top:0px;
 }
 
@@ -413,9 +377,10 @@ padding-left:.5em;
 	height: 1.8em;
 	margin: 0px auto;
 	padding: .5em 0 0 0;
-	width: 960px;
+	width: 100%;
 	position: relative;
 	background: #039;
+	max-width:980px;
 	border: none;
 }
 
@@ -436,7 +401,7 @@ padding-left:.5em;
 }
 
 .primary-nav {
-	margin: 0 0 0 -3em;
+
 	margin-top:-1px;
 	width: 100%;
 	font-weight:bold;
@@ -506,7 +471,21 @@ border: 7px solid #FFF;
 }
 /*end advanced search block*/
 
-
+/*----Search in Collection -----*/
+#search-in-collection{
+background-color: #CBE0F5;
+box-shadow: 0px 0px 2px 1px #CCC;
+border: 7px solid #FFF;
+margin:10px;
+width:95%;
+padding:10px;
+}
+#edit-options.container-inline.form-wrapper{
+	border:none;
+	display:inline;
+	margin-left:2em;
+}
+/*end Search in Collection */
 
 /*---Partners Logo Block---*/
 #block-block-21{
@@ -528,14 +507,7 @@ border: 7px solid #FFF;
 	padding-left: 20px;
 }
 
-.item-list .pager{
-	width:100%;
-	border: 0px;
-	text-align: center;
-}
-.item-list .pager li{
-	padding:0px;
-}
+
 #block-block-17{
 	float: right;
 	min-width: 150px;
@@ -549,19 +521,24 @@ border: 7px solid #FFF;
 
 
 #block-islandora-solr-sort {
-	width:30%;
+	width:25%;
+	float:left;
+	clear:both;
+	padding: 10px 10px 20px;
+background: #CBE0F5;
+box-shadow: 0px 0px 2px 1px #CCC;
+border: 7px solid #FFF;
+margin-top:20px;
+margin-right:50px;
 }
 
 /* ________ Featured Collection ________ */
-
-
-
 
 #block-block-15{
 	float: right;
 	min-width: 150px;
 	max-width:300px;
-	margin: -50px 20px 0px 10px;
+	margin: -50px 0px 0px 10px; 
 	padding: 10px;
 	background-color: #efefef;
 	box-shadow: 0px 0px 2px 1px #CCC;	
@@ -653,11 +630,24 @@ border: 7px solid #FFF;
 	border: 7px solid #FFF;
 	width:25%;
 	float:left;
+	clear:both;
+
 }
 .islandora-solr-facet-wrapper {
 	margin-bottom:15px;
 }
 	
+/*----Service Links Block----*/
+.service-links{float:right;
+width:97%;	
+clear:right;	
+padding: 10px 10px 20px;
+	background: #CBE0F5;
+	box-shadow: 0px 0px 2px 1px #CCC;
+	border: 7px solid #FFF;
+	margin-top:20px;
+}
+.service-links .item-list ul li{display:inline;}
 
 /*--------footer---------*/
 	
@@ -666,12 +656,12 @@ border: 7px solid #FFF;
 	border: none;
 	border-top: thin solid #ccc;
 	background: transparent;
-	padding: .5em .3em 0 .3em;
+	padding: 0em 0em 0em 0em;
 	margin: 0px auto;
 	min-height: 3em;
 	position: relative;
 	overflow: auto;
-	width:960px;
+
 }
 	
 	
@@ -751,12 +741,21 @@ border: 7px solid #FFF;
 
 /* ________ MISCELLANY ________ */
 
+.islandora-objects-list-item{
+	width: 90%;
+padding: 10px;
+background-color: #FFF;
+box-shadow: 2px 3px 2px #CCC;
+border: 2px solid #5E7181;
+margin:20px;}
+
 .islandora-objects-list-item dl dt {
 	clear: left;
 	float: left;
 	padding: 0px;
 	text-align: center;
 	width:250px;
+	margin-right:25px;
 }
 
 .islandora-objects-grid dd {
@@ -778,6 +777,7 @@ border: 7px solid #FFF;
 .item-title {
 	margin-left: -20px;
 	margin-bottom: 20px;
+	margin-top:20px;
 }
 
 #additions {
@@ -811,7 +811,9 @@ border: 7px solid #FFF;
 
 .collection-wrapper img {
 float: left;
-margin: 10px;
+margin-right:20px;
+margin-left:10px;
+margin-bottom:20px;
 height: 150px;
 width: auto;
 	}
@@ -830,7 +832,7 @@ width: auto;
 	}
 
 .fieldset-wrapper {
-	margin-left: -3em;
+	margin-left: -3em !important;
 	font-size: 90%;
 	}
 
@@ -921,240 +923,6 @@ table {
 	margin-left:20px;
 	margin-top:25px;
 	}
-
-
-
-/* ________ MEDIA QUERIES ________ */
-
-
-
-
-@media only screen and (min-width:768px) and (max-width: 991px) {
-
-.region-content {
-	width:100%;	
-}
-
-#col2 {
-	width: 90%;
-}
-#nav form {
-	float: left;
-	margin: 0em 0 0 0em;
-	font-size: 90%;
-	}
-#two-col-right-main{
-	width:100%;
-}
-#banimage {
-	width: 100%;
-	min-height: 170px;
-	margin: 0px auto;
-	padding-bottom:5px;
-	/*background: url(../images/banner_768.jpg) center no-repeat #006;*/
-	}
-.banner{
-	margin: 0px auto;
-max-width: 768px;
-}
-#footer{
-	width:90%;
-}
-#nav{
-margin: 0px auto;
-max-width: 768px;
-
-
-}
-.primary-nav li.menu-2774{
-	padding-left: 0px;
-}
-.item-list .pager{
-	width:50%;
-}
-
-#two-col-left-main #sidebar {
-	float: left;
-	width: 25%;
-	min-width: 200px;
-	}
-
-#two-col-left-main #main-content {
-	float: left;
-	width: 100%;
-	}
-
-.primary-nav{
-	margin-left:-2.9em;
-
-}
-
-#edit-islandora-simple-search-query.form-text {
-	width:150px;
-}
-#block-block-15{
-	display:none;
-}
-#homesearch {
-	margin:0px 0px 0px 0px;
-	
-}
-
-#block-islandora-solr-simple {
-	margin-top:-15px;
-	float:left;
-}
-
-
-/* layout percentage sm */
-@media only screen and (min-width: 320px) and (max-width: 768px) {		
-#two-col-right-main #sidebar {
-	width: 26%;
-	float: left;
-	font-size: 90%;
-	min-width: 10%;
-	padding: 1.8em 2em 0 0;
-	}
-#two-col-right-main #main-content {
-  font-size: 90%;
-	width: 96%;
-	float: left;
-	}
-#block-block-15{
-	display:none;
-}
-.region-content {
-	width:100%;	
-}
-
-#banimage {
-	width: 100%;
-	min-height: 104px;
-	max-width: 768px;
-	margin : 0px auto;
-	max-height: 104px;
-	/*background: url(../images/banner_768.jpg) no-repeat;*/
-	
-	}	
-.primary-nav li.menu-2774{
-	padding-left: 0px;
-}
-.collection-wrapper{
-	width: 100%;
-	}
-
-
-#wrap_mainmenu{
-	width:100%;
-	}
-
-#block-system-main {
-	width: 80%;	
-	}
-
-.primary-nav li {
-	margin: 0 0 0em 0;
-	padding: .2em .1em;
-	list-style: none;
-	display: block;
-	border:0px solid #000;
-	font-size: 80%;
-	background: none;
-	width: 40%;
-	margin-left: 20px;
-	}
-
-
-#nav {
-	height: 7em;
-	margin: 0 0 2em 0;
-	width: 100% !important;
-	}
-
-.primary-nav a:hover {
-	text-decoration: none;
-	}
-	
-#col2 {
-	width: 90%;
-}
-
-#nav form {
-	float: left;
-	margin: .8em 0 0 .5em;
-	font-size: 90%;
-	}
-	
-#two-col-right-main{
-	width:100%;
-}
-
-/*#two-col-right-main #sidebar {
-	width: 26%;
-	float: left;
-	font-size: 90%;
-	min-width: 10%;
-	padding: 1.8em 2em 0 0;
-	}
-	
-#two-col-right-main #main-content {
-  font-size: 90%;
-	width: 69%;
-	float: left;
-	}*/
-#footer{
-	width:90%;
-}
-
-.item-list .page{
-	width:50%;
-}
-
-#two-col-left-main #sidebar {
-	
-	width: 25%;
-	min-width: 200px;
-	}
-
-#two-col-left-main #main-content {
-	
-	width: 768px;
-	}
-.news-wrapper {
-	/*border: 2px solid #c9d5d9;
-	margin-bottom: 2em;
-	min-height: 12em;
-	width: 96%;
-	min-width: 19.2em;
-	padding: .4em .6em .8em .6em;*/
-	overflow: hidden;
-		padding: .4em .6em .8em .6em;
-min-height: 170px;
-background-color: #E5E5E5;
-box-shadow: 0px 0px 2px 1px #CCC;
-border: 7px solid #FFF;
-width: 45%;
-	}
-
-#homesearch {
-	margin:0px 0px 0px 0px;
-	width:87%;
-	
-}
-#block-islandora-solr-simple {
-	margin-top:-15px;
-	float:left;
-}
-#banimage{
-	display:none;
-}
-#pittbar{
-	width:100%;
-}
-.footernav{
-	display:none;
-}
-}
 /* ________ TEMPLATE SPECIFIC ________ */
 
 /* ________ islandora-solr-metadata-display.tpl ________ */
@@ -1225,11 +993,12 @@ width: 45%;
 	}
 
 .item-list .pager {
-	text-align: center;
+	text-align: left;
 font-size: small;
 margin-left: -10px;
-margin-top: 30px;
+margin-top: 40px;
 margin-bottom: 10px;
+max-width:980px;
 border: 0px solid #000;
 	}
 
@@ -1267,3 +1036,100 @@ body.no-sidebars .islandora-large-image-sidebar ul li {
 
 /* ________ EXPERIMENTATION ________ */
 
+
+
+
+/* ________ MEDIA QUERIES ________ */
+
+
+
+
+@media only screen and (min-width:768px) and (max-width: 991px) {
+#two-col-right-main {width:80%;}
+#col2 {width:80%;}
+#two-col-right-main #main-content { width:100%;float:left;}
+#two-col-left-main #sidebar{float:right;width:100%;}
+#block-block-15{margin:0px -70px 0px 10px;}
+#search-in-collection{
+	width:95%;
+}
+}
+
+@media only screen and (min-width:320px) and (max-width: 768px) {		
+#two-col-right-main {width:80%;}
+#col2 {width:80%;}
+#two-col-right-main #main-content { min-width:50%;float:left; }
+#banimage{display:none;}
+.islandora-objects-grid dl { width:30%;}
+#homesearch{ width:80%;height:100%;margin:  0px 0px 0px;padding: 10px 15px 5px;background-color: #CBE0F5; box-shadow: 0px 0px 2px 1px #CCC;
+	border: 7px solid #FFF;}
+		#block-block-15{ display:none;}
+		.islandora-solr-content{margin:0px auto; Width:80%; float:left; margin-top:0px;}
+		#nav {height:12em;text-align:center;}
+.primary-nav li{min-width:100%;margin: 0 0 .2em 0;padding: .2em .1em;list-style: none;display: block;font-size: 100%;width: 100%;}
+#wrap_mainmenu{height:250px;}
+#nav form{width:100%;font-size:100%; margin:10px;}
+#block-block-19 a{font-size:18px;}
+#block-block-19{width:60%; float:left; margin-top:-14px;}
+.islandora-objects-list-item dl dd {clear:both;margin:0px;}
+#two-col-left-main #sidebar{float:right;width:100%;}
+#search-in-collection{
+	width:95%;
+}
+}
+
+@media only screen and (min-width:320px) and (max-width: 568px) {		
+#two-col-right-main {width:80%;}
+#col2 {width:80%;}
+#two-col-right-main #main-content { min-width:50%;float:left; }
+#banimage{display:none;}
+#block-block-15{ display:none;}
+#block-block-19{width: 70%; margin: 0px auto; float:left; padding-right:0px;}
+#block-block-19 a{font-size:18px;}
+.islandora-objects-grid dl { width:50%;}
+#homesearch{ width:80%;height:100%;margin:  0px 0px 0px;padding: 10px 15px 5px;background-color: #CBE0F5; box-shadow: 0px 0px 2px 1px #CCC;border: 7px solid #FFF;}
+#block-block-15{ display:none;}
+.collection-wrapper img {float: left;margin: 0px auto;;height: auto;width: 100%;}
+#nav {height:12em;text-align:center;}
+.primary-nav li{min-width:100%;margin: 0 0 .2em 0;padding: .2em .1em;list-style: none;display: block;font-size: 100%;width: 100%;}
+#wrap_mainmenu{height:250px;}
+#nav form{width:100%;font-size:100%; margin:10px;}
+.islandora-solr-content{margin:0px auto; Width:80%; float:left; margin-top:0px;}
+#block-islandora-solr-basic-facets{display:none;}
+#block-islandora-solr-sort{width:80%;}
+.islandora-objects-list-item dl dd {clear:both; margin:0px;}
+.islandora-metadata{width:90%;float:left;}
+#two-col-left-main #sidebar{float:right;width:100%;}
+#search-in-collection{
+	width:95%;
+}
+}
+
+@media only screen and (max-width: 320px)  {
+#two-col-right-main {width:80%;}
+#two-col-right-main #main-content { min-width:50%; float:left;}
+#block-block-15{ display:none;}
+#block-block-19{width: 70%; margin: 0px auto; float:left; padding-right:0px;}
+#block-block-19 a{font-size:18px;}
+.islandora-objects-grid dl { width:50%;}
+#homesearch{ width:80%;height:100%;margin:  0px 0px 0px;padding: 10px 15px 5px;background-color: #CBE0F5; box-shadow: 0px 0px 2px 1px #CCC;border: 7px solid #FFF;}
+.collection-wrapper img {float: left;margin: 0px auto;;height: auto;width: 100%;	}
+#nav {height:12em;text-align:center;}
+.primary-nav li{min-width:100%;margin: 0 0 .2em 0;padding: .2em .1em;list-style: none;display: block;font-size: 100%;width: 100%;}
+#wrap_mainmenu{height:250px;}
+#nav form{width:100%;font-size:100%; margin:10px;}
+.banner{max-height:110px;}
+.islandora-solr-content{margin:0px auto; Width:80%; float:left; margin-top:0px;}
+#block-islandora-solr-basic-facets{display:none;}
+#block-islandora-solr-sort{width:80%;}
+.islandora-objects-list-item dl dd {clear:both;margin:0px;}
+.islandora-metadata{width:90%;float:left;}
+#two-col-left-main #sidebar{float:right;width:100%;}
+#search-in-collection{
+	width:95%;
+}
+#banimage{display:none;}
+
+
+}
+		

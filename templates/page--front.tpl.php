@@ -1,6 +1,6 @@
 <div id="pittbar" class="whitebar">
 <a href="http://pitt.edu"><img src="/sites/digital/themes/digital_pitt/images/pitt-logo-whitebkg.gif"> </a>    <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('class' => array('footernav')),)); ?>
-</div>
+</div><!-- /end pittbar -->
 <div id="wrap_headers" class="blue_bg">
 
 <div class="banner">   
@@ -15,27 +15,25 @@
       <!-- print banner region -->
         <?php print render($page['banner']); ?>   
  
-    </div></div>
+    </div>
 <!-- /end banner -->
-  <div id"=wrap_banner" class="dark_blue"> <div id="banimage">
+</div><!-- /end wrap_headers -->
+  <div id="wrap_banner" class="dark_blue"> <div id="banimage">
     <img src="/sites/digital/themes/digital_pitt/images/banner_960.jpg" style="margin:0px auto;">
-</div></div>
+</div> <!-- /end banimage -->
+</div> <!-- /end wrap_banner -->
 <div id="wrap_mainmenu" class="ltblue_bg">
    	<div id="nav">
 			<?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('primary-nav')),)); ?>
   
-    </div></div><!-- /end nav -->
+    </div><!-- /end nav -->
+</div> <!-- end wrap_mainmenu -->
 
     <?php print $messages; ?>
 
 	<div class="two-col-right-main">
 
-    <div id="col1">
-  
-      <!--<div class="widget">
-        <?php //print render($page['sidebar']); ?>
-      </div><!-- /end widget -->
-    </div><!-- /end col1 -->
+
     <div id="col2">
   
     <?php print render($title_prefix); ?>
@@ -54,17 +52,16 @@
       </div><!-- /end home search -->
       <div id="hometext">
         <p>Looking for a specific collection? Some of our most popular include:</p>
-        <li><a href="http://histpitt.library.pitt.edu">Historic Pittsburgh</a></li>
+        <li><a href="http://historicpittsburgh.org/">Historic Pittsburgh</a></li>
 <li><a href="http://documenting.library.pitt.edu/">Documenting Pitt</a></li>
-<li><a href="/islandora/object/pitt%3Acollection.123">Archives of Scientific Philosophy</a></li>
-<li><a href="/islandora/object/pitt%3Acollection.153">Darlington Digital Library</a></li>
-<li><a href="/islandora/object/pitt%3Acollection.72">Pittsburgh City Photographer Collection</a></li>
-<li><a href="/islandora/object/pitt%3Acollection.111">Stephen Foster Collection</a></li>
-<li><a href="/islandora/object/pitt%3Acollection.97">Western Pennsylvania Maps</a></li>
+<li><a href="/collection/archives-scientific-philosophy ">Archives of Scientific Philosophy</a></li>
+<li><a href="/collection/darlington-memorial-library ">Darlington Digital Library</a></li>
+<li><a href="/collection/pittsburgh-city-photographer-collection">Pittsburgh City Photographer Collection</a></li>
+<li><a href="/collection/stephen-foster-collection">Stephen Foster Collection</a></li>
 </div> <!---end home text-->
     </div><!-- /end col2 -->
     
-  </div><!-- div_class_main -->
+  </div><!-- two-col-right-main -->
 	<div id="footer">
   	<div id="footer-col1">
   		<?php print render($page['footer-col1']); ?>
@@ -75,4 +72,4 @@
   		<?php print render($page['footer-col2']); ?>
     </div><!-- /end footer column 2 -->
 	</div><!-- /end footer -->
-</div><!-- /end page-landing -->
+
