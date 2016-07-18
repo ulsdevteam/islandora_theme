@@ -27,10 +27,6 @@ function documenting_pitt_preprocess_islandora_objects_subset(&$variables) {
 
     $variables['collection_metadata'] = islandora_retrieve_metadata_markup($islandora_object);
 
-    if (isset($islandora_object['DESC'])) {
-      $variables['collection_desc'] = $islandora_object['DESC']->content;
-    }
-
     #var_dump($variables);
   }
 }

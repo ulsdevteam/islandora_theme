@@ -1,6 +1,6 @@
 <?php print $messages; ?>
 
-<div id="two-col-left-main">
+<div id="two-col-main">
 
   <?php if ($tabs): ?>
   <div class="tabs"><?php print render($tabs); ?></div>
@@ -17,10 +17,11 @@
   <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
   <?php endif; ?>
 
-  <?php if ($collection_desc): ?>
-  <!--<p>using the desc datastream</p>-->
-  <div class="islandora-basic-collection-metadata-desc"> <?php print $collection_desc; ?> </div>
-  <?php endif; ?>
+  <?php
+        $block = block_load('islandora_datastream_blocks', 'idb-DESC');
+        $renderable_block = _block_get_renderable_array(_block_render_blocks(array($block)));
+        print $renderable_block['islandora_datastream_blocks_idb-DESC']['#markup'];
+  ?>
   <div class="islandora-basic-collection clearfix"> <span class="islandora-basic-collection-display-switch">
     <ul class="links inline">
       <?php foreach ($view_links as $link): ?>
