@@ -6,14 +6,14 @@ Designer Website:
 University Library System | University of Pittsburgh
 */
 
-/*Reset it and forget it...*/
+/*Reset Typography*/
 @import url("../css/normalize.css");
 
-/* GLOBAL Type *********************************************************************************************************************/
+/* GLOBAL Typography *********************************************************************************************************************/
 
-body { font: 62.5%  Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; text-align: left; color: #000; }
+body { font: 62.5%  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif; text-align: left; color: #000; }
 
-p, dl, hr, h1, h2, h3, h4, h5, h6, ul, ol, pre, table, address, fieldset, span { font-size: 1.6em; margin: 0 0 10px 0; line-height: 24px; }
+p, dl, hr, h1, h2, h3, h4, h5, h6, ul, ol, pre, table, address, fieldset, span { font-size: 1.4em; margin: 0 0 10px 0; line-height: 20px; }
 
 blockquote { font-size: 1.5em; text-align: center; }
 
@@ -24,14 +24,14 @@ a:visited { color: #106079; border-bottom: 1px dashed #106079; }
 
 /* Headings */
 h1 { font-size: 2.5em; margin: 0 0 20px 0; padding: 0; }
-h2 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; border-bottom: #25211d solid 1px; }
+h2 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
 h3 { font-size: 1.6em; }
-h4 { font-size: 1.5em; }
+h4 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
 h5 { font-size: 1.0em; font-weight: normal; }
 h6 { font-size: 0.6em; }
 
 /* Lists */ 
-ul, ol { list-style-type: square; margin: 5px 0 5x 10px; padding: 0; font-weight: bold; }
+ul, ol { list-style-type: square; margin: 5px 0 5px 10px; padding: 0; font-weight: bold; }
 
 ol ol, ul ul, ul ol, ol ul{ list-style-type: disc; margin: 10px 0 10px 20px; font-size: 1.0em; }
 
@@ -41,109 +41,57 @@ li { margin: 5px 0 10px 20px; font-weight: normal; }
 .caption { margin-top: -1em; font-size: 1.2em; font-weight: bold; }
 .strike { text-decoration: line-through; }
 
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
 /* Structure ***********************************************************************************************************************/
 
-html {
-	overflow-y: scroll; }
+html { overflow-y: scroll; }
 
 body {
 	padding: 0;
 	width: 100%;
 	max-width: 100%;
 	margin: 0 auto;
-	background: url(../images/histpittv3_contentbackground.jpg) top center repeat; 
+	background: #7d7f69;
 }
 
-/* Layout **************************************************************************************************************************/
+#page-landing, #page-secondary {
+	margin: 0 auto;
+	background: #fff url(../images/histpittv3_contentbackground.jpg) top center repeat; 
+	}
 
-#page-landing, #page-secondary { margin: 0 auto; }
+/* Content **************************************************************************************************************************/
 
-#two-col-right-main, #two-col-left-main, #one-col-main{
+#content-wrapper, #islandora-object-full { 
 	width: 98%;
 	background: #fff;  
 	margin: 0 auto;
-	padding: 1%;
+	padding: 2% 1%;
 	max-width: 1280px;
-	min-height: 700px;
-
 }
 
-#islandora-object-main {
-	width: 100%;
-	background: #fff; 
-	margin: 0 auto;
-	padding: 1% 2%;
-	max-width: 1280px;
-	min-height: 700px;
-}	
-
-#islandora-object-main #two-col-left-main { background: none; box-shadow: 0px 0px 0px 0px #CCC; border: 0px solid #406164; max-width: 1280px; min-height: 700px; }
-
-#two-col-right-main #sidebar, #two-col-left-main #sidebar {
-	float: right;
-	width: 25%;
-	margin: 0 auto;
-	padding: 0;
-	}
-
-#fullsidebar {
-	width: 100%;
-	margin: 30px 0;
-	float: none;
-	font-size: 100%
-	}
-	
-	#fullsidebar h2 { display: none; }
-	
-	#fullsidebar form { float: left; margin: 0; font-size: 1.3em; }
-	
-	#fullsidebar input { background: #C2C2C2; border: 1px solid #000; }
-	#fullsidebar #edit-submit { background-color: #fff; border: 1px solid #000; }
-	
-#leftsidebar {
-	float: left;
-	width: 25%;
-	margin: 30px 5% 20px 0;
-	padding: 0;
-	}
-
-#rightsidebar {
-	float: right;
-	width: 25%;
-	margin: 30px 5% 20px 0;
-	padding: 0;
-	}
-	
-#rightsidebarfront {
-	float: right;
-	width: 30%;
-	margin: 5px 10% 20px 0;
-	padding: 0;
-	}
-	
-#two-col-right-main #main-content {
-	width: 63%;
-	margin: 0 auto;
-	float: left;
-	}
-
-#two-col-left-main #main-content {
+#content-left {
 	width: 67%;
 	margin: 0 auto;
 	float: left;
-	}
-		
-	#two-col-left-main #front-main-content {
-	width: 35%;
-	margin: 0px 5% 5px 0;
-	float: right;
-	}
+}
 
-#one-col-main #main-content {
+#content-right, #islandora-object-main {
+	width: 67%;
+	margin: 0 auto;
+	float: right;
+}
+
+#content-full {
 	width: 100%;
 	margin: 0 auto;
-	float: none;
-	}
+}
+
 
 /*Page content classes*/
 
@@ -151,28 +99,34 @@ body {
 
 .tablebox { width: 30%; margin: 5px; font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 0.8em; font-weight: normal; }
 	.tablebox h2 { font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; font-size: 1.9em;  }
+
+/* Content media queries**********************************************************************************************************************/
+
+@media screen and (max-width: 1382px) {
 	
-/*Control classes********************************************************************************************************************/
 
-/*img {
- 	max-width: 100%;
-  	height: auto;
-}*/
-
-.fltrt {
-	float: right;
-	margin-left: 8px;
 }
-.fltlft { 
+
+@media screen and (max-width: 960px) {
+
+#content-left, #islandora-object-main {
+	width: 100%;
+	margin: 0 auto;
 	float: left;
-	margin-right: 8px;
 }
-.clearfloat {
-	clear:both;
-	height:0;
-	font-size: 1px;
-	line-height: 0px;
+
+#content-right {
+	width: 100%;
+	margin: 0 auto;
+	float: left;
 }
+
+}
+
+@media screen and (max-width: 400px) {	
+
+}
+
 
 /* Header & Banner *****************************************************************************************************************/
 
@@ -184,6 +138,14 @@ body {
 	height: 230px;
 }
 
+		#searchheader { 	
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		background: url(../images/histpitt_header.jpg) center -88px repeat-x;
+		height: 158px;
+		}
+		
 .banner { 	
 	margin: 0 auto;
 	width: 100%;
@@ -192,6 +154,14 @@ body {
 	max-width: 1280px;
 	}
 
+		.searchbanner { 	
+		margin: 0 auto;
+		width: 100%;
+		background: none;
+		height: 80px; 
+		max-width: 1280px;
+		}
+
 .banner img {
 	display: block;
 	max-width: 320px;
@@ -199,82 +169,242 @@ body {
 	padding: 10px 0 0 20px;
 	float: left;
 	}
+	
+		.searchbanner img { 	
+		display: block;
+		max-width: 1280px;
+		height: 80px; 
+		padding: 0px;
+		float: left;
+		}
 
 	.banner ul { float: left; }
 	.banner ul li { list-style: none; display: inline; margin: 0 5px 0 5px  padding-right: 0; text-transform: uppercase; }
 	.banner ul li a { text-decoration: none; color: #405a71; }
 	
+/*Header media queries***********************************************************************************************************************/
+
+@media screen and (max-width: 1382px) {
+
+
+#header { 	
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+	height: auto;}
+	
+		#searchheader { 	
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		height: auto;
+		}
+		
+}
+
+@media screen and (max-width: 580px) {
+
+#header { 	
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+	background: #c9c9bb;
+	height: auto;}
+
+
+		#searchheader { 	
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		background: #c9c9bb;
+		height: auto;
+		}
+
+
+	  .searchbanner img {
+		  display: block;
+		  width: 100%;
+		  max-width: 100%;
+		  height: auto;
+		  padding: 0px;
+		  margin: 0px;
+		  float: left;
+		  }
+
+}
+
+@media screen and (max-width: 400px) {	
+
+#header { 	
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+	background: #c9c9bb;
+	height: auto;
+}
+
+.banner img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+	}
+}
  
 /*Pittbar***************************************************************************************************************************/
  
-#pittbar {
+#pittbar-wrapper {
 	width:100%;
 	height: 40px;
 	background: rgba(0,0,0,0.30);
 	margin: 0px auto;
+	overflow:hidden;
 	}
 
-#pittbar img { height: 40px; width: auto; margin: 0; }
-#pittbar a:hover { border-bottom: 0px dashed #106079; }
-
-#pbcontent {
+#pittbar-content {
 	width: 100%;
 	max-width: 1300px;
 	margin: 0 auto;
 	}
 
+#pittlogo a img { height: 40px; width: auto; margin: 0; float: left; }
+
+#pittbar a:hover { border-bottom: 0px dashed #106079; }
+
 /*Pittbarnav*/
 
-.pitbarnav {
+.pittbarnav {
 	float: right;
-	margin: 8px 0 0 0;
+	margin: 0px;
 	display: block;
 	color: #000;
-    font-size: 1.5em;
 }
 
-	.pitbarnav li { display: inline; margin: 0; padding: 0px; }
+	.pittbarnav a { width: auto; color: #000; font-weight: bold; font-size: 0.9em; padding: 15px 10px; display: inline; color: #000; margin: 0px; text-decoration:none; }
+	.pittbarnav a:hover { width: auto; background: rgba(255,255,255,0.62); padding: 15px 10px; display: inline; border: 0px solid #000; color: #000; margin: 0px; text-decoration: none; }
+	.pittbarnav a.active { width: auto; background: rgba(0,0,0,0.30); padding: 15px 10px; display: inline; color: #c9c9bb; margin: 0 -0.5%; text-decoration: none; }
 	
-	ul.pitbarnav a:link, ul.pitbarnav a:visited { color: #000; background: rgba(255,255,255,0.00); margin: 0; padding: 11px 10px 10px 10px; line-height:normal; }
-	ul.pitbarnav a:hover, ul.pitbarnav a.active { color: #000; background: rgba(255,255,255,0.50); margin: 0; padding: 11px 10px 10px 10px; border-bottom: 0px dashed #106079; line-height:normal; }
+	.pittbarnav ul { margin: 0px; padding: 10px 0px; font-weight: normal; float: right; }
+	.pittbarnav li { padding: 0px; margin: 0px; list-style: none; display: inline; border: 0px solid #000; font-weight: normal; }
 
 
- a:link.askanarch, a:visited.askanarch { margin: 0; padding: 10px; background: rgba(0,0,0,0.30); color: #000; text-decoration: none; float: right; font-size: 1.6em; font-weight: bold;   }
- a:hover.askanarch { margin: 0; padding: 10px; background:rgba(0,0,0,0.50); color: #d5d5c7; text-decoration: none; float: right; font-size: 1.6em; font-weight: bold; }
+ a:link.askanarch, a:visited.askanarch { margin: 0; padding: 9px; background: rgba(0,0,0,0.30); color: #000; text-decoration: none; float: right; font-size: 1.6em; font-weight: bold;   }
+ a:hover.askanarch { margin: 0; padding: 9px; background:rgba(0,0,0,0.50); color: #d5d5c7; text-decoration: none; float: right; font-size: 1.6em; font-weight: bold; }
+
+
+/*Pittbarnav media queries***********************************************************************************************************************/
+
+@media screen and (max-width: 1382px) {
+		
+}
+
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 400px) {	
+
+.pitbarnav {
+	display: none;
+
+}
+
+ a:link.askanarch, a:visited.askanarch { margin: 0px; padding: 8px 0px; width: 100%; font-weight: bold; font-size: 2.0em; text-align:center; background: rgba(0,0,0,0.30); color: #000; text-decoration: none; float: right; }
+
+} 
 
 /*Navigation ***********************************************************************************************************************/
 
 #nav {
-	height: 30px;
+	height: 40px;
 	margin: 0 auto;
 	padding: 0 0.5%;
 	max-width: 1280px;
 	border: 0px solid #000;
 	width: 99%;
 	background: none;
-}
-
-.primary-nav {
-	margin: 5px 0 0 0;
-	padding: 0;
-	width: 70%;
-	font-size: 1.9em;
+	clear: both;
+	overflow:hidden;
 }
 
 .topnav {
-	margin: 8px 0 0 0;
+	margin: 10px 0 0 0;
 	padding: 0;
 	width: 76%;
-    font-size: 1.5em;
+
 }
 
-	.primary-nav a, .topnav a { color: #000; font-weight: bold; padding: 11px 1%; color: #000; margin: 0; }
-	.topnav a:hover { background: rgba(255,255,255,0.62); padding: 11px 1%; color: #000; margin: 0; text-decoration: none; border-bottom: 0px solid #000; }
-	li a.active { background: rgba(0,0,0,0.30); padding: 11px 1% 11px 1%; color: #c9c9bb; margin: 0; text-decoration: none; }
-	.primary-nav ul, .topnav ul { margin: 0px; padding: 0px; font-weight: normal; }
-	.primary-nav li, .topnav li { padding: 0px; margin: 0px; list-style: none; display: inline; border: 0px solid #000; font-weight: normal; background: transparent; width: 80%; }
+	.topnav a { width: auto; color: #000; font-weight: bold; font-size: 100%; padding: 11px 1.5%; display: inline; color: #000; margin: 0px; text-decoration:none; }
+	.topnav a:hover { width: auto; background: rgba(255,255,255,0.62); padding: 11px 1.5%; display: inline; border: 0px solid #000; color: #000; margin: 0px; text-decoration: none; }
+	.topnav a.active { width: auto; background: rgba(0,0,0,0.30); padding: 11px 1.5%; display: inline; color: #c9c9bb; margin: 0 -0.5%; text-decoration: none; }
 	
-/* Searchbar Style */
+	.topnav ul { margin: 0px; padding: 11px 0px; font-weight: normal; }
+	.topnav li { padding: 0px; margin: 0px; list-style: none; display: inline; border: 0px solid #000; font-weight: normal; }
+
+/*Navigation media queries***********************************************************************************************************************/
+
+@media screen and (max-width: 960px) {
+#nav {
+	height: auto;
+	margin: 0px auto;
+	padding: 0px;
+	max-width: 100%;
+	border: 0px solid #000;
+	width: 100%;
+	background: #97978b;
+	clear: both;
+}
+.topnav {
+	margin: 0px auto;
+	padding: 0px;
+	width: 100%;
+
+}
+
+	.topnav a { width: auto; color: #000; font-weight: bold; font-size: 1.5em; padding: 9px 1.5%; display: inline-block; color: #000; margin: 0px; text-decoration:none; }
+	.topnav a:hover { width: auto; background: rgba(255,255,255,0.62); padding: 9px 1.5%; display: inline-block; border: 0px solid #000; color: #000; margin: 0px; text-decoration: none; }
+	.topnav a.active { width: auto; background: rgba(0,0,0,0.30); padding: 9px 1.5%; display: inline-block; color: #c9c9bb; margin: 0 -0.5%; text-decoration: none; }
+	
+	.topnav ul { padding: 0px; margin: 8px 0px; font-weight: normal; }
+	.topnav li { padding: 0px; margin: 0px; list-style: none; display: inline; border: 0px solid #000; font-weight: normal; overflow: hidden; text-align:center; }
+
+}
+
+@media screen and (max-width: 400px) {
+
+#nav {
+	height: auto;
+	margin: 5px 0px;
+	padding: 0px;
+	max-width: 100%;
+	border: 0px solid #000;
+	width: 100%;
+	background: #97978b;
+	display: 
+	clear: both;
+}
+
+.topnav {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+
+}
+
+	.topnav a { width: 100%; color: #000; font-weight: bold; font-size: 2.0em; padding: 10px 0px; display: block; color: #000; text-decoration:none; }
+	.topnav a:hover { width: 100%; background: rgba(255,255,255,0.62); padding: 10px 0px; border: 0px solid #000; color: #000; text-decoration: none; display: block;  }
+	.topnav a.active { width: 100%; background: rgba(0,0,0,0.30); padding: 10px 0px; color: #c9c9bb; text-decoration: none; display: block;  }
+	
+	.topnav ul { padding: 0px; margin: 0px; font-weight: normal; }
+	.topnav li { padding: 0px; margin: 0px; list-style: none; display: block; border: 0px solid #000; font-weight: normal; overflow: hidden; text-align:center; }
+
+
+}
+	
+/* Searchbar*************************************************************************************************************************************/
 
 #search {
 	width: 350px;
@@ -298,14 +428,109 @@ body {
     margin: 5px 0 0 50px;
 }
 
-/* Sidebars & widgets ***************************************************************************************************************/
+/*Searchbar media queries********************************************************************************************************************/
+
+@media screen and (max-width: 960px) {	
+
+#search {
+	width: 98%;
+	height: auto;
+	float: none;
+	margin: 1% auto;
+	padding: 0px;
+	color: #000;
+	border: 1px solid #000; 
+	 }	
+
+.adsearch { float: left; width: 100%; font-size: 1.8em; margin: 5px 0; background-color: #fff; border: 1px solid #000; padding: 2px 0px; text-align:center;}
+a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
+
+#nav form {
+	float: left;
+	margin: 0px;
+	padding: 0 5px;
+	font-size: 1.8em;
+	width: 100%;
+}
+
+#nav input { background: #C2C2C2; border: 1px solid #000; width: 99%; margin: 1% auto; }
+#nav #edit-submit { background-color: #fff; border: 1px solid #000; width: 100%; padding: 1px 0px; margin: 5px 0px; }
+
+}
+
+/*Sidebar********************************************************************************************************************/
+
+#sidebar-left {
+	float: left;
+	width: 30%;
+	margin: 20px 0 20px 0;
+	padding: 0;
+	line-height: 10px;
+		font-size: 95%;
+	}
+
+#sidebar-right {
+	float: right;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	line-height: 10px;
+		font-size: 95%;
+	}
+
+#sidebar-full {
+	float: left;
+	width: 100%;
+	margin: 10px 0px 0px 0px;
+	padding: 0;
+	line-height: 10px;
+		font-size: 95%;
+	}
+
+#sidebar-right ul, #sidebar-left ul { list-style-type: none; }
+
+/*#sidebar-right li, #sidebar-left li  {     
+	margin: 0px 0px 0px 20px;
+    font-weight: normal; }
+*/
+
+
+/*Sidebar media queries********************************************************************************************************************/
+
+@media screen and (max-width: 1382px) {
+		
+}
+
+@media screen and (max-width: 960px) {
+
+#sidebar-right, #sidebar-left {
+	float: left;
+	width: 100%;
+	margin: 5px 0 10px 0;
+	padding: 0;
+	}
+
+}
+
+@media screen and (max-width: 400px) {	
+
+#sidebar-right, #sidebar-left {
+	float: left;
+	width: 100%;
+	margin: 10px 0px 0px 0px;
+	padding: 0;
+	}
+	
+}
+
+/* Widgets ***************************************************************************************************************/
 
 .widget {
 	border: none;
-	padding: 5px;
+	padding: 1%;
 	margin: 0 0 5px 0;
 	background: #fff;
-	width: 100%;
+	width: 98%;
 	min-width: 180px;
 	font-size: 1.1em;
 }
@@ -316,28 +541,30 @@ body {
 
 	.widget .social-icons { width: 70%; }
 	.widget .social-icons li { display: inline; }
-	.widget h2 { width: 100%; display: block; background: #8e816f; color: #fff; margin: 0 0 10px 0; padding: 10px 5px; text-decoration: none; border-bottom: #25211d solid 0px; }
+	.widget h2 { display: block; background: #8e887d; color: #fff; margin: 0 0 10px 0; padding: 10px 5px; text-decoration: none; border-bottom: #25211d solid 0px; }
 	.widget h3 { font-size: 1.2em; margin: 0; }
 	.widget select, .widget input { font-size: 1.4em; }
 	.widget span { font-size: 100%; margin: 0px 0px 10px; }
 	ul.islandora-solr-facet { margin: 0px 0px 0px -40px; padding: 0px; font-weight: bold; }
-
-.item-list ul li {  margin: 0px; padding: 0px 0px 0px 10px; }
+	
+.item-list ul li {  margin: 0px; padding: 0px 0px 0px 10px; display: inline; }
 #block-views-news-archives-by-date-block .item-list ul  {  margin: 0px; padding: 0px 0px 0px 20px; }
 
 .news_hdr4 { border-top: 1px solid #000; }
+
+
+/*Widget media queries********************************************************************************************************************/
 
 /* Footer ****************************************************************************************************************************/
 
 #footer {
 	margin: 0;
 	clear: both;
-	display: block;
 	border: none;
 	padding: 10px 0;
 	min-height: 20px;
-	height: 100%;
-	overflow: auto;
+	width: 100%;
+	overflow: hidden;
 	background: #7d7f69 url(../images/footer_shadow.png) top center no-repeat;
 	color: #000;
 
@@ -362,12 +589,44 @@ body {
 	#footer img { padding: 0; }
 	#footer-col1 a:hover  { border-bottom: 0px dashed #fff; }
 
+/* Footer media queries**********************************************************************************************************************/
+
+@media screen and (max-width: 1382px) {
+	
+	#footer-col1 {
+		float: left;
+		width: 20%;
+		margin: 10px 0 0 1%;
+	}
+	#footer-col2 {
+		float: right;
+		width: 60%;
+		margin: 7px 1% 0 0;
+		font-size: 0.8em;
+	}}
+
+@media screen and (max-width: 400px) {	
+	#footer-col1 {
+		float: left;
+		width: 98%;
+		margin: 10px 1% 0 1%;
+	}
+	#footer-col2 {
+		float: left;
+		width: 98%;
+		margin: 7px 1% 0 1%;
+		font-size: 0.8em;
+	}
+	
+}
+
+
 /* Tables*****************************************************************************************************************************/
 
 table {
 	width: 100%;
 	border: 0px solid #005648;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 
@@ -376,7 +635,7 @@ th, td {
 	border-collapse:collapse;
 }
 
-td { text-align:left; padding:5px; }
+td { text-align:left; padding: 3px 5px; }
 
 th { text-align: center; height:10px; }
 
@@ -399,7 +658,7 @@ table.downloadops {
 
 /* Frontpage image roll over and information rollover code****************************************************************************/
 
-#displaybox { width: 55%; max-width: 725px; float: left; margin: 2% 0 0 1%; }
+#displaybox { width: 100%; max-width: 100%; float: left; margin: 2% 0 0 1%; }
 
 .view {
     overflow: hidden;
@@ -427,7 +686,7 @@ table.downloadops {
     text-align: center;
     position: relative;
     font-size: 1.8em;
-    padding: 8px 0px 5px 0;
+    padding: 10px 0px;
     background: #5e7181;
     margin: 10px 0 0 0;
 	border-bottom: #fff solid 2px;
@@ -456,14 +715,29 @@ table.downloadops {
 	margin: -250px 0 0 0;
 }
 
+/* Frontpage image roll over and information rollover media queries****************************************************************************/
+
+@media screen and (max-width: 1382px) {
+	
+#displaybox { width: 100%; max-width: 100%; float: left; margin: 1% 0 0 0px; }}
+
+@media screen and (max-width: 960px) {
+	
+#displaybox { display: block; width: 100%; max-width: 100%; float: left; margin: 1% 0 0 0px; }}
+
+@media screen and (max-width: 400px) {	
+
+#displaybox { display: none; width: 100%; max-width: 100%; float: left; margin: 1% 0 0 0px; }}
+
 /*Largebox styles************************************************************************************/
 
 .largebox {
-	width: 99%;
+	width: 100%;
 	height: 225px;
     float: left;
     border: 4px solid #5e7181;
 	background: #b2b2a8 url(../images/largebox01.jpg) top center no-repeat;
+	background-size: cover;
 }
 	
 .largebox img {
@@ -479,6 +753,7 @@ table.downloadops {
 .largebox .mask {
     opacity: 0;
     background: url(../images/largebox02.jpg) top center no-repeat;
+	background-size: cover;
     transition: all 0.4s ease-in-out;
 	-webkit-transition-property: all; /* Safari */
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -540,25 +815,50 @@ table.downloadops {
 	border-bottom: none;
 }
 .largebox:hover p {
-    transition-delay: 1.0s;
-	-webkit-transition-delay: 1.0s; /* Safari */
+    transition-delay: 0.1s;
+	-webkit-transition-delay: 0.1s; /* Safari */
 }
 .largebox:hover a.info {
-    transition-delay: 0.2s;
-	-webkit-transition-delay: 0.2s; /* Safari */
+    transition-delay: 0.1s;
+	-webkit-transition-delay: 0.1s; /* Safari */
 }
+
+/*Largebox media queries************************************************************************************/
+@media screen and (max-width: 1382px) {
+.largebox { 
+	  width: 99%;
+	  height:225px;
+	  margin: 1% 0px;
+	  float: left;
+}}
+
+@media screen and (max-width: 960px) {	
+.largebox { 
+	  width: 99%;
+	  height:200px;
+	  margin: 1% 0px;
+	  float: left;
+}}
+
+@media screen and (max-width: 400px) {	
+.largebox { 
+	  width:99%;
+	  height:150px;
+      margin: 1% 0px;
+	  float: left;
+}}
 
 /*Smallbox styles************************************************************************************/
 
 .smallbox {
-	width:47%;
+	width:48%;
 	height:200px;
 	float: left;
     border: 4px solid #406164;
 	background: #b2b2a8 url(../images/smalltestroll_new.jpg) top center no-repeat;
-	
 }
 
+		
 .smallbox img {
     transition: all 0.2s linear;
 	-webkit-transition-property: all; /* Safari */
@@ -630,29 +930,65 @@ table.downloadops {
 	border-bottom: none;
 }
 .smallbox:hover p {
-    transition-delay: 1.0s;
-	-webkit-transition-delay: 1.0s; /* Safari */
+    transition-delay: 0.1s;
+	-webkit-transition-delay: 0.1s; /* Safari */
 }
 .smallbox:hover a.info {
-    transition-delay: 0.2s;
-	-webkit-transition-delay: 0.2s; /* Safari */
+    transition-delay: 0.1s;
+	-webkit-transition-delay: 0.1s; /* Safari */
 }
-
 
 /*Smallbox color classes*/
 
-.blue { border: 4px solid #495864; margin: 2% 1% 1% 0px; float: left; background: #fff url(../images/smallbox01.jpg) top center no-repeat; }
+.blue { border: 4px solid #495864; margin: 2% 1% 1% 0px; float: left; background: #fff url(../images/smallbox01.jpg) top center no-repeat;background-size: cover; }
 	.blue h2 { background: #495864; }
-	.blue .mask { background: url(../images/smallbox01-2.jpg) top center no-repeat; }
-.orange { border: 4px solid #495864; margin: 2% 0px 1% 1%; float: right; background: #fff url(../images/smallbox02.jpg) top center no-repeat; }
+	.blue .mask { background: url(../images/smallbox01-2.jpg) top center no-repeat;background-size: cover; }
+.orange { border: 4px solid #495864; margin: 2% 0px 1% 1%; float: right; background: #fff url(../images/smallbox02.jpg) top center no-repeat; background-size: cover;}
 	.orange h2 { background: #495864; }
-	.orange .mask { background: url(../images/smallbox02-2.jpg) top center no-repeat; }
-.green { border: 4px solid #495864; margin: 1% 1% 2% 0px; float: left; background: #fff url(../images/smallbox03.jpg) top center no-repeat; }
+	.orange .mask { background: url(../images/smallbox02-2.jpg) top center no-repeat;background-size: cover; }
+.green { border: 4px solid #495864; margin: 1% 1% 2% 0px; float: left; background: #fff url(../images/smallbox03.jpg) top center no-repeat;background-size: cover; }
 	.green h2 { background: #495864; }
-	.green .mask { background: url(../images/smallbox03-2.jpg) top center no-repeat; }
-.cyan { border: 4px solid #495864; margin: 1% 0px 2% 1%; float: right; background: #fff url(../images/smallbox04.jpg) top center no-repeat; }
+	.green .mask { background: url(../images/smallbox03-2.jpg) top center no-repeat; background-size: cover;}
+.cyan { border: 4px solid #495864; margin: 1% 0px 2% 1%; float: right; background: #fff url(../images/smallbox04.jpg) top center no-repeat;background-size: cover; }
 	.cyan h2 { background: #495864; }
-	.cyan .mask { background: url(../images/smallbox04-2.jpg) top center no-repeat; }
+	.cyan .mask { background: url(../images/smallbox04-2.jpg) top center no-repeat;background-size: cover; }
+	
+
+/*Smallbox media queries************************************************************************************/
+		
+@media screen and (max-width: 1382px) {
+.smallbox {
+	width:47%;
+	height:200px;
+	float: left;
+    border: 4px solid #406164;
+	
+	
+}}
+
+@media screen and (max-width: 960px) {	
+.smallbox {
+	width:99%;
+	height:180px;
+	float: left;
+    border: 4px solid #406164;
+	
+}
+
+.blue, .orange, .green, .cyan { float: left; margin: 2% 0px 2% 0px; }
+
+}
+
+@media screen and (max-width: 400px) {	
+.smallbox {
+	width:99%;
+	height:150px;
+	float: left;
+    border: 4px solid #406164;
+	
+}}
+
+
 
 /* Islandora styles******************************************************************************************************************/
 
@@ -697,7 +1033,7 @@ table.downloadops {
     font-size: 100%;
 }
 
-@media screen and (max-width: 1382px) {
+
 /*Fix the collection image box, and img*/
 
 .islandora-basic-collection-metadata-image {
@@ -706,10 +1042,11 @@ table.downloadops {
 }
 
 .islandora-basic-collection-metadata-image img {
-    max-width: 100%;
+   /* max-width: 100%;*/
+   width: 100%;
+   height: auto;
+   border: 2px solid #495864;
 	margin: 0 0 0 0;
-}
-
 }
 
 .islandora-metadata {
@@ -719,42 +1056,42 @@ table.downloadops {
 
 /* Restyle islandora advanced search form*/
 	
-	#leftsidebar form { float: left; margin: 0; font-size: 1.0em; }
+	#sidebar-right form, sidebar-left form { margin: 0; font-size: 1.0em; }
 	
-	#leftsidebar label { font-size: 1.2em; }
-	#leftsidebar input { background: #C2C2C2; border: 1px solid #000; }
-	#leftsidebar .edit-submit { background-color: #fff; border: 1px solid #000; }
-	#leftsidebar .form-submit { background-color: #fff; border: 1px solid #000; margin-top: 10px; }
+	#sidebar-right label, sidebar-left label { font-size: 1.2em; margin: 5px 0px; }
+	#sidebar-right input, sidebar-left input { background: #C2C2C2; border: 1px solid #000; }
+	#sidebar-right .edit-submit, sidebar-left .edit-submit { background-color: #fff; border: 1px solid #000; }
+	#sidebar-right .form-submit, sidebar-left .form-submit { background-color: #fff; border: 1px solid #000; margin-top: 10px; }
 
 /* Restyle the gridview and listview links on collection pages*/
 
 /* reset li styles*/
-.islandora-basic-collection-display-switch li {
+.islandora-objects-display-switch li {
     margin: 0;
 	padding: 0;
 }
 
-.islandora-basic-collection-display-switch {
+.islandora-objects-display-switch {
     float: right;
-	width: 50%;
-	margin: 10px 0;
+	width: 100%;
+	margin: 10px 0px 5px 0px;
 	padding: 0;
 	font-size: 1.0em;
 	text-align: right;
 }
 
-.islandora-basic-collection-display-switch a {
+.islandora-objects-display-switch a {
 	background: #fff;
-	padding: 1%;
+	padding: 0px 1%;
 	color: #1DADD9;
 	margin: 0px;
 	text-decoration: none;
 	border: 1px solid #5e7181;
 }
 
-.islandora-basic-collection-display-switch a:hover, .islandora-basic-collection-display-switch a.active {
+.islandora-objects-display-switch a:hover, .islandora-objects-display-switch a.active {
 	background: #DBDBDB;
-	padding: 1%;
+	padding: 0px 1%;
 	color: #106079;
 	margin: 0px;
 	text-decoration: none;
@@ -784,7 +1121,9 @@ table.downloadops {
 
 /* Restyle islandora thumb hover to remove underline	*/
 
-.islandora-basic-collection-thumb a:hover{ border: 0px solid #5e7181; }
+.islandora-object a:hover, .search-result-img-wrapper a:hover { border: 0px solid #5e7181; }
+
+.islandora-object-thumb img { max-width: 100%; height: auto; }
 
 /*Fix front page news block view*/
   #block-views-newsfeed-block .item-list ul {
@@ -793,24 +1132,55 @@ table.downloadops {
   }
 
 /*Add bottom line to islandora search result sidebar facets*/
-.islandora-solr-facet-wrapper { border-bottom: 1px solid #5e7181; margin: 20px 0; padding: 0 10px; }
+.islandora-solr-facet-wrapper { border-bottom: 1px solid #5e7181; margin: 20px 0; padding: 0px 10px 10px 10px; }
   
 /*fix bad formatting islandora search results -  ul list type*/
-#block-islandora-solr-basic-facets ul{ width: 100%; list-style-type: none; float: left; margin: 0; padding: 0; }
+#islandora-solr-basic-facets ul{ width: 100%; list-style-type: none; float: left; margin: 0; padding: 0; }
 
-.islandora-solr-search-result ul { width: 60%; list-style-type: none; float: left; margin: 0; padding: 0;  }
+.islandora-solr-search-result ul { width: 60%; list-style-type: none; float: left; margin: 10px 0 0 10px; padding: 0;  }
+.islandora-solr-search-result li { margin: 0; }
+
+ul.islandora-solr-sort { 	
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+	}
+
+.islandora-solr-sort li a{ 	
+	background: #fff;
+	padding: 1% 5%;
+	color: #1DADD9;
+	text-decoration: none;
+	border: 1px solid #5e7181;
+	display: inline;
+	float: left; 
+	}
+	
+	.islandora-solr-sort li a:hover{ 	
+		background: #DBDBDB;
+	color: #106079;
+	border: 1px solid #5e7181;
+
+	}
+	
+.islandora-solr-sort a:hover { border-bottom: 0px dashed #106079; }
 
 /*fix bad formatting islandora search results - increase collection islandora h3 tag size*/
-#block-islandora-solr-basic-facets h3 { font-size: 0.0em; font-size: 1.8em; }
+#block-islandora-solr-basic-facets h3 { font-size: 0.0em; font-size: 1.5em; margin: 0 0 0 -10px; }
 
 /*fix bad formatting islandora search results - h2 background*/
-#block-islandora-solr-basic-facets h2 { background: #fff; border: 1px solid #5e7181;  }
+#block-islandora-solr-basic-facets h2 { width: 100%; display: block; background: #8e887d; color: #fff; margin: 0 0 10px 0; padding: 10px 5px; text-decoration: none; border-bottom: #25211d solid 0px; }
 
 /*drop count to next line down*/
 .islandora-solr-facet li a { display: block; margin: 5px 0px 0px 0px; border-bottom: 0px dashed #106079;}/*also move li to left*/
 islandora-solr-facet li a:hover { border-bottom: 0px solid #5e7181; }
 
-.islandora-solr-facet li a.plus, .islandora-solr-facet li a.minus { display: inline; }
+.islandora-solr-facet li a.plus { font-size: 0.8em; display: inline; padding: 0px 3px; border: .5px solid #5e7181; }
+
+.islandora-solr-facet li a.minus { font-size: 0.8em; display: inline; padding: 0px 4px; border: .5px solid #5e7181; }
+
+/*fix search result number*/
+#islandora-solr-result-count { display: block; margin: 0;}
 
 /*Add some padding to show more link*/
 a.soft-limit { margin: 5px 0; }
@@ -819,163 +1189,38 @@ a.soft-limit { margin: 5px 0; }
 .subtitle-first {
     margin-bottom: -0.2em;
 }
+
+/*Sidebar form submit button*/
+#leftsidebar #edit-submit--2 { width: 100%; }
  
-/* ________ MEDIA QUERIES ________ */
+/*Fix partners image wrap*/
 
+.field-name-field-image { height: 100%; width: auto; float: left; margin: 20px; }
 
-/*Switched from 1200px to 1382px to fit better on Eds screen :) */
+.solr-field-parent {
+    color: #555;
+    font-size: 100%;
+}
 
+ 
+/*islandora media queries************************************************************************************/
+		
 @media screen and (max-width: 1382px) {
 
-#two-col-left-main #front-main-content {
-	width: 70%;
-	margin: 30px 1% 0px 1%;
-	float: left;
-	font-size: 100%;
-	}
-
-#rightsidebarfront {
-    float: right;
-    width: 24%;
-    margin: -180px 3% 20px 0px;
-    padding: 0px;
-}
-	
-#displaybox { width: 70%; max-width: 100%; float: left; margin: 1% 0 0 1%; }
-	
-.largebox { 
-	  width: 61%;
-	  height:150px;
-      margin: 1%;
-	  float: left;
 }
 
+@media screen and (max-width: 960px) {	
 
-.smallbox { 
-	  width:29%;
-	  height:150px;
-	  margin: 1%;
-	  float: left;
+#islandora-solr-advanced-search-form { width: 100%; }
+
+.islandora-objects-grid dl { width: 40%; height: auto; }
 
 }
 
-	#footer-col1 {
-		float: left;
-		width: 20%;
-		margin: 10px 0 0 1%;
-	}
-	#footer-col2 {
-		float: right;
-		width: 60%;
-		margin: 7px 1% 0 0;
-		font-size: 0.8em;
-	}
-	
-}
+@media screen and (max-width: 400px) {	
 
-@media screen and (max-width: 960px) {
+.islandora-objects-grid dl { width: 100%; height: auto; }
 
-#two-col-left-main #front-main-content {
-	width: 96%;
-	margin: 30px 0px 0px 2%;
-	float: left;
-	font-size: 100%;
-	}
-
-#rightsidebarfront {
-    float: left;
-    width: 96%;
-    margin: 0px 2% 0 1%;
-    padding: 0px;
-}
-	
-#displaybox { display: block; width: 98%; max-width: 100%; float: left; margin: 1% 0 0 2%; }	
-	
-	
-	
-}
-
-@media screen and (max-width: 400px) {
-
-/*Navigationbar	*/
-.topnav {
-	margin: 2px 0 0 0;
-	padding: 0;
-	width: 100%;
-    font-size: 1.6em;
-}
-	
-/* Searchbar Style */
-
-#search {
-	width: 98%;
-	height: 40px;
-	float: right;
-	margin: 20px 0;
-	padding: 0 10px;
-	color: #000;
-	 }	
-
-.adsearch { float: right; font-size: 1.8em; margin: 9px 0 0 0; background-color: #fff; border: 1px solid #000; padding: 2px 3px;}
-a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
-
-/*Searchbar Style*/
-#nav form {
-	float: left;
-	margin: 10px auto;
-	padding: 0 5px;
-	font-size: 1.8em;
-	width: 100%;
-}
-
-#nav input { background: #C2C2C2; border: 1px solid #000; width: 80%; }
-#nav #edit-submit { background-color: #fff; border: 1px solid #000; width: 90px; padding: 1px 2px;}
-
-#displaybox { display: none; width: 100%; max-width: 725px; float: left; margin: 1% 0 0 1%; }
-
-.largebox { 
-	  width:100%;
-	  height:150px;
-      margin: 1% 0;
-	  float: left;
-}
-
-
-.smallbox { 
-	  width:100%;
-	  height:150px;
-	  margin: 1% 0;
-	  float: left;
-
-}
-
-#two-col-left-main #front-main-content {
-	width: 99%;
-	margin: 30px 1% 0px 1%;
-	float: left;
-	font-size: 100%;
-	}
-
-#rightsidebarfront {
-    float: right;
-    width: 99%;
-    margin: 0px 1% 20px 1%;
-    padding: 0px;
-}
-
-
-	#footer-col1 {
-		float: left;
-		width: 99%;
-		margin: 10px 1% 0 1%;
-	}
-	#footer-col2 {
-		float: right;
-		width: 99%;
-		margin: 7px 1% 0 1%;
-		font-size: 0.8em;
-	}
-	
 }
 
 

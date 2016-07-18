@@ -1,30 +1,32 @@
 <div id="page-landing">
 <div id="header">
 
-<?php include("upitthead.php"); ?><!--callpitthead-->
-  
+<div id="pittbar-wrapper"><div id="pittbar-content">
+		<?php if ($page['pittbar']): ?>
+  		<?php print render($page['pittbar']); ?>
+		<?php endif; ?> <!-- endpittbarcall -->
+</div><!--closepittbarcontent-->
+</div><!--closepittbarwrapper-->
+
   <div class="banner">
- 
+      
+	  <?php print render($page['banner']); ?><!-- print banner region -->
+      
 	  <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Historic Pittsburgh'); ?>" rel="home" id="logo">
         <img class="logo" src="<?php print $logo; ?>" alt="<?php print t('link to Historic Pittsburgh homepage'); ?>" />
       </a>
-    <?php endif; ?>
-    
-    <!-- print banner region -->
-        <?php print render($page['banner']); ?>
-        
+      <?php endif; ?>
+   
     </div><!-- closebanner ------------------------------------------------->
 
 <div id="nav">
     
 	  	  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('topnav')),)); ?>
       
-      
-      
       <div id="search">
 	  
-      <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a>
+      <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" alt="link to advanced search page" target="_self">Advanced Search</a>
 	  
 	  <?php print render($page['search']); ?>
       
@@ -32,11 +34,9 @@
     
   </div><!-- closenav ------------------------------------------------------>
 
-</div><!--closeheader------------------------------------------------------->   
-  
+</div><!--closesearchheader-------------------------------------------------------> 
+	
 	<?php print $messages; ?>
-
-    <div id="two-col-left-main"> 
   
 <!--Admin Menu Items -->
  <?php if ($tabs): ?>
@@ -48,24 +48,22 @@
   </ul>
   <?php endif; ?>
 <!--Close Admin Menu Items  -->
+
+<div id="content-wrapper"> 
   
-   <div id="leftsidebar">
-  	<?php if ($page['sidebar']): ?>
-    <div class="widget">
-      <?php print render($page['sidebar']); ?> </div>
-    <?php endif; ?><!-- /end widget --> 
-  </div><!-- /end sidebar -->
-  
-  <div id="main-content"> <?php print render($title_prefix); ?>
+  <div id="content-full"> 
+  <?php print render($title_prefix); ?>
     <?php if ($title): ?>
     <h1><?php print $title; ?></h1>
     <?php endif; ?>
-    <div class="content-wrapper"> <?php print render($page['content']); ?> </div>
     
-  </div><!-- /end main-content -->
- 
-  <br class="clearfloat"/> 
-  </div><!-- closetwo-col-right-main -->
+    <?php print render($page['content']); ?>
+  </div><!-- close content-right -->
+    
+
+ <br class="clearfloat"/> 
+  </div><!-- closecontent-wrapper -->
+   
  </div><!-- /end page-landing -->	
   <div id="footer">
 

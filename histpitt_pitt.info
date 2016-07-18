@@ -13,6 +13,7 @@ stylesheets[all][] 		= styles/histpitt_pitt.css
 ; REGIONS
 ;regions[featured] = Featured
 
+regions[pittbar] = Pittbar
 regions[banner] = Banner
 regions[nav] = Navigation
 regions[search] = Search

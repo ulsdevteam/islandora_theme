@@ -1,7 +1,6 @@
 <?php print $messages; ?>
 
-<div id="two-col-left-main">
-
+<div id="content-wrapper">
   <?php if ($tabs): ?>
   <div class="tabs"><?php print render($tabs); ?></div>
   <?php endif; ?>
@@ -11,16 +10,30 @@
   </ul>
   <?php endif; ?>
 
-  <div id="main-content">
+  <div id="sidebar-right"> 
+  <?php print render($page['sidebar']); ?>
+  <?php if ($collection_metadata): ?>
+  <div class="islandora-basic-collection-metadata">
+    <!--<p>using the islandora metadata framework</p>-->
+    <?php print $collection_metadata; ?> </div>
+  <?php endif; ?>
+ 
+  </div><!-- /end rightsidebar -->
+
+  <div id="content-left">
 	<?php print render($title_prefix); ?>
 	<?php if ($collection_img): ?>
   <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
   <?php endif; ?>
 
-  <?php if ($collection_desc): ?>
-  <!--<p>using the desc datastream</p>-->
-  <div class="islandora-basic-collection-metadata-desc"> <?php print $collection_desc; ?> </div>
-  <?php endif; ?>
+  <?php
+        $block = block_load('islandora_datastream_blocks', 'idb-DESC');
+        $renderable_block = _block_get_renderable_array(_block_render_blocks(array($block)));
+        print $renderable_block['islandora_datastream_blocks_idb-DESC']['#markup'];
+  ?>
+  
+  </div><!-- /end main-content -->
+  
   <div class="islandora-basic-collection clearfix">
     <span class="islandora-objects-display-switch">
     <?php
@@ -36,17 +49,5 @@
     <?php print $pager; ?>
   </div><!-- /end islandora-basic-collection-metadata-desc -->
 
-</div><!-- /end main-content -->
 
-  <div id="sidebar">
-  <?php if ($collection_metadata): ?>
-  <div class="islandora-basic-collection-metadata">
-    <!--<p>using the islandora metadata framework</p>-->
-    <?php print $collection_metadata; ?> </div>
-  <?php endif; ?>
-		<?php if ($page['sidebar']): ?>
-    <div class="widget"> <?php print render($page['sidebar']); ?> </div>
-    <!-- /end widget -->
-    <?php endif; ?>
-  </div><!-- /end sidebar -->
-</div>
+
