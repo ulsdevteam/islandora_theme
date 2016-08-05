@@ -1,5 +1,5 @@
 <div id="topbanner"><?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('class' => array('topnav')),)); ?>
-<div id="pitt"><a href="http://pitt.edu"><img src="http://documenting.library.pitt.edu/sites/documenting.library.pitt.edu/themes/documenting_pitt/images/pitt-logo-whitebkg.gif"></a>
+<div id="pitt"><a href="http://pitt.edu"><img src="<?php print base_path() . path_to_theme(); ?>/images/pitt-logo-whitebkg.gif" /></a>
 
 </div><!-- /end pitt -->
 </div><!-- /end topbanner -->

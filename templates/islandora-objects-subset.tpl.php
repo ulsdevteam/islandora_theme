@@ -15,7 +15,7 @@
 
   <div id="main-content">
   
-    <div id="sidebar">
+    <div id="metadata-sidebar">
   <?php if ($collection_metadata): ?>
   <div class="islandora-basic-collection-metadata">
     <!--<p>using the islandora metadata framework</p>-->

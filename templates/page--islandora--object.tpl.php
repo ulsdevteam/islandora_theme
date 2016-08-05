@@ -1,11 +1,11 @@
 <div id="topbanner"><?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('class' => array('topnav')),)); ?>
-<div id="pitt"><a href="http://pitt.edu"><img src="http://documenting.library.pitt.edu/sites/documenting.library.pitt.edu/themes/documenting_pitt/images/pitt-logo-whitebkg.gif"></a>
+<div id="pitt"><a href="http://pitt.edu"><img src="<?php print base_path() . path_to_theme(); ?>/images/pitt-logo-whitebkg.gif" /></a>
 
 </div><!-- /end pitt -->
 </div><!-- /end topbanner -->
 <div id="bannerwrap">
 <div class="banner">
-		  <img src="/sites/documenting.library.pitt.edu/themes/documenting_pitt/images/DocuPitt_Header_small.jpg" style="margin:0px auto;">
+		<a href="http://documenting.library.pitt.edu/"> <img src="<?php print base_path() . path_to_theme(); ?>/images/DocuPitt_Header_small.jpg" style="margin:0px auto;"> </a>
      
     <!-- <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -30,7 +30,19 @@
     <?php print $messages; ?>
 
 <div id="two-col-left-main">
- 		<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+	<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+
+    <?php if ($solr_search_links && (count($solr_search_links)>0)): ?>
+    <div class="searchnav">
+      <ul class="searchnav-links">
+      <?php foreach ($solr_search_links as $solr_search_link) : ?>
+        <li><?php print $solr_search_link; ?></li>
+      <?php endforeach; ?>
+      </ul>
+      <br class="clearfloat">
+    </div>
+    <?php endif; ?>
+
   	<?php print render($title_prefix); ?>
     <?php if ($title): ?><h1 class="item-title"><?php print $title; ?></h1><?php endif; ?>
     <?php print render($title_suffix); ?>
@@ -39,6 +51,11 @@
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
 
+  <?php if ($page['sidebar']): ?>
+  <div id="sidebar">
+    <?php print render($page['sidebar']); ?>
+  </div>
+  <?php endif; ?>
 
    <?php print render($page['content']); ?>
 </div> <!-- end two-col-left-main -->
