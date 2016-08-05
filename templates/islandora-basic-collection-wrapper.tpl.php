@@ -13,6 +13,19 @@
 
   <div id="main-content">
 	<?php print render($title_prefix); ?>
+
+  <div id="metadata-sidebar">
+  <?php if ($collection_metadata): ?>
+  <div class="islandora-basic-collection-metadata">
+    <!--<p>using the islandora metadata framework</p>-->
+    <?php print $collection_metadata; ?> </div>
+  <?php endif; ?>
+                <?php if ($page['sidebar']): ?>
+    <div class="widget"> <?php print render($page['sidebar']); ?> </div>
+    <!-- /end widget -->
+    <?php endif; ?>
+  </div><!-- /end sidebar -->
+
 	<?php if ($collection_img): ?>
   <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
   <?php endif; ?>
@@ -29,6 +42,9 @@
       <?php endforeach ?>
     </ul>
     </span>
+    <?php if ($collection_search) {
+      print render($collection_search);
+    } ?>
     <?php print $collection_pager; ?>
     <div>Total objects: <?php print $total_count; ?></div>
     <?php print $collection_content; ?>
@@ -37,16 +53,3 @@
 
 </div><!-- /end main-content -->
 </div><!-- /end two col left main -->
-  <div id="sidebar">
-  <?php if ($collection_metadata): ?>
-  <div class="islandora-basic-collection-metadata">
-    <!--<p>using the islandora metadata framework</p>-->
-    <?php print $collection_metadata; ?> </div>
-  <?php endif; ?>
-		<?php if ($page['sidebar']): ?>
-    <div class="widget"> <?php print render($page['sidebar']); ?> </div>
-    <!-- /end widget -->
-    <?php endif; ?>
-  </div><!-- /end sidebar -->
-
-

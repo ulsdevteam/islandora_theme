@@ -116,10 +116,18 @@ max-width: 980px;
 	margin-left: 15px;
 }	
 
-#two-col-left-main #sidebar {
+#two-col-left-main #metadata-sidebar {
 	float: right;
 	width: 25%;
 	margin: 20px 0px;
+}
+
+#metadata-sidebar .fieldset-wrapper {
+	margin-left: 0 !important;
+}
+
+#metadata-sidebar ul {
+	padding: 0;
 }
 
 #two-col-left-main{
@@ -130,8 +138,13 @@ min-height:500px
 }
 #two-col-left-main #main-content{
 	max-width:980px; 
-	width:auto;}
+	width:100%;}
 
+.region-sidebar {
+  width: 25%;
+  float:left;
+  margin-right:4em;
+} 
 	
 .collection-wrapper {
 width: 96%;
@@ -197,7 +210,7 @@ _height: 180px;
 
 .islandora-solr-content {
 	margin:0px auto;
-	width:65%;
+	width:68%;
 	float:left;
 margin-top:-10em;
 }
@@ -222,11 +235,24 @@ margin-top:-10em;
 
 .span-like-link {
 	color: #405a71;
-cursor: pointer;
-text-decoration: underline;
-font: 100% Arial, Helvetica, sans-serif;
-float:none;
+	font: 100% Arial, Helvetica, sans-serif;
+}
 
+.searchnav {
+	text-align: center;
+	height: 0.8em;
+}
+.searchnav-links {
+	list-style: none;
+	display: inline-block;
+}
+.searchnav-links li {
+	float: left;
+	margin: 0 10px;
+}
+
+.views-field.views-field-mods-name-depositor-namePart-ms {
+	padding-top:15px;
 }
 
 /* -----Exhibits ------*/
@@ -305,6 +331,9 @@ padding-left:.5em;
 	height: auto;
 	padding-bottom: 0em;
 	padding-top: 5px;
+}
+.banner img{
+	max-width:55%;
 }
 
 /*home search Block*/
@@ -528,7 +557,7 @@ padding:10px;
 background: #CBE0F5;
 box-shadow: 0px 0px 2px 1px #CCC;
 border: 7px solid #FFF;
-margin-top:20px;
+margin-top:85px;
 margin-right:50px;
 }
 
@@ -628,7 +657,7 @@ margin-right:50px;
 	background: #CBE0F5;
 	box-shadow: 0px 0px 2px 1px #CCC;
 	border: 7px solid #FFF;
-	width:25%;
+	width:25% 
 	float:left;
 	clear:both;
 
@@ -728,7 +757,10 @@ padding: 10px 10px 20px;
 	width:100%;
 }
 .islandora-solr-search-result a{
-	font-size:1.3em;
+	font-size:1em;
+}
+.islandora-solr-search-result ul{
+	padding:0px;
 }
 .search-result-wrapper {
   	height: 250px;
@@ -738,6 +770,10 @@ padding: 10px 10px 20px;
 	padding: 0;
 	margin-right: 1em;
 }
+
+.solr-metafields{
+	width:56%;
+	float:left;}
 
 /* ________ MISCELLANY ________ */
 
