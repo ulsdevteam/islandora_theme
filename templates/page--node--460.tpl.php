@@ -39,14 +39,17 @@
 	<?php print $messages; ?>
 
 <div id="content-wrapper">
-      
-<div id="sidebar-full">
-  	<?php if ($page['sidebar']): ?>
-    <div class="widget">
-      <?php print render($page['sidebar']); ?> </div>
-    <?php endif; ?><!-- /end widget --> 
-  </div><!-- /end rightsidebar -->
     
+    <div id="content-full">
+	
+	<?php print render($title_prefix); ?>
+    <?php if ($title): ?>
+    <h1><?php print $title; ?></h1>
+    <?php endif; ?>
+    
+	<?php print render($page['content']); ?>
+
+  </div><!-- /close content ------------------------------------------------------>
 
  <br class="clearfloat"/>
 </div><!-- closecontent-wrapper ----------------------------------------------->

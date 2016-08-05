@@ -5,12 +5,12 @@
 		<?php if ($page['pittbar']): ?>
   		<?php print render($page['pittbar']); ?>
 		<?php endif; ?> <!-- endpittbarcall -->
-</div><!--closepittbarcontent-->
-</div><!--closepittbarwrapper-->
+</div><!-- closepittbarcontent -->
+</div><!-- closepittbarwrapper -->
 
   <div class="banner">
       
-	  <?php print render($page['banner']); ?><!-- print banner region -->
+	  <?php print render($page['banner']); ?><!-- printbanner region -->
       
 	  <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Historic Pittsburgh'); ?>" rel="home" id="logo">
@@ -18,7 +18,7 @@
       </a>
       <?php endif; ?>
    
-    </div><!-- closebanner ------------------------------------------------->
+    </div> <!-- closebanner -->
 
 <div id="nav">
     
@@ -26,15 +26,15 @@
       
       <div id="search">
 	  
-      <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" alt="link to advanced search page" target="_self">Advanced Search</a>
+      <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a>
 	  
 	  <?php print render($page['search']); ?>
       
-      </div><!-- /end search -->
+      </div><!-- closesearch -->
     
-  </div><!-- closenav ------------------------------------------------------>
+  </div><!-- closenav -->
 
-</div><!--closeheader------------------------------------------------------->   
+</div><!-- closeheader -->
 
 	<?php print $messages; ?>
 
@@ -44,29 +44,30 @@
 	
 	<?php print render($page['content']); ?>
 
-  </div><!-- /close content ------------------------------------------------------>
+
+  </div> <!--close content-->
 
     <div id="sidebar-right">
   	<?php if ($page['sidebar']): ?>
     <div class="widget">
       <?php print render($page['sidebar']); ?> </div>
-    <?php endif; ?><!-- /end widget --> 
-  </div><!-- /end rightsidebar -->
+    <?php endif; ?><!-- closewidget --> 
+  </div><!-- closerightsidebar -->
 
 
  <br class="clearfloat"/> 
 
-</div><!-- closecontent-wrapper ----------------------------------------------->
+</div> <!--closecontent-wrapper -->
 
-</div><!-- /end page-landing -->	
+</div><!--closepagelanding-->
   
   <div id="footer">
 
   	<div id="footer-col1">
   		<?php print render($page['footer-col1']); ?>
-    </div><!-- /end footer column 1 -->
+    </div><!--closefootercol2-->
     <div id="footer-col2">
   		<?php print render($page['footer-col2']); ?>
-    </div><!-- /end footer column 2 -->
+    </div><!--closefootercol1-->
 	
-  </div><!-- closefooter --------------------------------------------------------->
+  </div><!--closefooter-->

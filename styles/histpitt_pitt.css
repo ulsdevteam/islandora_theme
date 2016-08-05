@@ -7,7 +7,7 @@ University Library System | University of Pittsburgh
 */
 
 /*Reset Typography*/
-@import url("../css/normalize.css");
+@import url("../styles/normalize.css");
 
 /* GLOBAL Typography *********************************************************************************************************************/
 
@@ -23,7 +23,7 @@ a:hover { color: #106079; border-bottom: 1px dashed #106079; }
 a:visited { color: #106079; border-bottom: 1px dashed #106079; }
 
 /* Headings */
-h1 { font-size: 2.5em; margin: 0 0 20px 0; padding: 0; }
+h1 { font-size: 2.8em; margin: 0 0 20px 0; padding: 0; }
 h2 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
 h3 { font-size: 1.6em; }
 h4 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
@@ -67,7 +67,7 @@ body {
 
 /* Content **************************************************************************************************************************/
 
-#content-wrapper, #islandora-object-full { 
+#content-wrapper { 
 	width: 98%;
 	background: #fff;  
 	margin: 0 auto;
@@ -75,7 +75,14 @@ body {
 	max-width: 1280px;
 }
 
-#content-left {
+#islandora-object-full, #islandora-content-wrapper { 
+	width: 100%;
+	background: #fff;  
+	margin: 0 auto;
+	padding: 0px;
+}
+
+#content-left, #islandora-content-left {
 	width: 67%;
 	margin: 0 auto;
 	float: left;
@@ -109,7 +116,7 @@ body {
 
 @media screen and (max-width: 960px) {
 
-#content-left, #islandora-object-main {
+#content-left, #islandora-object-main, #islandora-content-wrapper, #islandora-content-left  {
 	width: 100%;
 	margin: 0 auto;
 	float: left;
@@ -164,9 +171,10 @@ body {
 
 .banner img {
 	display: block;
-	max-width: 320px;
+	max-width: 350px;
 	height: auto;
-	padding: 10px 0 0 20px;
+	padding: 0 0 0 20px;
+	margin-top: -20px;
 	float: left;
 	}
 	
@@ -176,6 +184,7 @@ body {
 		height: 80px; 
 		padding: 0px;
 		float: left;
+		margin-top: -20px;
 		}
 
 	.banner ul { float: left; }
@@ -259,14 +268,13 @@ body {
 #pittbar-wrapper {
 	width:100%;
 	height: 40px;
-	background: rgba(0,0,0,0.30);
 	margin: 0px auto;
 	overflow:hidden;
 	}
 
 #pittbar-content {
 	width: 100%;
-	max-width: 1300px;
+	max-width: 1280px;
 	margin: 0 auto;
 	}
 
@@ -407,7 +415,7 @@ body {
 /* Searchbar*************************************************************************************************************************************/
 
 #search {
-	width: 350px;
+	width: 450px;
 	height: 40px;
 	float: right;
 	margin: -22px 0 0 0;
@@ -416,8 +424,8 @@ body {
 	
 #nav form { float: left; margin: 0; font-size: 1.4em; }
 
-#nav input { background: #C2C2C2; border: 1px solid #000; }
-#nav #edit-submit { background-color: #fff; border: 1px solid #000; }
+#nav input { background: #C2C2C2; border: 1px solid #000;  width: 240px; }
+#nav #edit-submit { background-color: #fff; border: 1px solid #000; width: 60px; }
 
 .adsearch { float: right; font-size: 1.4em; margin: 3px 0 0 0; }
 	a.adsearch { color: #000; text-decoration: none; }
@@ -478,6 +486,41 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 		font-size: 95%;
 	}
 
+#sidebar-meta, #collection-metadata-block {
+	float: right;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	font-size: 95%;
+	line-height: normal;
+	}
+
+#islandora-sidebar-meta {
+	float: right;
+	width: 55%;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	line-height: normal;
+	}
+
+		.islandora-metadata { margin-bottom: 3em; font-size: 100%;}
+		
+		#islandora-collection-thumb { width: 40%; float: left; }
+		#islandora-collection-thumb img { width: 100%; height: auto; }
+		
+		#islandora-collection-thumb a:hover { border-bottom: 0px dashed #106079; }
+
+#sidebar-widget {
+	float: right;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	font-size: 95%;
+	line-height: normal;
+	}
+
+
 #sidebar-full {
 	float: left;
 	width: 100%;
@@ -487,12 +530,10 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 		font-size: 95%;
 	}
 
-#sidebar-right ul, #sidebar-left ul { list-style-type: none; }
+#sidebar-right ul, #sidebar-left ul { list-style-type: none; margin: 5px 0px 5px 5px}
 
-/*#sidebar-right li, #sidebar-left li  {     
-	margin: 0px 0px 0px 20px;
-    font-weight: normal; }
-*/
+#sidebar-right ul li, #sidebar-left ul li { list-style-type: none; margin: 5px 0px 10px 0px}
+
 
 
 /*Sidebar media queries********************************************************************************************************************/
@@ -503,7 +544,7 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 
 @media screen and (max-width: 960px) {
 
-#sidebar-right, #sidebar-left {
+#sidebar-right, #sidebar-left, #sidebar-meta, #islandora-sidebar-meta {
 	float: left;
 	width: 100%;
 	margin: 5px 0 10px 0;
@@ -514,7 +555,7 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 
 @media screen and (max-width: 400px) {	
 
-#sidebar-right, #sidebar-left {
+#sidebar-right, #sidebar-left, #sidebar-meta, #islandora-sidebar-meta {
 	float: left;
 	width: 100%;
 	margin: 10px 0px 0px 0px;
@@ -533,7 +574,24 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 	width: 98%;
 	min-width: 180px;
 	font-size: 1.1em;
+	float: right;
+	}
+
+#widget {
+	float: right;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	font-size: 95%;
+	line-height: normal;
+
 }
+/*
+.widget ul { list-style-type: none; margin: 5px 0px 5px 5px}
+
+.widget ul li { list-style-type: none; margin: 5px 0px 10px 0px}*/
+
+
 
 .widget .content { margin: 13px; }
 
@@ -548,9 +606,28 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 	ul.islandora-solr-facet { margin: 0px 0px 0px -40px; padding: 0px; font-weight: bold; }
 	
 .item-list ul li {  margin: 0px; padding: 0px 0px 0px 10px; display: inline; }
-#block-views-news-archives-by-date-block .item-list ul  {  margin: 0px; padding: 0px 0px 0px 20px; }
+
+#block-views-news-archives-by-date-block .item-list ul  {  margin: 0px; padding: 0px; }
+
+#block-views-newsfeed-block .item-list ul {
+    margin: 0px 0px 0px 20px;
+    padding: 0px;
+}
 
 .news_hdr4 { border-top: 1px solid #000; }
+
+.searchnav {
+	text-align: center;
+       /* height: 0.8em;*/
+}
+.searchnav-links {
+	list-style: none;
+	display: inline-block;
+}
+.searchnav-links li {
+	float: left;
+	margin: 0 10px;
+}
 
 
 /*Widget media queries********************************************************************************************************************/
@@ -561,7 +638,7 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 	margin: 0;
 	clear: both;
 	border: none;
-	padding: 10px 0;
+	padding: 30px 0px 20px 0px;
 	min-height: 20px;
 	width: 100%;
 	overflow: hidden;
@@ -569,56 +646,31 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 	color: #000;
 
 }
-	#footer a { color: #fff; }
-	#footer a:hover { border-bottom: 1px dashed #fff; }
+	#footer a, #footer a:visited  { border-bottom: 1px dashed #000; color: #000; }
+	#footer a:hover { border-bottom: 0px solid #000; }
 
 	#footer-col1 {
 		float: left;
-		width: 20%;
-		margin: 10px 0 0 5%;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 0.9em;
+		color: #000;
 	}
 	#footer-col2 {
 		float: right;
 		width: 60%;
 		margin: 7px 5% 0 0;
 		font-size: 0.8em;
+		display: none;
 	}
 		#footer-col2 p {line-height: 20px;}
 		#footer-col2 ul { margin-top: -1em; }
 
 	#footer img { padding: 0; }
-	#footer-col1 a:hover  { border-bottom: 0px dashed #fff; }
 
 /* Footer media queries**********************************************************************************************************************/
 
-@media screen and (max-width: 1382px) {
-	
-	#footer-col1 {
-		float: left;
-		width: 20%;
-		margin: 10px 0 0 1%;
-	}
-	#footer-col2 {
-		float: right;
-		width: 60%;
-		margin: 7px 1% 0 0;
-		font-size: 0.8em;
-	}}
-
-@media screen and (max-width: 400px) {	
-	#footer-col1 {
-		float: left;
-		width: 98%;
-		margin: 10px 1% 0 1%;
-	}
-	#footer-col2 {
-		float: left;
-		width: 98%;
-		margin: 7px 1% 0 1%;
-		font-size: 0.8em;
-	}
-	
-}
 
 
 /* Tables*****************************************************************************************************************************/
@@ -851,8 +903,8 @@ table.downloadops {
 /*Smallbox styles************************************************************************************/
 
 .smallbox {
-	width:48%;
-	height:200px;
+	width:47%;
+	height:170px;
 	float: left;
     border: 4px solid #406164;
 	background: #b2b2a8 url(../images/smalltestroll_new.jpg) top center no-repeat;
@@ -996,8 +1048,8 @@ table.downloadops {
 /*Fix collections wrappers and container*/
 
 .collection-wrapper {
-	width: 96%;
-	padding: 10px;
+	width: 97%;
+	padding: 20px 10px 10px 10px;
 	min-height: 170px;
 	background-color: #fff;
 	box-shadow: 0px 0px 0px 0px #CCC;
@@ -1008,12 +1060,19 @@ table.downloadops {
 .collection-wrapper ul li { width: 100%; margin: 5px 0px 10px 30px; }
 
 /*Fix some random ul float? why?*/
-.collection-wrapper ul { float: none; margin: 30px 0 10px 20px; padding: 0; font-weight: bold; }
+
+.collection-wrapper ul {
+     float: left; 
+    width: 100%;
+    margin: 30px 0 10px 20px;
+    padding: 0;
+    font-weight: bold;
+}
 
 /* Change size of collections search results box*/
 .collection-wrapper H3 a { font-size: 1.0em; font-weight: normal; border-bottom: #25211d solid 0px; }
 
-.collection-wrapper img { float: left; margin: 10px; height: 150px; width: auto; }
+.collection-wrapper img { float: left; margin: 0px 20px 10px 10px; height: 160px; width: auto; }
 
 /*Fix the collection image box, and img*/
 
@@ -1024,8 +1083,37 @@ table.downloadops {
 
 .islandora-basic-collection-metadata-image img {
     max-width: 100%;
-	margin: 0 0 0 2%;
+	margin: 0;
 }
+
+.islandora-basic-collection #sidebar {
+	width: 290px !important;
+}
+
+.islandora-solr-content .islandora-solr-search-results {
+	width: 840px;
+}
+
+.item-title {
+	font-size: 3.0em;
+    margin: 0 0 20px 0px;
+    padding: 0;
+	line-height: 35px; 
+}
+
+.islandora-basic-collection-desc {
+	width: 100%;
+	float: left;
+	margin: -30px 0px 20px 0px;
+	padding: 0px;
+}
+
+/*Fix front page news block view*/
+  div#sidebar-meta .item-list ul {
+	  margin: 0px;
+	  padding: 0px;
+  }
+
 
 /*Fix devel bug*/
 
@@ -1038,7 +1126,7 @@ table.downloadops {
 
 .islandora-basic-collection-metadata-image {
 	width: 100%;
-	margin: 5% 0;
+	margin: 0px 0px 5% 0px;
 }
 
 .islandora-basic-collection-metadata-image img {
@@ -1047,11 +1135,6 @@ table.downloadops {
    height: auto;
    border: 2px solid #495864;
 	margin: 0 0 0 0;
-}
-
-.islandora-metadata {
-	margin: 0;
-	font-size: 100%;
 }
 
 /* Restyle islandora advanced search form*/
@@ -1123,12 +1206,12 @@ table.downloadops {
 
 .islandora-object a:hover, .search-result-img-wrapper a:hover { border: 0px solid #5e7181; }
 
-.islandora-object-thumb img { max-width: 100%; height: auto; }
+.islandora-object-thumb img { width: 100%; height: auto; }
 
 /*Fix front page news block view*/
   #block-views-newsfeed-block .item-list ul {
-	  margin: 0px 0px 0px 20px;
-	  padding: 0px;
+	  margin: 0px;
+	  padding: 0px 0px 0px 5px;
   }
 
 /*Add bottom line to islandora search result sidebar facets*/
@@ -1169,7 +1252,16 @@ ul.islandora-solr-sort {
 #block-islandora-solr-basic-facets h3 { font-size: 0.0em; font-size: 1.5em; margin: 0 0 0 -10px; }
 
 /*fix bad formatting islandora search results - h2 background*/
-#block-islandora-solr-basic-facets h2 { width: 100%; display: block; background: #8e887d; color: #fff; margin: 0 0 10px 0; padding: 10px 5px; text-decoration: none; border-bottom: #25211d solid 0px; }
+#block-islandora-solr-basic-facets h2, #block-islandora-solr-sort h2 {
+	width: 100%;
+	display: block;
+	background: #8e887d;
+	color: #fff;
+	margin: 0 0 10px 0;
+	padding: 10px 5px;
+	text-decoration: none;
+	border-bottom: #25211d solid 0px; 
+}
 
 /*drop count to next line down*/
 .islandora-solr-facet li a { display: block; margin: 5px 0px 0px 0px; border-bottom: 0px dashed #106079;}/*also move li to left*/
@@ -1202,6 +1294,28 @@ a.soft-limit { margin: 5px 0; }
     font-size: 100%;
 }
 
+/*Add margin to dipositor line in the collections view*/
+
+.views-field.views-field-mods-name-depositor-namePart-ms {
+    margin: 10px 0 0 0;
+}
+
+/*Fix random css width change added to solr*/
+ .islandora-solr-search-result {
+    border: 1px solid #cad6d9;
+    padding: .4em;
+    width: 100%;
+}
+ 
+/* Test*/
+
+
+.ul-no-margin {
+    margin-left: 10px;
+}
+ 
+ 
+
  
 /*islandora media queries************************************************************************************/
 		
@@ -1222,5 +1336,3 @@ a.soft-limit { margin: 5px 0; }
 .islandora-objects-grid dl { width: 100%; height: auto; }
 
 }
-
-

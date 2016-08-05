@@ -4,9 +4,9 @@
 <div id="pittbar-wrapper"><div id="pittbar-content">
 		<?php if ($page['pittbar']): ?>
   		<?php print render($page['pittbar']); ?>
-		<?php endif; ?> <!-- endpittbarcall -->
-</div><!--closepittbarcontent-->
-</div><!--closepittbarwrapper-->
+		<?php endif; ?> <!-- close pittbar region -->
+</div><!-- close pittbarcontent -->
+</div><!-- close pittbarwrapper -->
 
   <div class="banner">
       
@@ -18,7 +18,7 @@
       </a>
       <?php endif; ?>
    
-    </div><!-- closebanner ------------------------------------------------->
+    </div><!-- closebanner -->
 
 <div id="nav">
     
@@ -26,15 +26,15 @@
       
       <div id="search">
 	  
-      <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" alt="link to advanced search page" target="_self">Advanced Search</a>
+      <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a>
 	  
 	  <?php print render($page['search']); ?>
       
-      </div><!-- /end search -->
+      </div><!-- close search -->
     
-  </div><!-- closenav ------------------------------------------------------>
+  </div><!-- close nav -->
 
-</div><!--closeheader------------------------------------------------------->   
+</div><!-- close header -->   
   
 	<?php print $messages; ?>
 
@@ -49,20 +49,20 @@
     
 	<?php print render($page['content']); ?>
 
-  </div><!-- /close content ------------------------------------------------------>
+  </div><!-- close content -->
 
  <br class="clearfloat"/>
-</div><!-- closecontent-wrapper ----------------------------------------------->
+</div><!-- close content-wrapper -->
 
-</div><!-- /end page-landing -->	
+</div><!-- close page-landing -->	
   
   <div id="footer">
 
   	<div id="footer-col1">
   		<?php print render($page['footer-col1']); ?>
-    </div><!-- /end footer column 1 -->
+    </div><!-- close footer column 1 -->
     <div id="footer-col2">
   		<?php print render($page['footer-col2']); ?>
-    </div><!-- /end footer column 2 -->
+    </div><!-- close footer column 2 -->
 	
-  </div><!-- closefooter --------------------------------------------------------->
+  </div><!-- close footer -->
