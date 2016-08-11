@@ -230,6 +230,8 @@ min-width: 200px;
 float: right;
 margin-top: -20px;
 color: #000;
+width:20%;
+margin-left:1.5em;
 }
 
 #block-islandora-solr-advanced {
