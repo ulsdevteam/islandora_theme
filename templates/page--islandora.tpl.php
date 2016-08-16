@@ -19,7 +19,7 @@
   <?php if ($tabs): ?>
   <div class="tabs"><?php print render($tabs); ?></div>
   <?php endif; ?>
-  <?php if ($action_links): ?>
+  <?php if (isset($action_links)): ?>
   <ul class="action-links">
     <?php print render($action_links); ?>
   </ul>
@@ -34,7 +34,7 @@
   <?php endif; ?>
   
   <div id="main-content-outer">
-    <?php if ($solr_search_links && (count($solr_search_links)>0)): ?>
+    <?php if (isset($solr_search_links) && (count($solr_search_links)>0)): ?>
     <div class="searchnav">
       <ul class="searchnav-links">
       <?php foreach ($solr_search_links as $solr_search_link) : ?>
@@ -51,11 +51,11 @@
 
     <?php print render($title_suffix); ?> <?php print render($page['content']); ?>
 
-    <?php if ($collection_img): ?>
+    <?php if (isset($collection_img)): ?>
     <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
     <?php endif; ?>
 
-    <?php if ($collection_metadata): ?>
+    <?php if (isset($collection_metadata)): ?>
       <div id="sidebar-right">
         <div class="islandora-basic-collection-metadata">
           <?php print $collection_metadata; ?> 
