@@ -1,0 +1,78 @@
+/* CSS document for Gamera site */
+
+.islandora-metadata-fields {
+  list-style-type: none;
+}
+
+#two-col-left-main #main-content {
+  width: 71%;
+  float: left;
+}
+
+#two-col-right-main #main-content-outer {
+  width: 100%;
+}
+
+#two-col-left-main #sidebar {
+        float: left;
+        width: 25%;
+        min-width: 200px;
+        padding: 0 .3em .8em .7em;
+        border: 1px solid #000;
+        margin: 0 3em 2em 0;
+        background: -webkit-linear-gradient(90deg, #bccbd0 15%, #e9edee 85%);
+}
+
+#two-col-right-main #metadata-sidebar {
+        width: 26%;
+        float: left;
+        font-size: 90%;
+        min-width: 10%;
+        padding: 1.8em 2em 0 0;
+        }
+
+#two-col-left-main #metadata-sidebar {
+        float: right;
+        width: 25%;
+        }
+
+.searchnav {
+	text-align: center;
+        height: 0.8em;
+}
+.searchnav-links {
+	list-style: none;
+	display: inline-block;
+}
+.searchnav-links li {
+	float: left;
+	margin: 0 10px;
+}
+
+.text-format-wrapper .filter-wrapper .fieldset-wrapper {
+	margin-left: 0;
+}
+
+.text-format-wrapper .filter-wrapper {
+	border-top: 1px solid #c0c0c0;
+}
+
+/* ________ MEDIA QUERIES ________ */
+
+@media screen and (max-width: 780px) {
+#two-col-left-main #sidebar {
+        float: left;
+        width: 25%;
+        min-width: 200px;
+        }
+}
+
+@media screen and (max-width: 710px) {
+#two-col-right-main #sidebar {
+        width: 26%;
+        float: left;
+        font-size: 90%;
+        min-width: 10%;
+        padding: 1.8em 2em 0 0;
+        }
+}

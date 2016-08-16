@@ -1,11 +1,11 @@
-name 				= Digital Pitt Theme
-description = Testing theme based off the islandora_default theme.
+name 				= Gamera Pitt theme
+description = Gamera Pitt specific theme based off the islandora_default theme.
 core 				= 7.x
 screenshot 	= screenshot.jpg
 base theme 	= islandora_default
 
 ; STYLES
-stylesheets[all][] 		= styles/digital.css
+stylesheets[all][] 		= styles/gamera_pitt.css
 
 ; REGIONS
 ;regions[featured] 		= Featured
