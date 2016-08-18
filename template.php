@@ -9,7 +9,6 @@ function gamera_pitt_preprocess_islandora_objects_subset(&$variables) {
     #list($total_count, $results) = islandora_basic_collection_get_member_objects($islandora_object, $page_number, $page_size);
     #$variables['total_count'] = $total_count;
     $variables['total_count'] = $variables['total'];
-error_log('TN_LARGE = ' . (isset($islandora_object['TN_LARGE']) ? isset($islandora_object['TN_LARGE']) : 'NULL'));
     if (isset($islandora_object['TN_LARGE'])) {
       $collection_tn_url = url("islandora/object/{$islandora_object->id}/datastream/TN_LARGE/view");
       $params = array(
