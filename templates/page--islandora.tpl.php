@@ -24,14 +24,6 @@
     <?php print render($action_links); ?>
   </ul>
   <?php endif; ?>
-  <?php if ($page['sidebar']): ?>
-  <div id="sidebar">
-    <div class="widget"> <!-- BTB - added 7-15-14 to alleviate the left margin on responsive design media query ~466 in islandora_default.css --> 
-      <?php print render($page['sidebar']); ?> </div>
-    <!-- /end widget --> 
-  </div>
-  <!-- /end sidebar -->
-  <?php endif; ?>
   
   <div id="main-content-outer">
     <?php if (isset($solr_search_links) && (count($solr_search_links)>0)): ?>
@@ -53,6 +45,15 @@
 
     <?php if (isset($collection_img)): ?>
     <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
+    <?php endif; ?>
+
+    <?php if ($page['sidebar']): ?>
+    <div id="sidebar">
+      <div class="widget"> <!-- BTB - added 7-15-14 to alleviate the left margin on responsive design media query ~466 in islandora_default.css -->
+        <?php print render($page['sidebar']); ?> </div>
+      <!-- /end widget -->
+    </div>
+    <!-- /end sidebar -->
     <?php endif; ?>
 
     <?php if (isset($collection_metadata)): ?>
