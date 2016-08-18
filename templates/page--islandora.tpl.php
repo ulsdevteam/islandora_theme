@@ -26,7 +26,7 @@
   <?php endif; ?>
   
   <div id="main-content-outer">
-    <?php if (isset($solr_search_links) && (count($solr_search_links)>0)): ?>
+    <?php if (isset($solr_search_links) && is_array($solr_search_links) && (count($solr_search_links)>0)): ?>
     <div class="searchnav">
       <ul class="searchnav-links">
       <?php foreach ($solr_search_links as $solr_search_link) : ?>
