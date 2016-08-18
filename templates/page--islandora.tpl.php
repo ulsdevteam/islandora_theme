@@ -41,11 +41,7 @@
     <h1><?php print $title; ?></h1>
     <?php endif; ?>
 
-    <?php print render($title_suffix); ?> <?php print render($page['content']); ?>
-
-    <?php if (isset($collection_img)): ?>
-    <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
-    <?php endif; ?>
+    <?php print render($title_suffix); ?> 
 
     <?php if ($page['sidebar']): ?>
     <div id="sidebar">
@@ -54,6 +50,12 @@
       <!-- /end widget -->
     </div>
     <!-- /end sidebar -->
+    <?php endif; ?>
+
+    <?php print render($page['content']); ?>
+
+    <?php if (isset($collection_img)): ?>
+    <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
     <?php endif; ?>
 
     <?php if (isset($collection_metadata)): ?>
