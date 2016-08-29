@@ -20,16 +20,16 @@
     <div id="nav"> <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('topnav')),)); ?>
       <div id="search"> <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a> <?php print render($page['search']); ?> </div>
       <!-- close search --> 
-    </div>
-    <!-- closenav --> 
-    
-  </div>
-  <!-- closesearchheader --> 
-  
+    </div><!-- closenav --> 
+  </div><!-- closesearchheader --> 
   <?php print $messages; ?>
-
   <div id="content-wrapper">
-    
+ 
+ <!--drupal breadcrumbs -->
+<?php if ($breadcrumb): ?>
+    <?php print $breadcrumb; ?>
+  <?php endif; ?>
+ 
 <div id="sidebar-left"> 
   	<?php if ($collection_metadata): ?>
   <div class="islandora-basic-collection-metadata">
@@ -51,6 +51,7 @@
       <h1 class="item-title"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
+
       <?php if ($action_links): ?>
       <ul class="action-links">
         <?php print render($action_links); ?>

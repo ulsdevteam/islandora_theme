@@ -23,7 +23,7 @@ a:hover { color: #106079; border-bottom: 1px dashed #106079; }
 a:visited { color: #106079; border-bottom: 1px dashed #106079; }
 
 /* Headings */
-h1 { font-size: 2.8em; margin: 0 0 20px 0; padding: 0; }
+h1 { font-size: 2.8em; margin: 0 0 20px 0; padding: 0; line-height: 30px;}
 h2 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
 h3 { font-size: 1.6em; }
 h4 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
@@ -93,6 +93,14 @@ body {
 	margin: 0 auto;
 	float: right;
 }
+
+/*islandora for for template file islandora-objects-grid.tpl added id to div*/
+#islandora-object-second {
+	width: 76%;
+	margin: 0 auto;
+	float: left;
+}
+
 
 #content-full {
 	width: 100%;
@@ -507,10 +515,12 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 		.islandora-metadata { margin-bottom: 3em; font-size: 100%;}
 		
 		#islandora-collection-thumb { width: 40%; float: left; }
-		#islandora-collection-thumb img { width: 100%; height: auto; }
+		#islandora-collection-thumb img { max-width: 100%; height: auto; }
 		
 		#islandora-collection-thumb a:hover { border-bottom: 0px dashed #106079; }
-
+		
+		.islandora-basic-collection-metadata { block: 100%; }
+		
 #sidebar-widget {
 	float: right;
 	width: 30%;
@@ -544,7 +554,7 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 
 @media screen and (max-width: 960px) {
 
-#sidebar-right, #sidebar-left, #sidebar-meta, #islandora-sidebar-meta {
+#sidebar-right, #sidebar-left, #sidebar-meta, #islandora-sidebar-meta, #collection-metadata-block {
 	float: left;
 	width: 100%;
 	margin: 5px 0 10px 0;
@@ -555,7 +565,7 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 
 @media screen and (max-width: 400px) {	
 
-#sidebar-right, #sidebar-left, #sidebar-meta, #islandora-sidebar-meta {
+#sidebar-right, #sidebar-left, #sidebar-meta, #islandora-sidebar-meta, #collection-metadata-block {
 	float: left;
 	width: 100%;
 	margin: 10px 0px 0px 0px;
@@ -1090,8 +1100,33 @@ table.downloadops {
 	width: 290px !important;
 }
 
-.islandora-solr-content .islandora-solr-search-results {
+
+/*.islandora-solr-content .islandora-solr-search-results {
 	width: 840px;
+}*/
+
+/*Islandora pager size fix*/
+.pager {
+    border: 1px solid #000;
+    width: 100%;}
+
+/*Fix for drl css read more link*/
+.span-like-link {
+    font-size: smaller;
+    text-decoration: underline;
+    color: #0071B3;
+    cursor: pointer;
+    float: right;
+    padding: 0px;
+}
+
+/*solr fix for search width in collections*/
+
+.islandora-solr-content {
+    margin-top: 0 !important;
+    margin-left: 1%;
+    width: 100%; 
+    float: left;
 }
 
 .item-title {
@@ -1220,7 +1255,7 @@ table.downloadops {
 /*fix bad formatting islandora search results -  ul list type*/
 #islandora-solr-basic-facets ul{ width: 100%; list-style-type: none; float: left; margin: 0; padding: 0; }
 
-.islandora-solr-search-result ul { width: 60%; list-style-type: none; float: left; margin: 10px 0 0 10px; padding: 0;  }
+.islandora-solr-search-result ul { width: 95%; list-style-type: none; float: left; margin: 10px 0 0 10px; padding: 0;  }
 .islandora-solr-search-result li { margin: 0; }
 
 ul.islandora-solr-sort { 	
@@ -1240,7 +1275,7 @@ ul.islandora-solr-sort {
 	}
 	
 	.islandora-solr-sort li a:hover{ 	
-		background: #DBDBDB;
+	background: #DBDBDB;
 	color: #106079;
 	border: 1px solid #5e7181;
 
@@ -1329,6 +1364,25 @@ a.soft-limit { margin: 5px 0; }
 
 .islandora-objects-grid dl { width: 40%; height: auto; }
 
+.islandora-basic-collection #sidebar {
+	width: 99% !important;
+}
+
+#islandora-object-second {
+    width: 99%;
+    margin: 0 auto;
+    float: left;
+}
+
+#sidebar .region-sidebar {
+    width: 99% !important;
+    margin: 0 !important;
+    padding-left: 2px;
+}
+
+#block-islandora-solr-basic-facets, #block-islandora-solr-sort {
+    width: 99% !important;
+}
 }
 
 @media screen and (max-width: 400px) {	
