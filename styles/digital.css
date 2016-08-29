@@ -132,13 +132,13 @@ max-width: 980px;
 
 #two-col-left-main{
 max-width: 980px;
-
 margin: 30px auto 0px;
 min-height:500px
 }
+
 #two-col-left-main #main-content{
 	max-width:980px; 
-	width:100%;}
+	width:auto;}
 
 .region-sidebar {
   width: 25%;
@@ -234,7 +234,12 @@ margin-top:-10em;
 }
 
 .span-like-link {
-	color: #405a71;
+  font-size: smaller;
+  text-decoration: underline;
+  color: #0071B3;
+  cursor: pointer;
+  float: right;
+  padding: 0px;
 	font: 100% Arial, Helvetica, sans-serif;
 }
 
@@ -518,10 +523,10 @@ padding:10px;
 
 /*---Partners Logo Block---*/
 #block-block-21{
-	float:right;
 	margin-left:35px;
-	margin-right:75px;
-	margin-bottom:50px;
+	margin-top:-40px;
+	float:right;
+	margin-right:-5em;
 
 }
 /*End Partners Logo Block*/
@@ -529,7 +534,7 @@ padding:10px;
 
 
 #edit-islandora-simple-search-query.form-text {
-	width: 150px;
+	width: 220px;
 }
 	
 .field-item.even {
@@ -1152,7 +1157,7 @@ body.no-sidebars .islandora-large-image-sidebar ul li {
 .collection-wrapper img {float: left;margin: 0px auto;;height: auto;width: 100%;	}
 #nav {height:12em;text-align:center;}
 .primary-nav li{min-width:100%;margin: 0 0 .2em 0;padding: .2em .1em;list-style: none;display: block;font-size: 100%;width: 100%;}
-#wrap_mainmenu{height:250px;}
+#wrap_mainmenu{height:275px;}
 #nav form{width:100%;font-size:100%; margin:10px;}
 .banner{max-height:110px;}
 .islandora-solr-content{margin:0px auto; Width:80%; float:left; margin-top:0px;}
