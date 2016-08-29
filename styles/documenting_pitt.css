@@ -203,7 +203,8 @@ _height: 180px;
 	width:63%;
 	float:left;
 }
-
+#edit-islandora-simple-search-query.form-text{
+	width:220px;}
 
 #block-islandora-solr-basic-facets{
 	width:80%;
@@ -259,9 +260,12 @@ color: #000;
 }
 
 .span-like-link{
-	color:#fff;
-	cursor:pointer;
-	text-decoration: underline;
+ font-size: smaller;
+  text-decoration: underline;
+  color:#fff;
+  cursor: pointer;
+  float: right;
+  padding: 0px;
 	font: 100% Arial, Helvetica, sans-serif;
 
 }

@@ -30,6 +30,9 @@
 <div id="page-secondary">
 <?php print $messages; ?>
 <div id="two-col-right-main">
+  <?php if ($breadcrumb): ?>
+    <?php print $breadcrumb; ?>
+  <?php endif; ?>
 
 
   <?php if ($tabs): ?>
@@ -52,6 +55,7 @@
     <h1><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?> <?php print render($page['content']); ?> </div>
+
   <!-- /end main-content -->
   </div> <!-- /end two-col-right-main -->
   <div id="footer">
