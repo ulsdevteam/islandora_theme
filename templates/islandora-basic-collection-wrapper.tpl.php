@@ -12,13 +12,12 @@
   <?php endif; ?>
 
   <div id="main-contents">
-	<?php print render($title_prefix); ?>
-
-
-	<?php if ($collection_img): ?>
-  <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
-  <?php endif; ?>
-
+    <?php print render($title_prefix); ?>
+    <?php if ($collection_img): ?>
+    <div class="islandora-basic-collection-metadata-image">
+      <?php print $collection_img; ?>
+    </div>
+    <?php endif; ?>
   <?php
         $block = module_invoke('islandora_datastream_blocks', 'block_view', 'idb-DESC');
         print render($block['content']);

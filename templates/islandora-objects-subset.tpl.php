@@ -14,29 +14,28 @@
   <?php endif; ?>
 
   <div id="main-contents">
-	<?php print render($title_prefix); ?>
+    <?php print render($title_prefix); ?>
 
-  <div id="metadata-sidebar">
-  <?php if ($collection_metadata): ?>
-  <div class="islandora-basic-collection-metadata">
-    <!--<p>using the islandora metadata framework</p>-->
-    <?php print $collection_metadata; ?> </div>
-  <?php endif; ?>
-    <?php if (isset($page) && isset($page['sidebar'])): ?>
-    <div class="widget"> <?php print render($page['sidebar']); ?> </div>
-    <!-- /end widget -->
-    <?php endif; ?>
-  </div><!-- /end sidebar -->
-</div>
+    <div id="metadata-sidebar">
+      <?php if (isset($page) && isset($page['sidebar'])): ?>
+      <div class="widget"> 
+        <?php print render($page['sidebar']); ?> 
+      </div><!-- /end widget -->
+      <?php endif; ?>
 
-	<?php if ($collection_img): ?>
-  <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
+    </div><!-- /end metadata-sidebar -->
+  </div><!-- /end main-contents -->
+
+  <?php if ($collection_img): ?>
+  <div class="islandora-basic-collection-metadata-image"> 
+    <?php print $collection_img; ?> 
+  </div>
   <?php endif; ?>
 
   <?php
-        $block = block_load('islandora_datastream_blocks', 'idb-DESC');
-        $renderable_block = _block_get_renderable_array(_block_render_blocks(array($block)));
-        print $renderable_block['islandora_datastream_blocks_idb-DESC']['#markup'];
+    $block = block_load('islandora_datastream_blocks', 'idb-DESC');
+    $renderable_block = _block_get_renderable_array(_block_render_blocks(array($block)));
+    print $renderable_block['islandora_datastream_blocks_idb-DESC']['#markup'];
   ?>
   <div class="islandora-basic-collection clearfix">
     <span class="islandora-objects-display-switch">

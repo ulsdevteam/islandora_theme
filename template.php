@@ -9,23 +9,16 @@ function gamera_pitt_preprocess_islandora_objects_subset(&$variables) {
     #list($total_count, $results) = islandora_basic_collection_get_member_objects($islandora_object, $page_number, $page_size);
     #$variables['total_count'] = $total_count;
     $variables['total_count'] = $variables['total'];
-    if (isset($islandora_object['TN_LARGE'])) {
-      $collection_tn_url = url("islandora/object/{$islandora_object->id}/datastream/TN_LARGE/view");
-      $params = array(
-        'title' => $islandora_object->label,
-        'alt' => $islandora_object->label,
-        'path' => $collection_tn_url);
-      $variables['collection_img'] = theme('image', $params);
-    } elseif (isset($islandora_object['TN'])) {
-      $collection_tn_url = url("islandora/object/{$islandora_object->id}/datastream/TN/view");
-      $params = array(
-        'title' => $islandora_object->label,
-        'alt' => $islandora_object->label,
-        'path' => $collection_tn_url);
-      $variables['collection_img'] = theme('image', $params);
-    }
+    $collection_tn_url = (isset($islandora_object['TN_LARGE'])) ? url("islandora/object/{$islandora_object->id}/datastream/TN_LARGE/view") :
+      ((isset($islandora_object['TN'])) ?  url("islandora/object/{$islandora_object->id}/datastream/TN/view") : NULL);
+    $params = array(
+      'title' => $islandora_object->label,
+      'alt' => $islandora_object->label,
+      'path' => $collection_tn_url);
+    $variables['collection_img'] = ($collection_tn_url) ? theme('image', $params) : '';
 
-    $variables['collection_metadata'] = islandora_retrieve_metadata_markup($islandora_object);
+    // This is now being populated by the upitt_islandora_solr_search_extras for islandora-solr-wrapper.tpl.php
+    // $variables['collection_metadata'] = islandora_retrieve_metadata_markup($islandora_object);
 
     #var_dump($variables);
   }

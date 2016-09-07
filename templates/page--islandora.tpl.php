@@ -15,6 +15,9 @@
 
 <?php print $messages; ?>
 <div id="two-col-right-main">
+  <?php if ($breadcrumb): ?>
+    <?php print $breadcrumb; ?>
+  <?php endif; ?>
 
   <?php if ($tabs): ?>
   <div class="tabs"><?php print render($tabs); ?></div>
@@ -40,7 +43,6 @@
     <?php if ($title): ?>
     <h1><?php print $title; ?></h1>
     <?php endif; ?>
-
     <?php print render($title_suffix); ?> 
 
     <?php if ($page['sidebar']): ?>
@@ -54,16 +56,17 @@
 
     <?php print render($page['content']); ?>
 
-    <?php if (isset($collection_img)): ?>
-    <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
-    <?php endif; ?>
-
     <?php if (isset($collection_metadata)): ?>
       <div id="sidebar-right">
         <div class="islandora-basic-collection-metadata">
-          <?php print $collection_metadata; ?> 
+          <?php print $collection_metadata; ?>
         </div>
       </div><!-- /end sidebar -->
+    <?php endif; ?>
+
+
+    <?php if (isset($collection_img)): ?>
+    <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
     <?php endif; ?>
 
   </div>
