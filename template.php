@@ -23,7 +23,18 @@ function histpitt_pitt_preprocess_islandora_objects_subset(&$variables) {
 	'path' => $collection_tn_url);
       $variables['collection_img'] = theme('image', $params);
     }
-
     $variables['collection_metadata'] = islandora_retrieve_metadata_markup($islandora_object);
+  }
+}
+
+function histpitt_pitt_preprocess_islandora_solr_wrapper(&$variables) {
+  $islandora_object = menu_get_object('islandora_object', 2);
+  module_load_include('inc', 'islandora', 'includes/metadata');
+  if ($islandora_object) {
+    // service links block must be manually placed into this collection_metadata area
+    $service_links_block_hack = (_is_collection($islandora_object)) ? module_invoke('service_links', 'block_view', 'service_links_not_node')
+      : '';
+    $variables['collection_page_metadata'] = islandora_retrieve_metadata_markup($islandora_object) .
+'<div id="block-service-links-service-links-not-node" class="block block-service-links">' . $service_links_block_hack['content'] . '</div>';
   }
 }

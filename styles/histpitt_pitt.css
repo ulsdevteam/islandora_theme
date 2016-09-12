@@ -433,7 +433,7 @@ body {
 #nav form { float: left; margin: 0; font-size: 1.4em; }
 
 #nav input { background: #C2C2C2; border: 1px solid #000;  width: 240px; }
-#nav #edit-submit { background-color: #fff; border: 1px solid #000; width: 60px; }
+#nav #edit-submit, #nav #edit-submit--2 { background-color: #fff; border: 1px solid #000; width: 60px; }
 
 .adsearch { float: right; font-size: 1.4em; margin: 3px 0 0 0; }
 	a.adsearch { color: #000; text-decoration: none; }
@@ -519,7 +519,7 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 		
 		#islandora-collection-thumb a:hover { border-bottom: 0px dashed #106079; }
 		
-		.islandora-basic-collection-metadata { block: 100%; }
+		.islandora-basic-collection-metadata { width: 100%; }
 		
 #sidebar-widget {
 	float: right;
@@ -1351,6 +1351,24 @@ a.soft-limit { margin: 5px 0; }
  
  
 
+/*DRL mod style changes*/
+
+.islandora-basic-collection #sidebar, #two-col-left-main #sidebar {
+  width: 253px;
+  float: left;
+}
+
+#sidebar .region-sidebar {
+  width: 99%;
+  margin: 0;
+  padding-left: 2px;
+}
+
+
+#block-islandora-solr-basic-facets, #block-islandora-solr-sort {
+  width: 88% ;
+}
+
  
 /*islandora media queries************************************************************************************/
 		
@@ -1365,7 +1383,7 @@ a.soft-limit { margin: 5px 0; }
 .islandora-objects-grid dl { width: 40%; height: auto; }
 
 .islandora-basic-collection #sidebar {
-	width: 99% !important;
+	width: 99%;
 }
 
 #islandora-object-second {
@@ -1375,13 +1393,13 @@ a.soft-limit { margin: 5px 0; }
 }
 
 #sidebar .region-sidebar {
-    width: 99% !important;
-    margin: 0 !important;
+    width: 99%;
+    margin: 0;
     padding-left: 2px;
 }
 
 #block-islandora-solr-basic-facets, #block-islandora-solr-sort {
-    width: 99% !important;
+    width: 99%;
 }
 }
 
@@ -1390,3 +1408,5 @@ a.soft-limit { margin: 5px 0; }
 .islandora-objects-grid dl { width: 100%; height: auto; }
 
 }
+
+

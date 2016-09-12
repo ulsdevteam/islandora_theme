@@ -30,19 +30,25 @@
     <?php print $breadcrumb; ?>
   <?php endif; ?>
  
-<div id="sidebar-left"> 
-  	<?php if ($collection_metadata): ?>
+<div id="sidebar-meta"> 
+  <?php if ($collection_metadata): ?>
   <div class="islandora-basic-collection-metadata">
-    <?php print $collection_metadata; ?> </div><!--close islandora-basic-collection-metadata-->
+    <?php print $collection_metadata; ?>
+  </div><!--close islandora-basic-collection-metadata-->
   <?php endif; ?>
-  
-   <?php if ($page['sidebar']): ?>
-   <div class="widget">
-		<?php print render($page['sidebar']); ?></div><!--close widget-->
-    <?php endif; ?>
-    </div><!--closesidebar-meta-->
-    
+
+   <?php // if ($page['sidebar']): ?>
+   <!-- div class="widget" -->
+     <?php // print render($page['sidebar']); ?>
+    <!-- /div --><!--close widget-->
+   <?php // endif; ?>
+</div><!--closesidebar-meta-->
+
+  <?php if ($page['sidebar']): ?>    
+    <div id="islandora-collection">
+  <?php else: ?>
     <div id="islandora-object-main">
+  <?php endif; ?>
       <?php if ($tabs): ?>
       <div class="tabs"><?php print render($tabs); ?></div>
       <?php endif; ?>

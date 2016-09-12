@@ -1,4 +1,5 @@
 <?php print $messages; ?>
+<?php $is_first_page = !(isset($_GET['page'])); ?>
 
 <div id="islandora-content-wrapper">
   <?php if ($tabs): ?>
@@ -11,9 +12,10 @@
   <?php endif; ?>
 
 <div id="collection-metadata-block"> 
-  	<?php if ($collection_metadata): ?>
+  <?php if ($collection_page_metadata): ?>
   <div class="islandora-basic-collection-metadata">
-    <?php print $collection_metadata; ?> </div><!--close islandora-basic-collection-metadata-->
+    <?php print $collection_page_metadata; ?>
+  </div><!--close islandora-basic-collection-metadata-->
   <?php endif; ?>
   
  <!-- force islandora to render sidebar region -->
@@ -22,19 +24,23 @@
     </div><!--close collection-metadata-block -->
     
 <div id="islandora-content-left">
-<?php print render($title_prefix); ?>
-	<?php if ($collection_img): ?>
-  <div class="islandora-basic-collection-metadata-image"> <?php print $collection_img; ?> </div>
+  <?php print render($title_prefix); ?>
+  <?php if (isset($collection_tn_img) && $is_first_page): ?>
+    <div class="islandora-basic-collection-metadata-image"> 
+      <?php print $collection_tn_img; ?> 
+    </div>
   <?php endif; ?>
-  </div><!-- close islandora-content-left -->
+</div><!-- close islandora-content-left -->
  
- <div class="islandora-basic-collection-desc">
+<div class="islandora-basic-collection-desc">
   <?php
-        $block = block_load('islandora_datastream_blocks', 'idb-DESC');
-        $renderable_block = _block_get_renderable_array(_block_render_blocks(array($block)));
-        print $renderable_block['islandora_datastream_blocks_idb-DESC']['#markup'];
+    if ($is_first_page && $is_collection) {
+      $block = block_load('islandora_datastream_blocks', 'idb-DESC');
+      $renderable_block = _block_get_renderable_array(_block_render_blocks(array($block)));
+      print $renderable_block['islandora_datastream_blocks_idb-DESC']['#markup'];
+    }
   ?>
-  </div><!--close islandora-basic-collection-desc-->
+</div><!--close islandora-basic-collection-desc-->
 
   
   <div class="islandora-basic-collection clearfix">
