@@ -71,7 +71,7 @@ body {
 	width: 98%;
 	background: #fff;  
 	margin: 0 auto;
-	padding: 2% 1%;
+	padding: 0 1%;
 	max-width: 1280px;
 }
 
@@ -107,6 +107,9 @@ body {
 	margin: 0 auto;
 }
 
+.datastream-block {
+  clear: both;
+}
 
 /*Page content classes*/
 
