@@ -32,6 +32,7 @@
   <?php endif; ?>
 
 
+  <div id="<?php print (($page['sidebar']) ? 'islandora-collection' : 'main-content'); ?>">
   <?php if ($tabs): ?>
   <div class="tabs"><?php print render($tabs); ?></div>
   <?php endif; ?>
@@ -40,23 +41,16 @@
     <?php print render($action_links); ?>
   </ul>
   <?php endif; ?>
-  <!--<div id="sidebar">
-    <div class="widget"> <!-- BTB - added 7-15-14 to alleviate the left margin on responsive design media query ~466 in islandora_default.css -->
-      <?php print render($page['sidebar']); ?> 
-    <!-- /end widget -->
-  <!-- /end sidebar -->
-   
   
- 
-  
-  <div id="main-content"> <?php print render($title_prefix); ?>
+  <?php print render($title_prefix); ?>
     <?php if ($title): ?>
     <h1><?php print $title; ?></h1>
     <?php endif; ?>
-    <?php print render($title_suffix); ?> <?php print render($page['content']); ?> </div>
-
-  <!-- /end main-content -->
+    <?php print render($title_suffix); ?> 
+    <?php print render($page['content']); ?> 
+  </div><!-- /end <?php print (($page['sidebar']) ? 'islandora-collection' : 'main-content'); ?> -->
 </div> <!-- /end two-col-right-main -->
+
     <div id="footer">
     <div id="footer-col1"> <?php print render($page['footer-col1']); ?> </div>
     <!-- /end footer column 1 -->

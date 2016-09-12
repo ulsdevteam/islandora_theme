@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.25em;
 	font-family:'museo-slab','MuseoSlab500Regular','Rockwell','Crete Round',sans-serif ;
 	margin-top:-10px;
 	font-style:normal;
@@ -210,9 +210,9 @@ _height: 180px;
 
 .islandora-solr-content {
 	margin:0px auto;
-	width:68%;
+	width:100%;
 	float:left;
-margin-top:-10em;
+	margin-top:-10em;
 }
 
 .islandora-metadata {
@@ -222,7 +222,6 @@ margin-top:-10em;
 	padding: 15px;
 	min-width: 200px;
 	float: right;
-	margin-top:-20px;
 }
 
 .islandora-basic-collection.clearfix {
@@ -258,6 +257,10 @@ margin-top:-10em;
 
 .views-field.views-field-mods-name-depositor-namePart-ms {
 	padding-top:15px;
+}
+
+.datastream-block {
+	clear:both;
 }
 
 /* -----Exhibits ------*/
@@ -489,21 +492,21 @@ li a.active {
 /*End Advanced Search Nav */
 
 
-/*----Advanced Search Block-----*/
-#block-islandora-solr-advanced {
-margin: 20px 20px 20px 0px;
-padding: 20px 40px 20px 20px;
-background: transparent;
-box-shadow: 0px 0px 0px 0px #000;
-border-right: 1px solid #001E4C;
-float:left;
-color:#000;
-min-height:100px;
-background-color: #CBE0F5;
-box-shadow: 0px 0px 2px 1px #CCC;
-border: 7px solid #FFF;
+/*----solr sidebar blocks-----*/
+#block-islandora-solr-basic-facets, #block-islandora-solr-sort, #block-islandora-solr-advanced {
+        margin: 20px 20px 0px 0px;
+        padding: 10px 10px 20px;
+        background: #CBE0F5;
+        box-shadow: 0px 0px 2px 1px #CCC;
+        border: 7px solid #FFF;
+        width:25%
+        float:left;
+        clear:both;
 }
-/*end advanced search block*/
+.islandora-solr-facet-wrapper {
+        margin-bottom:15px;
+}
+/*end solr sidebar blocks*/
 
 /*----Search in Collection -----*/
 #search-in-collection{
@@ -551,19 +554,6 @@ padding:10px;
 	background: #fff;
 	box-shadow: 0px 0px 2px 1px #CCC;	
 	border: 7px solid #FFF;
-}
-
-
-#block-islandora-solr-sort {
-	width:25%;
-	float:left;
-	clear:both;
-	padding: 10px 10px 20px;
-background: #CBE0F5;
-box-shadow: 0px 0px 2px 1px #CCC;
-border: 7px solid #FFF;
-margin-top:85px;
-margin-right:50px;
 }
 
 /* ________ Featured Collection ________ */
@@ -656,21 +646,6 @@ margin-right:50px;
 	border-top: 1px solid #000;
 }
 
-#block-islandora-solr-basic-facets{
-	margin: 20px 20px 0px 0px;
-	padding: 10px 10px 20px;
-	background: #CBE0F5;
-	box-shadow: 0px 0px 2px 1px #CCC;
-	border: 7px solid #FFF;
-	width:25% 
-	float:left;
-	clear:both;
-
-}
-.islandora-solr-facet-wrapper {
-	margin-bottom:15px;
-}
-	
 /*----Service Links Block----*/
 .service-links{float:right;
 width:97%;	
