@@ -1302,7 +1302,7 @@ ul.islandora-solr-sort {
 }
 
 /*drop count to next line down*/
-.islandora-solr-facet li a { display: block; margin: 5px 0px 0px 0px; border-bottom: 0px dashed #106079;}/*also move li to left*/
+.islandora-solr-facet li a { display: inline-block; margin: 5px 0px 0px 0px; border-bottom: 0px dashed #106079;}/*also move li to left*/
 islandora-solr-facet li a:hover { border-bottom: 0px solid #5e7181; }
 
 .islandora-solr-facet li a.plus { font-size: 0.8em; display: inline; padding: 0px 3px; border: .5px solid #5e7181; }
