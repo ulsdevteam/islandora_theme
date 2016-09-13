@@ -29,7 +29,7 @@
 <?php if ($breadcrumb): ?>
     <?php print $breadcrumb; ?>
   <?php endif; ?>
- 
+
 <div id="sidebar-meta"> 
   <?php if ($collection_metadata): ?>
   <div class="islandora-basic-collection-metadata">
@@ -52,6 +52,18 @@
       <?php if ($tabs): ?>
       <div class="tabs"><?php print render($tabs); ?></div>
       <?php endif; ?>
+
+    <?php if ($solr_search_links && (count($solr_search_links)>0)): ?>
+    <div class="searchnav">
+      <ul class="searchnav-links">
+      <?php foreach ($solr_search_links as $solr_search_link) : ?>
+        <li><?php print $solr_search_link; ?></li>
+      <?php endforeach; ?>
+      </ul>
+      <br class="clearfloat">
+    </div>
+    <?php endif; ?>
+
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
       <h1 class="item-title"><?php print $title; ?></h1>
