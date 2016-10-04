@@ -26,12 +26,14 @@
   <div id="content-wrapper">
  
  <!--drupal breadcrumbs -->
+ <div id="breadcrumbs-isl">
 <?php if ($breadcrumb): ?>
     <?php print $breadcrumb; ?>
   <?php endif; ?>
+</div><!--closebreadcrumbsisl-->
 
 <div id="sidebar-meta"> 
-  <?php if ($collection_metadata): ?>
+  <?php if (isset($collection_metadata)): ?>
   <div class="islandora-basic-collection-metadata">
     <?php print $collection_metadata; ?>
   </div><!--close islandora-basic-collection-metadata-->
@@ -53,7 +55,7 @@
       <div class="tabs"><?php print render($tabs); ?></div>
       <?php endif; ?>
 
-    <?php if ($solr_search_links && (count($solr_search_links)>0)): ?>
+    <?php if (isset($solr_search_links) && (count($solr_search_links)>0)): ?>
     <div class="searchnav">
       <ul class="searchnav-links">
       <?php foreach ($solr_search_links as $solr_search_link) : ?>
