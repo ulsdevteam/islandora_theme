@@ -111,6 +111,16 @@ body {
   clear: both;
 }
 
+/* Colors for Alpha pagination */
+.alpha-pagination li:hover {
+  background-color: #98988C;
+  color: #000;
+}
+
+.alpha-pagination ul li {
+  padding: 0px 5px !important;
+}
+
 /*Page content classes*/
 
 .pagecont { width: 60%; margin: 5px; }

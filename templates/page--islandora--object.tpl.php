@@ -47,6 +47,7 @@
   	<?php print render($title_prefix); ?>
     <?php if ($title): ?><h1 class="item-title"><?php print $title; ?></h1><?php endif; ?>
     <?php print render($title_suffix); ?>
+  <p class="subtitle-first"><?php print $upitt_date; ?></p>
 
     <?php if ($action_links): ?>
       <ul class="action-links"><?php print render($action_links); ?></ul>
