@@ -31,6 +31,7 @@ function histpitt_pitt_preprocess_islandora_solr_wrapper(&$variables) {
   $islandora_object = menu_get_object('islandora_object', 2);
   module_load_include('inc', 'islandora', 'includes/metadata');
   if ($islandora_object) {
+    module_load_include('module', 'upitt_islandora_solr_search_extras', 'upitt_islandora_solr_search_extras');
     // service links block must be manually placed into this collection_metadata area
     $service_links_block_hack = (_is_collection($islandora_object)) ? module_invoke('service_links', 'block_view', 'service_links_not_node')
       : '';
