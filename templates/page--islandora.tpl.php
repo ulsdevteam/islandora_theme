@@ -55,12 +55,12 @@
       <div class="tabs"><?php print render($tabs); ?></div>
       <?php endif; ?>
 
-    <?php if (isset($solr_search_links) && (count($solr_search_links)>0)): ?>
+    <?php if (isset($solr_search_links) && (is_array($solr_search_links))): ?>
     <div class="searchnav">
       <ul class="searchnav-links">
-      <?php foreach ($solr_search_links as $solr_search_link) : ?>
+        <?php foreach ($solr_search_links as $solr_search_link) : ?>
         <li><?php print $solr_search_link; ?></li>
-      <?php endforeach; ?>
+        <?php endforeach; ?>
       </ul>
       <br class="clearfloat">
     </div>

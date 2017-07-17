@@ -40,7 +40,7 @@
 
 	<div id="content-wrapper">
     
-<div id="sidebar-right">
+<div id="sidebar-left">
   	<?php if ($page['sidebar']): ?>
     <div class="widget">
       <?php print render($page['sidebar']); ?> </div>

@@ -13,22 +13,24 @@ University Library System | University of Pittsburgh
 
 body { font: 62.5%  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif; text-align: left; color: #000; }
 
-p, dl, hr, h1, h2, h3, h4, h5, h6, ul, ol, pre, table, address, fieldset, span { font-size: 1.4em; margin: 0 0 10px 0; line-height: 20px; }
+p, h1, h2, h3, h4, h5, h6, ul, ol, dd, dt { font-size: 1.4em; margin: 0 0 10px 0; line-height: 20px; }
+
+p.contrib { font-size: 1.1em; }
 
 blockquote { font-size: 1.5em; text-align: center; }
 
 /* Links */
 a:link { color: #1DADD9; text-decoration:none; }
 a:hover { color: #106079; border-bottom: 1px dashed #106079; }
-a:visited { color: #106079; border-bottom: 1px dashed #106079; }
+a:visited { color: #1B9BC3; border-bottom: 1px dashed #106079; }
 
 /* Headings */
-h1 { font-size: 2.8em; margin: 0 0 20px 0; padding: 0; line-height: 30px;}
-h2 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.8em; margin: 20px 0 20px 0; padding: 0; }
-h5 { font-size: 1.0em; font-weight: normal; }
-h6 { font-size: 0.6em; }
+h1 { font-size: 2.8em; margin: 0 0 20px 0; padding: 20px 0 0 0; line-height: 30px;}
+h2 { font-size: 2.0em; margin: 0 0 20px 0; padding: 20px 0 0 0;}
+h3 { font-size: 1.8em; margin: 0; padding: 15px 0 5px 0;}
+h4 { font-size: 1.4em; margin: 0; padding: 10px 0 5px 0;}
+h5 { font-size: 1.3em; font-weight: normal; }
+h6 { font-size: 0.8em; }
 
 /* Lists */ 
 ul, ol { list-style-type: square; margin: 5px 0 5px 10px; padding: 0; font-weight: bold; }
@@ -36,6 +38,7 @@ ul, ol { list-style-type: square; margin: 5px 0 5px 10px; padding: 0; font-weigh
 ol ol, ul ul, ul ol, ol ul{ list-style-type: disc; margin: 10px 0 10px 20px; font-size: 1.0em; }
 
 li { margin: 5px 0 10px 20px; font-weight: normal; }
+
 
 /* Other Type classes */ 
 .caption { margin-top: -1em; font-size: 1.2em; font-weight: bold; }
@@ -91,7 +94,7 @@ body {
 #content-right, #islandora-object-main {
 	width: 67%;
 	margin: 0 auto;
-	float: right;
+	float: left;
 }
 
 /*islandora for for template file islandora-objects-grid.tpl added id to div*/
@@ -494,34 +497,44 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 #sidebar-left {
 	float: left;
 	width: 30%;
-	margin: 20px 0 20px 0;
+	margin: 0 10px 0 0;
 	padding: 0;
 	line-height: 10px;
-		font-size: 95%;
+	font-size: 95%;
+	}
+	
+	#toc {
+	float: left;
+	width: 20%;
+	margin: 0 20px 0 0;
+	padding: 10px;
+	line-height: 10px;
+	font-size: 100%;
+	border: 1px solid #cad6d9;
 	}
 
 #sidebar-right {
-	float: right;
+	float: left;
 	width: 30%;
-	margin: 0;
+	margin: 0 0 0 10px;
 	padding: 0;
 	line-height: 10px;
 		font-size: 95%;
 	}
 
 #sidebar-meta, #collection-metadata-block {
-	float: right;
+	float: left;
 	width: 30%;
-	margin: 0;
+	margin: 0 0 0 10px;
 	padding: 0;
 	font-size: 95%;
 	line-height: normal;
 	}
 
 #islandora-sidebar-meta {
-	float: right;
+	float: left;
 	width: 55%;
-	margin: 0;
+	margin: 0 0 0 10px;
 	padding: 0;
 	font-size: 100%;
 	line-height: normal;
@@ -537,9 +550,9 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 		.islandora-basic-collection-metadata { width: 100%; }
 		
 #sidebar-widget {
-	float: right;
+	float: left;
 	width: 30%;
-	margin: 0;
+	margin: 0 0 0 10px;
 	padding: 0;
 	font-size: 95%;
 	line-height: normal;
@@ -559,6 +572,7 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 
 #sidebar-right ul li, #sidebar-left ul li { list-style-type: none; margin: 5px 0px 10px 0px}
 
+.news-block { display: block; }
 
 
 /*Sidebar media queries********************************************************************************************************************/
@@ -616,8 +630,6 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 
 .widget ul li { list-style-type: none; margin: 5px 0px 10px 0px}*/
 
-
-
 .widget .content { margin: 13px; }
 
 #block-block-15 { margin: 0 0 30px 0; }
@@ -628,16 +640,13 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 	.widget h3 { font-size: 1.2em; margin: 0; }
 	.widget select, .widget input { font-size: 1.4em; }
 	.widget span { font-size: 100%; margin: 0px 0px 10px; }
-	ul.islandora-solr-facet { margin: 0px 0px 0px -40px; padding: 0px; font-weight: bold; }
+	ul.islandora-solr-facet { margin: 0px 0px 0px -20px; padding: 0px; font-weight: bold; }
 	
 .item-list ul li {  margin: 0px; padding: 0px 0px 0px 10px; display: inline; }
 
-#block-views-news-archives-by-date-block .item-list ul  {  margin: 0px; padding: 0px; }
+#block-views-newsfeed-block .item-list ul li span { display: block; margin: 0px; padding: 5px 0px; }
 
-#block-views-newsfeed-block .item-list ul {
-    margin: 0px 0px 0px 20px;
-    padding: 0px;
-}
+#block-views-newsfeed-block ul li { margin: 0px; padding: 0px; }
 
 .news_hdr4 { border-top: 1px solid #000; }
 
@@ -702,34 +711,41 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 
 table {
 	width: 100%;
-	border: 0px solid #005648;
-	font-size: 1.3em;
+	border: 0px solid #005648;	
 }
 
 
 th, td {
-	border: 1px solid #000;
+	padding: 5px 0px;
+	border: 0px solid #000;
 	border-collapse:collapse;
 }
-
-td { text-align:left; padding: 3px 5px; }
-
-th { text-align: center; height:10px; }
-
-td.center {
-	height: 10px;
-	text-align:center;
-}
+	td { text-align:left; }
+	th { text-align: center; }
+	td.center { height: 10px; text-align:center; }
 
 td.numcell {
 	width: 20px;
 	text-align:center;
 }
 
+tr.even,
+tr.odd {
+  background-color: #fff;
+  border-bottom: 0px solid #ccc;
+  padding: 5px 0px;
+}
+
+tr.even { background: #fff; }
+
+hr {
+    border: 1px solid gray;
+    height: 0px;
+}
+
 table.downloadops {
 	width: 100%;
 	border: 0px solid #005648;
-	font-size: 1.0em;
 	font-weight: normal;
 }
 
@@ -791,6 +807,9 @@ table.downloadops {
 	float: left;
 	margin: -250px 0 0 0;
 }
+
+/* ______ views elements _______ */
+span.count { font-size: 1em; }
 
 /* Frontpage image roll over and information rollover media queries****************************************************************************/
 
@@ -1065,6 +1084,108 @@ table.downloadops {
 	
 }}
 
+/*Maintenence Shadowbox popup*****************************************************/
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.maint .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 0.2s;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.maint .close:hover {
+  color: #06D85F;
+}
+.maint .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+/*Overley popup when page loads*/
+.overlaybox:target:before {
+    display: none;
+}
+.overlaybox:before {
+  content:"";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 9;
+}
+.overlaybox .maint {
+  background: #fff;
+  width: 30%;
+  position: fixed;
+  top: 0;
+  left: 35%;
+  padding: 25px;
+  margin: 70px auto;
+  z-index: 10;
+}
+.overlaybox:target .maint {
+    top: -100%;
+    left: -100%;
+}
+
+@media screen and (max-width: 768px){
+  .box{
+    width: 70%;
+  }
+  .overlaybox .maint{
+    width: 70%;
+    left: 15%;
+  }
+}
+
+/* maps styles******************************************************************************************************************/
+
+#sidebar-left.thin {width: 19%;}  /*geotopo & flood*/
+	
+#content-right.wide{width:80%;}   /*geotopo & flood*/
+
+#sidebar-right.outline { border: 1px solid #c0c0c0;	padding: 20px 10px 10px 10px; background-color: white;} /*hopkins*/
+		
+.under-content-right {width: 67%;	margin: 0 auto;	float: right;}
+
+.maps-thumb-title{ margin: 5px 0 0px 0;font-size: 1.4em; max-width: 350px } /*link to all maps in section*/
+
+.currentname {margin: 5px 0 0px 0; font-size:1.3em; line-height:normal; max-width: 350px}
+
+.field.field-name-field-map-neighborhoods.field-type-text.field-label-above {
+font-size: 1.2em;
+}
+
+.field.field-name-field-map-link.field-type-link-field.field-label-above, .field.field-name-field-map-link.field-type-link-field.field-label-above a {
+font-size: 1.3em;
+}
+
+.mapNotes, .mapsNotes a {margin: 5px 0 0px 0;font-size: 1.4em;}
+
+td.rowstripe { padding: 25px 0; vertical-align: top; }
+
+.datagrid table { border-collapse: collapse; text-align: left;} 
+.datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #006699; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; width: 50%;}
+.datagrid table td, .datagrid table th { padding: 3px 10px; }
+.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8E887D), color-stop(1, #6B6A63) );background:-moz-linear-gradient( center top, #8E887D 5%, #6B6A63 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8E887D', endColorstr='#6B6A63');background-color:#8E887D; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 1px solid #000000; }
+.datagrid table thead th:first-child { border: none; }
+.datagrid table td { color: #00557F; border-left: 1px solid #8E887D;font-size: 12px;font-weight: normal; }
+.datagrid table tr.plat, .datagrid table td.plat { background: #CBC9BC; color: #00557F; }
+.datagrid table td:first-child { border-left: none; }
+.datagrid table tr:last-child td { border-bottom: none; }
+
 
 
 /* Islandora styles******************************************************************************************************************/
@@ -1190,7 +1311,6 @@ table.downloadops {
 /* Restyle islandora advanced search form*/
 	
 	#sidebar-right form, sidebar-left form { margin: 0; font-size: 1.0em; }
-	
 	#sidebar-right label, sidebar-left label { font-size: 1.2em; margin: 5px 0px; }
 	#sidebar-right input, sidebar-left input { background: #C2C2C2; border: 1px solid #000; }
 	#sidebar-right .edit-submit, sidebar-left .edit-submit { background-color: #fff; border: 1px solid #000; }
@@ -1359,12 +1479,9 @@ a.soft-limit { margin: 5px 0; }
  
 /* Test*/
 
-
 .ul-no-margin {
     margin-left: 10px;
 }
- 
- 
 
 /*DRL mod style changes*/
 
@@ -1384,7 +1501,54 @@ a.soft-limit { margin: 5px 0; }
   width: 88% ;
 }
 
- 
+/*Fixes to EAD*/
+
+h1.item-title { font-size: 2.8em; margin: 0; padding: 20px 0 0 0; line-height: 30px;}
+#title h3  { font-size: 2.5em; margin: 0 0 20px 0; padding: 10px 0 0 0; }
+
+.series td h4, .subseries td h4, .otherLevel td h4 {
+    font-size: 1.6em;
+}
+
+tr.series td {
+    padding-top: 2em;
+}
+
+.parentContainers tbody {
+    border-top: 1px solid #ccc;
+}
+	
+table.containerList { font-size: 0em; }
+table.containerList { font-size: 1.5em; }
+table.containerList p { font-size: 100%; }
+
+table.parentContainers td[colspan] {
+ width: 100%;
+ width: 250px;
+}
+
+tr.containerTypes.odd { background: none; }
+
+tbody { border-top: 0px solid #ccc; }
+
+span.address {
+    font-size: 1.4em;
+    margin: 0 0 15px 30px;
+    display: block;
+}
+
+.summary dt { font-size: 1.6em; font-weight: bold; margin: 0; }
+
+dd { margin: 0px 0px 10px 10px; line-height: 25px; }
+
+#toc dt { margin: 0px; }
+
+.parentContainers tbody { margin: 0 0 0 10px; }
+
+#block-views-news-archives-by-date-block .item-list ul li {
+    display: block;
+}
+
 /*islandora media queries************************************************************************************/
 		
 @media screen and (max-width: 1382px) {
