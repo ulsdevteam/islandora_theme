@@ -1,6 +1,6 @@
 <?php
 
-function gamera_pitt_preprocess_islandora_objects_subset(&$variables) {
+function gmworker_pitt_preprocess_islandora_objects_subset(&$variables) {
   $islandora_object = menu_get_object('islandora_object', 2);
   module_load_include('inc', 'islandora', 'includes/metadata');
   if ($islandora_object) {
