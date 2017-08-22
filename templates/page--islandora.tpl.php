@@ -11,7 +11,7 @@
     </div>
     <!-- closepittbarwrapper -->
     
-    <div class="searchbanner"> <a href="<?php print $front_page; ?>" title="<?php print t('Historic Pittsburgh'); ?>" rel="home" id="logo"> <img src="<?php print $base_path . $directory; ?>/images/histpittlogov2_beta.png" alt="<?php print t('link to Historic Pittsburgh homepage'); ?>" class="logo2" /> </a> 
+    <div class="searchbanner"> <a href="<?php print $front_page; ?>" title="<?php print t('Historic Pittsburgh'); ?>" rel="home" id="logo"> <img src="<?php print $base_path . $directory; ?>/images/histpittlogo_bnw.png" alt="<?php print t('link to Historic Pittsburgh homepage'); ?>" class="logo" /> </a> 
       
       <!-- print banner region --> 
       <?php print render($page['banner']); ?> </div>
