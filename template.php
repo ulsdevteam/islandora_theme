@@ -24,3 +24,12 @@ function gamera_pitt_preprocess_islandora_objects_subset(&$variables) {
   }
 }
 
+function gamera_pitt_user_menu() {
+  $items['user/login'] = array(
+    'title' => 'Log in',
+    'access callback' => 'user_is_anonymous',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+
+  return $items;
+}

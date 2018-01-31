@@ -1,5 +1,9 @@
 /* CSS document for Gamera site */
 
+.fieldset-wrapper {
+  margin-left: 0 !important;
+}
+
 .islandora-metadata-fields {
   list-style-type: none;
 }
