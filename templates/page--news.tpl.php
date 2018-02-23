@@ -26,7 +26,7 @@
       
       <div id="search">
 	  
-      <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a>
+      <a href="http://historicpittsburgh.org/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a>
 	  
 	  <?php print render($page['search']); ?>
       

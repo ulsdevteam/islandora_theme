@@ -11,14 +11,14 @@
     </div>
     <!-- closepittbarwrapper -->
     
-    <div class="searchbanner"> <a href="<?php print $front_page; ?>" title="<?php print t('Historic Pittsburgh'); ?>" rel="home" id="logo"> <img src="<?php print $base_path . $directory; ?>/images/histpittlogo_bnw.png" alt="<?php print t('link to Historic Pittsburgh homepage'); ?>" class="logo" /> </a> 
+    <div class="searchbanner"> <a href="<?php print $front_page; ?>" title="<?php print t('Historic Pittsburgh'); ?>" rel="home" id="logo"> <img src="<?php print $base_path . $directory; ?>/images/histpittlogov2.png" alt="<?php print t('link to Historic Pittsburgh homepage'); ?>" class="logo" /> </a> 
       
       <!-- print banner region --> 
       <?php print render($page['banner']); ?> </div>
     <!-- closesearchbanner -->
     
     <div id="nav"> <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('topnav')),)); ?>
-      <div id="search"> <a href="http://histpitt.library.pitt.edu/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a> <?php print render($page['search']); ?> </div>
+      <div id="search"> <a href="http://historicpittsburgh.org/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a> <?php print render($page['search']); ?> </div>
       <!-- close search --> 
     </div><!-- closenav --> 
   </div><!-- closesearchheader --> 
