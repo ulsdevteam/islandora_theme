@@ -28,5 +28,14 @@ function documenting_pitt_preprocess_islandora_objects_subset(&$variables) {
     $variables['collection_metadata'] = islandora_retrieve_metadata_markup($islandora_object);
 
     #var_dump($variables);
-  }
+  } 
+/**
+ * Implements hook_preprocess_theme().
+ *
+ */
+function islandora_default_preprocess_page(&$vars) {
+  // Load webtrends analytics for anonymous users for all pages using this theme
+  if (!user_is_logged_in()) { drupal_add_js('//pitt.edu/webtrends/webtrends.load.js', 'external'); };
+}
+
 }

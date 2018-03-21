@@ -15,7 +15,7 @@
 		var hoverGrid = $(this);
 		hoverGrid.addClass('hover-grid');
 		hoverGrid.find(settings.itemClass).addClass('hover-grid-item');
-		
+
 		$(hoverGrid).find(settings.itemClass).hover(function () {
 			$(this).find('div.caption').stop(false, true).fadeIn(200);
 		},

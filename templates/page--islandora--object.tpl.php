@@ -5,7 +5,7 @@
 </div><!-- /end topbanner -->
 <div id="bannerwrap">
 <div class="banner">
-		<a href="http://documenting.library.pitt.edu/"> <img src="<?php print base_path() . path_to_theme(); ?>/images/DocuPitt_Header_small.jpg" style="margin:0px auto;"> </a>
+		<a href="/"> <img src="<?php print base_path() . path_to_theme(); ?>/images/DocuPitt_Header_small.jpg" style="margin:0px auto;"> </a>
      
     <!-- <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -65,7 +65,7 @@
       </div> <!--/end widget -->
   </div> <!--/end col1 -->
 
-
+</div><!-- /end page-secondary -->
  <div id="footer">
   	<div id="footer-col1">
   		<?php print render($page['footer-col1']); ?>
@@ -74,5 +74,5 @@
   		<?php print render($page['footer-col2']); ?>
     </div><!-- /end footer column 2 -->
 </div><!-- /end footer -->
-</div><!-- /end page-secondary -->
+
 	

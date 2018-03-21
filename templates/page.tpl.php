@@ -51,7 +51,7 @@
 
   
  
- 
+ </div> <!-- /end page-secondary -->
   <div id="footer">
     <div id="footer-col1"> <?php print render($page['footer-col1']); ?> </div>
     <!-- /end footer column 1 -->
@@ -59,4 +59,4 @@
     <!-- /end footer column 2 --> 
   </div>
   <!-- /end footer --> 
-</div> <!-- /end page-secondary -->
+
