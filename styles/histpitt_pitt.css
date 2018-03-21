@@ -493,7 +493,7 @@ button, html input[type="button"], input[type="reset"] {
     display: block;
     float: left;
     background: #fff;
-    padding: 1% 5%;
+    padding: 3px 5%;
     color: #1DADD9;
     text-decoration: none;
     border: 1px solid #5e7181;
@@ -501,20 +501,25 @@ button, html input[type="button"], input[type="reset"] {
     float: left;
 }
 
-
-
+/*
 input#edit-submit {
     -webkit-appearance: button;
     cursor: pointer;
-    width: 100%;
+    width: 40%;
     display: block;
     background: #fff;
-    padding: 1% 5%;
+    padding: 3px 5%;
     color: #1DADD9;
     text-decoration: none;
     border: 1px solid #5e7181;
     float: left;
-    margin: 18px 0;
+    margin: 18px 40% 10px 0px;
+}
+
+input#edit-submit:hover {
+    background: #DBDBDB;
+    color: #106079;
+    border: 1px solid #5e7181;
 }
 
 .form-submit  {
@@ -524,7 +529,7 @@ input#edit-submit {
     display: block;
     float: left;
     background: #fff;
-    padding: 1% 5%;
+    padding: 3px 5%;
     color: #1DADD9;
     text-decoration: none;
     border: 1px solid #5e7181;
@@ -532,9 +537,16 @@ input#edit-submit {
     float: left;
     
 }
-
+*/
 input#edit-range-slider-submit {
     margin: -5px 5px 0 0;
+}
+
+input#edit-range-slider-submit:hover {
+    margin: -5px 5px 0 0;
+	background: #DBDBDB;
+    color: #106079;
+    border: 1px solid #5e7181;
 }
 	
 /* Searchbar*************************************************************************************************************************************/
@@ -550,7 +562,19 @@ input#edit-range-slider-submit {
 #nav form { float: left; margin: 0; font-size: 1.4em; }
 
 #nav input { background: #C2C2C2; border: 1px solid #000;  width: 240px; }
-#nav #edit-submit, #nav #edit-submit--2 { background-color: #fff; border: 1px solid #000; width: 60px; }
+
+#nav #edit-submit, #nav #edit-submit--2 { 
+	background-color: #fff;
+	border: 1px solid #000;
+	width: 60px;
+	}
+	
+	#nav #edit-submit:hover, #nav #edit-submit--2:hover { 
+	background: #DBDBDB;
+	color: #106079;
+	width: 83px;
+    border: 1px solid #5e7181;
+	}
 
 .adsearch { float: right; font-size: 1.4em; margin: 3px 0 0 0; }
 	a.adsearch { color: #000; text-decoration: none; }
@@ -763,6 +787,11 @@ a.adsearch:hover { text-decoration:none; border: 1px solid #000; }
 	.widget h2 { display: block; background: #8e887d; color: #fff; margin: 0 0 10px 0; padding: 10px 5px; text-decoration: none; border-bottom: #25211d solid 0px; }
 	.widget h3 { font-size: 1.2em; margin: 0; }
 	.widget select, .widget input { font-size: 1.4em; }
+	.form-submit:hover {
+		background: #DBDBDB;
+		color: #106079;
+		border: 1px solid #5e7181;
+	}
 	.widget span { font-size: 100%; margin: 0px 0px 10px; }
 	ul.islandora-solr-facet { margin: 0px 0px 0px -20px; padding: 0px; font-weight: bold; }
 	
@@ -1607,7 +1636,7 @@ td.rowstripe { padding: 25px 0; vertical-align: top; }
 
 .islandora-solr-search-result ul { width: 95%; list-style-type: none; float: left; margin: 10px 0 0 10px; padding: 0;  }
 .islandora-solr-search-result li { margin: 0; }
-
+/*
 ul.islandora-solr-sort { 	
 	width: 100%;
 	height: 50px;
@@ -1630,7 +1659,7 @@ ul.islandora-solr-sort {
 	border: 1px solid #5e7181;
 
 	}
-	
+	*/
 .islandora-solr-sort a:hover { border-bottom: 0px dashed #106079; }
 
 /*fix bad formatting islandora search results - increase collection islandora h3 tag size*/

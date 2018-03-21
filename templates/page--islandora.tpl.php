@@ -18,7 +18,7 @@
     <!-- closesearchbanner -->
     
     <div id="nav"> <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('topnav')),)); ?>
-      <div id="search"> <a href="http://historicpittsburgh.org/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a> <?php print render($page['search']); ?> </div>
+      <div id="search"> <a href="/search/" class="adsearch" title="advanced search link" target="_self">Advanced Search</a> <?php print render($page['search']); ?> </div>
       <!-- close search --> 
     </div><!-- closenav --> 
   </div><!-- closesearchheader --> 
