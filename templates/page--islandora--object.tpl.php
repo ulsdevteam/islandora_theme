@@ -4,14 +4,14 @@
 <div id="wrap_headers" class="blue_bg">
 
 <div class="banner">
-       <img src="/sites/digital/themes/digital_pitt/images/collection_banner.jpg" style="float:right;">
-		 
+       <img src="/sites/culturalrevolution.pitt.edu/themes/cultural_revolution_theme/images/collection_banner.jpg" style="float:right;">
+
       <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
- 
+
       <!-- print banner region -->
         <?php print render($page['banner']); ?>
     </div>
@@ -31,7 +31,7 @@
 <div id="two-col-left-main">
  		<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
 
-    <?php if ($solr_search_links && (count($solr_search_links)>0)): ?>
+    <?php if (isset($solr_search_links) && (count($solr_search_links)>0)): ?>
     <div class="searchnav">
       <ul class="searchnav-links">
       <?php foreach ($solr_search_links as $solr_search_link) : ?>

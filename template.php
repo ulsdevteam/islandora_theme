@@ -1,6 +1,22 @@
 <?php
 
-function digital_pitt_preprocess_islandora_objects_subset(&$variables) {
+function cultural_revolution_preprocess_page(&$variables) {
+  /*
+  $varaibles key values:
+  page
+  directory
+  base_path
+  is_front
+  logo
+  main_menu
+  secondary_menu
+  action_links
+  tabs
+  ... etc ...
+  */
+}
+
+function cultural_revolution_preprocess_islandora_objects_subset(&$variables) {
   $islandora_object = menu_get_object('islandora_object', 2);
   module_load_include('inc', 'islandora', 'includes/metadata');
   if ($islandora_object) {

@@ -5,20 +5,19 @@
 <div id="wrap_headers" class="blue_bg">
 <div class="banner">
 
-		
       <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
-        
+
       <!-- print banner region -->
         <?php print render($page['banner']); ?>
     </div>
 <!-- /end banner -->
 </div><!-- /end wrap_headers -->
   <div id="wrap_banner" class="dark_blue"> <div id="banimage">
-    <img src="/sites/digital/themes/digital_pitt/images/banner_960.jpg" style="margin:0px auto;">
+    <img src="/sites/culturalrevolution.pitt.edu/themes/cultural_revolution_theme/images/banner_960.jpg" style="margin:0px auto;">
 </div></div>
 <div id="wrap_mainmenu" class="ltblue_bg">
    	<div id="nav">
