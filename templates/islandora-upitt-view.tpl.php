@@ -13,10 +13,20 @@
 ?>
 
 
+  <?php if (isset($upitt_date)) : ?>
   <p class="subtitle-first"><?php print $upitt_date; ?></p>
+  <?php endif; ?>
+
+  <?php if (isset($upitt_creator)) : ?>
   <p class="subtitle"><?php print $upitt_creator; ?></p>
+  <?php endif; ?>
+
   <p class="subtitle"><?php print $upitt_viewer_link; ?></p>
-  <div id="islandora-collection-thumb"> <?php print $upitt_object_view; ?> <?php print $upitt_lg_thumb; ?> </div><!-- /end main-content -->
+
+  <div id="islandora-collection-thumb">
+   <?php if (isset($upitt_object_view)) : ?><?php print $upitt_object_view; ?> <?php endif; ?><?php print $upitt_lg_thumb; ?>
+  </div>
+  <!-- /end main-content -->
  
   <div id="islandora-sidebar-meta">
     <?php print render($page['sidebar']); ?>
