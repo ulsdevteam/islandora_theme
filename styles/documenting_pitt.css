@@ -1444,3 +1444,8 @@ body.no-sidebars .islandora-large-image-sidebar ul li {
 }
 
 /* ________ EXPERIMENTATION ________ */
+
+.islandora-manuscript-ead-display a {
+  color: #405a71 !important;
+}
+
