@@ -735,7 +735,8 @@ td.c03:first-line, td.c04:first-line, td.c05:first-line {
   font-weight:bold;
 }
 
-
+tr.subseries a{color:#cc9;}
+tr.subseries a:hover{color:#000}
 
 /*Maintenence Shadowbox popup*****************************************************/
 
