@@ -5,7 +5,7 @@
 <div class="banner">
 
 		
-      <?php if ($logo): ?>
+         <a href="https://library.pitt.edu"><img src="/sites/digital/themes/digital_pitt/images/ULSdigital.fw.png"></a><?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>

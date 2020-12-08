@@ -6,7 +6,7 @@
 <div class="banner">   
 
 		 <!-- print banner region -->
-      <?php if ($logo): ?>
+     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img class="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
@@ -53,13 +53,13 @@
       <div id="hometext">
         <p>Looking for a specific collection? Some of our most popular include:</p>
         <li><a href="http://historicpittsburgh.org/">Historic Pittsburgh</a></li>
-<li><a href="http://documenting.library.pitt.edu/">Documenting Pitt</a></li>
+<li><a href="https://documenting.pitt.edu/">Documenting Pitt</a></li>
 <li><a href="/collection/archives-scientific-philosophy ">Archives of Scientific Philosophy</a></li>
-<li><a href="/collection/darlington-memorial-library ">Darlington Digital Library</a></li>
+<li><a href="/collection/darlington-digital-library ">Darlington Digital Library</a></li>
 <li><a href="/collection/pittsburgh-city-photographer-collection">Pittsburgh City Photographer Collection</a></li>
 <li><a href="/collection/stephen-foster-collection">Stephen Foster Collection</a></li>
 </div> <!---end home text-->
-    </div><!-- /end col2 -->
+    </div> <!-- /end col2 -->
     
   </div><!-- two-col-right-main -->
 	<div id="footer">
