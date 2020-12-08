@@ -13,7 +13,7 @@ University Library System | University of Pittsburgh
 
 body { font: 62.5%  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif; text-align: left; color: #000; }
 
-p, h1, h2, h3, h4, h5, h6, ul, ol, dd, dt { font-size: 1.4em; margin: 0 0 10px 0; line-height: 20px; }
+p, h1, h2, h3, h4, h5, h6, ul, ol, dd, dt, pre { font-size: 1.4em; margin: 0 0 10px 0; line-height: 20px; }
 
 p.contrib { font-size: 1.1em; }
 
@@ -58,7 +58,8 @@ li { margin: 5px 0 10px 20px; font-weight: normal; }
     color: #000;
     padding: 1%;
     margin: 2% 1% 0px 0px;
-    font-size: 1.2em;
+    font-size: 2.0em;
+	font-weight: bold;
     display:block;
 }
 .newshighlight p { line-height: 26px; font-weight: bold; margin: 0; padding:0; }
@@ -485,6 +486,13 @@ form input, form textarea, form select{
 	clear:right;
 	float:left;
 	font-size: 1.2em;}
+
+.islandora-solr-date-filter input.form-submit, .islandora-solr-range-slider input.form-submit {
+    margin-right: 0;
+    float: none;
+    clear: both;
+}
+
 
 button, html input[type="button"], input[type="reset"] {
     -webkit-appearance: button;
@@ -1145,6 +1153,11 @@ span.count { font-size: 1em; }
 
 	
 }
+
+h2.h2highlight {
+    margin-bottom: 47px;
+}
+
 .smallbox p {
 	background: #495864;
 	padding: 10px 10px;
@@ -1178,7 +1191,9 @@ span.count { font-size: 1em; }
 }
 .smallbox:hover h2,
 .smallbox:hover p,
-.smallbox:hover a.info, .smallbox:hover a.infolink {
+.smallbox:hover a.info,
+.smallbox:hover a.infolink,
+.smallbox:hover a.infolink1 {
     opacity: 1;
     transform: translateY(0px);
 	-webkit-transform: translateY(0px); /* Safari */
@@ -1193,7 +1208,7 @@ span.count { font-size: 1em; }
 	-webkit-transition-delay: 0.1s; /* Safari */
 }
 
-.smallbox a.infolink {
+.smallbox a.infolink, .smallbox a.infolink1  {
 	display: inline-block;
 	text-decoration: none;
 	padding: 7px 14px;
@@ -1201,11 +1216,10 @@ span.count { font-size: 1em; }
 	background: #000;
 	color: #fff;
 	text-transform: uppercase;
-	box-shadow: 0 0 1px #000
-	font-size: 1.5em;	
+	box-shadow: 0 0 1px #000;	
 }
 
-.smallbox a:hover.infolink {
+.smallbox a:hover.infolink, .smallbox a:hover.infolink1  {
 	box-shadow: 0 0 5px #000;
 	color: #000;
 	background: #fff;
