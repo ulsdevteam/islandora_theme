@@ -29,7 +29,7 @@
     <?php print $messages; ?>
 
 <div id="two-col-left-main">
- 		<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+ 		<?php if ($tabs && user_is_logged_in()): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
 
     <?php if ($solr_search_links && (count($solr_search_links)>0)): ?>
     <div class="searchnav">
