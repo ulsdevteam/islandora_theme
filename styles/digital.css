@@ -281,9 +281,7 @@ margin-top:20px;
 color: #000;
 overflow:hidden;
 }
-/* This value was in .exhibit-wrapper above, but without specifying any element or attribute and causes an error:
-#FFF;
-*/
+
 .exhibit-wrapper img{
 float: left;
 margin: 20px 10px 10px;
@@ -304,9 +302,67 @@ padding-left:.5em;
 }
 
 
+/*----- TOPIC PAGES -------*/
 
+.topic-wrapper{
+width: 96%;
+padding: 10px;
+min-height: 170px;
+background-color: #FFF;
+box-shadow: 2px 3px 2px #CCC;
+border: 2px solid #5E7181;
+margin-bottom:20px;
+margin-top:20px;
+color: #000;
+overflow:hidden;
+}
 
+.topic-wrapper img{
+float: left;
+margin: 20px 10px 10px;
+height: 200px;
+width: auto;
+}
+.topic-wrapper h4 a{
+	font-size: 1.5em;
+font-family: "museo-slab","MuseoSlab500Regular","Rockwell","Crete Round",sans-serif;
+font-style: normal;
+font-weight: normal;
+color:#000;
+padding-left:.5em;
+}
+.topic-wrapper p{
+	line-height: 1.5em;
+	font-size:1em;
+}
 
+.topic{width: 66%;
+padding: 10px;
+min-height: 170px;
+background-color: #FFF;
+box-shadow: 2px 3px 2px #CCC;
+border: 2px solid #5E7181;
+margin-bottom: 20px;
+margin-top: 20px;
+color: #000;
+overflow: hidden;}
+
+.topic_img{float: right;
+margin: 1em;
+height: 200px;
+width: auto;
+clear:both;}
+
+.topic-related{
+width: 30%;
+float: right;
+background: #EBEBD8;
+box-shadow: 0px 0px 2px 1px #CCC;
+border: 7px solid #FFF;
+padding: 15px;
+margin-left:3em;
+	
+}
 /* ________ BANNER ________ */
 
 #pittbar {
@@ -549,7 +605,7 @@ padding:10px;
 }
 	
 .field-item.even {
-	padding-left: 20px;
+	padding-left: 0px;
 }
 
 
