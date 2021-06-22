@@ -1,5 +1,5 @@
 <?php
-
+/**
 function digital_pitt_preprocess_islandora_objects_subset(&$variables) {
   $islandora_object = menu_get_object('islandora_object', 2);
   module_load_include('inc', 'islandora', 'includes/metadata');
@@ -27,3 +27,4 @@ function digital_pitt_preprocess_islandora_objects_subset(&$variables) {
     $variables['collection_metadata'] = islandora_retrieve_metadata_markup($islandora_object);
   }
 }
+*/

@@ -1,11 +1,11 @@
-name 				= Digital Pitt Theme
-description = Testing theme based off the islandora_default theme.
+name 				= Center for American Music, Pitt Theme
+description = Theme based off the islandora_default theme.
 core 				= 7.x
 screenshot 	= screenshot.jpg
 base theme 	= islandora_default
 
 ; STYLES
-stylesheets[all][] 		= styles/digital.css
+stylesheets[all][] 		= styles/cam.css
 
 ; REGIONS
 ;regions[featured] 		= Featured
