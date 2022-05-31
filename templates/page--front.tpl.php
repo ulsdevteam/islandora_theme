@@ -48,7 +48,7 @@
             <?php print render ($page['search']); ?>  
             <p>Content includes a diverse array of formats, including photographic images, books, maps, artwork, manuscripts, atlases, ephemera, correspondence, and audio-video media.</p> 
         
-        <a href="collections"><strong>Browse Collections</strong></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="search"><strong>Advanced Search</strong></a>
+        <a href="collections"><strong>Browse by Collection Name</strong></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="browse-topics"><strong>Browse Topics</strong></a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="search"><strong>Advanced Search</strong></a>
       </div><!-- /end home search -->
       <div id="hometext">
         <p>Looking for a specific collection? Some of our most popular include:</p>
