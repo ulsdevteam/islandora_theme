@@ -56,15 +56,16 @@
     <?php print render($page['sidebar']); ?>
   </div>
   <?php endif; ?>
+  <?php if ($page['islandora_object_sidebar']): ?>
+    <div id="col1">
+      <div class="widget">
+        <?php print render($page['islandora_object_sidebar']); ?>
+      </div> <!--/end widget -->
+  </div> <!--/end col1 -->
+  <?php endif; ?>
 
    <?php print render($page['content']); ?>
 </div> <!-- end two-col-left-main -->
-    <div id="col1">
-      <div class="widget">
-        <?php //print render($page['islandora_object_sidebar']); ?>
-      </div> <!--/end widget -->
-  </div> <!--/end col1 -->
-
 </div><!-- /end page-secondary -->
  <div id="footer">
   	<div id="footer-col1">

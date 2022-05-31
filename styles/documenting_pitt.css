@@ -740,6 +740,10 @@ td.c03:first-line, td.c04:first-line, td.c05:first-line {
 tr.subseries a{color:#cc9;}
 tr.subseries a:hover{color:#000}
 
+.ead-abstract{
+  margin-left:0px;
+}
+
 /*Maintenence Shadowbox popup*****************************************************/
 
 *, *:after, *:before {
@@ -1449,6 +1453,137 @@ body.no-sidebars .islandora-large-image-sidebar ul li {
 /* ________ EXPERIMENTATION ________ */
 
 .islandora-manuscript-ead-display a {
-  color: #405a71 !important;
+//  color: #405a71 !important;
+}
+
+/* ________ FINDING AIDS ________ */
+
+fieldset.ead-component {
+  margin-top: 1em;
+}
+
+fieldset.ead-component legend {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 1.5em;
+  color: #cc9;
+}
+
+span.ead-legend-level {
+  text-transform: uppercase;
+}
+
+div.ead > dl > dt {
+  font-weight: unset;
+  float: left;
+  margin-right: 0.5em;
+  font-size: 1.5em;
+  color: #cc9;
+  margin-top: -6px;
+}
+
+div.ead > dl > dd {
+  margin-bottom: 1em;
+}
+
+fieldset.ead-component div.fieldset-wrapper {
+  margin-left: 0em !important;
+}
+
+@media (min-width:960px) { 
+  div#col1 {
+    float: right;
+    margin-left: 1.5em;
+  }
+}
+
+div.fieldset-wrapper > div.ead-leaf-container:first-of-type {
+  display: none;
+}
+
+div.ead > h2 {
+  font-size: 1.5em;
+  padding-left: unset;
+}
+
+fieldset.ead-component h3 {
+  font-size: 1.2em;
+}
+
+fieldset.ead-component div.fieldset-wrapper {
+  font-size: unset;
+}
+
+div.ead-leaf-wrapper {
+  padding-left: 1em ;
+}
+
+
+/* Common directives */
+
+dl.ead-archdesc-did-content > dt {
+    text-transform: capitalize;
+}
+
+dd.ead-abstract {
+    clear: left;
+}
+
+div.ead > dl > dt:after {
+  content: ': ';
+}
+
+dt.ead-container {
+  float: left;
+  margin-right: 0.5em;
+}
+
+dt.ead-container:after {
+  content: ': ';
+}
+
+fieldset.ead-leaf-fieldset dl.ead-did-content > dd.ead-container {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: .5em;
+}
+
+fieldset.ead-leaf-fieldset dl.ead-did-content > dt.ead-container {
+  display: none;
+}
+
+a.astraeus-target {
+  float: right;
+}
+
+ul.ead_daos > li > a:before {
+  content: 'View online: ';
+}
+
+
+/*Fix a set height overflow and word wrap issue with finding aids*/
+
+html.js fieldset.collapsed .fieldset-legend, html.js fieldset.collapsible .fieldset-legend {
+    height: auto;
+}
+
+fieldset.ead-component legend {
+    white-space: break-spaces;
+    height: auto;
+}
+
+.block-islandora-manuscript {
+    overflow: hidden;
+    height: auto;
+}
+
+.jstree-anchor {
+    white-space: break-spaces;
+}
+
+.jstree-default .jstree-anchor {
+    height: auto;
+	font-size:17px;
 }
 
