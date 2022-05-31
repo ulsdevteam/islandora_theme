@@ -53,6 +53,15 @@
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
 
+    <?php if ($page['islandora_object_sidebar']): ?>
+    <div id="col1">
+      <div class="widget">
+        <?php print render($page['islandora_object_sidebar']); ?>
+      </div><!-- /end widget -->
+    </div><!-- /end col1 -->
+    <?php endif; ?>
+
+
    <?php print render($page['content']); ?>
   
   </div><!-- close islandora-object-full -->
