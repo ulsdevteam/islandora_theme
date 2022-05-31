@@ -55,13 +55,15 @@
     </div>
     <?php endif; ?>
 
-   <?php print render($page['content']); ?>
-
-    <!--<div id="col1">
+    <?php if ($page['islandora_object_sidebar']): ?>
+    <div id="col1">
       <div class="widget">
-        <?php //print render($page['islandora_object_sidebar']); ?>
+        <?php print render($page['islandora_object_sidebar']); ?>
       </div><!-- /end widget -->
-    <!--</div>--><!-- /end col1 -->
+    </div><!-- /end col1 -->
+    <?php endif; ?>
+
+   <?php print render($page['content']); ?>
 
 
  <div id="footer">

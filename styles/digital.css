@@ -865,6 +865,11 @@ table.parentContainers td[colspan] {
 .subseries td h4 {font-size:18px; font-weight:bold;}
 tr.series td{padding-top:2em;}
 tr.subseries td{padding-top:3em;}
+
+.ead-abstract{
+  margin-left: 0px;
+}
+
 /*
 // td.c03:first-line, td.c04:first-line, td.c05:first-line {
 //  font-size:16px;
@@ -1400,4 +1405,166 @@ banimage{ display:none;}
 #sidebar .region-sidebar {width:100%;}
 .islandora-basic-collection #sidebar, #two-col-right-main #sidebar {width:100%;  float:left;}
 }
-		
+
+/* Finding Aids */
+
+
+fieldset.ead-component legend {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 1.5em;
+}
+
+span.ead-legend-level {
+  text-transform: uppercase;
+}
+
+div.ead > dl > dt {
+  font-weight: bold;
+  float: left;
+  margin-right: 0.5em;
+  font-size: 1.5em;
+  margin-top: -6px;
+}
+
+div.ead > h3 {
+  line-height: unset;
+  margin-top: unset;
+}
+
+div.ead > h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+div.ead > dl > dd {
+  margin-bottom: 1em;
+  font-family: "PT Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5em;
+}
+
+div.ead > h3 {
+  font-weight: bold;
+}
+
+div.ead section h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+div.ead section h2, div.ead section h3 {
+  font-size: 1.2em;
+}
+
+div.ead fieldset.ead-component {
+  margin: 1.5em 2px 0.5em 2px;
+}
+
+div.ead-leaf-wrapper {
+  padding-left: 1em;	
+}
+
+@media (min-width:960px) { 
+  div#col1 {
+    float: right;
+    margin-left: 1.5em;
+  }
+}
+
+div.ead-leaf-notdid h3, fieldset.ead-component h3, div.ead-leaf-did h3 {
+  font-size: 14px;
+}
+
+div.ead-leaf-notdid > h3 {
+  margin-top: .5em;
+  line-height: unset;
+  margin-bottom: -.25em;
+}
+
+div.fieldset-wrapper > div.ead-leaf-container:first-of-type {
+  display: none;
+}
+
+/* Common directives */
+
+dl.ead-archdesc-did-content > dt {
+    text-transform: capitalize;
+}
+
+dd.ead-abstract {
+    clear: left;
+}
+
+div.ead > dl > dt:after {
+  content: ': ';
+}
+
+/*
+dt.ead-container {
+  float: left;
+  margin-right: 0.5em;
+}
+
+dt.ead-container:after {
+  content: ': ';
+}
+
+fieldset.ead-leaf-fieldset dl.ead-did-content > dd.ead-container {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: .5em;
+}
+
+fieldset.ead-leaf-fieldset dl.ead-did-content > dt.ead-container {
+  display: none;
+}
+*/
+dl.ead-did-content > dt.ead-container {
+  display: none;
+}
+
+dl.ead-did-content > dd.ead-container {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: .5em;
+}
+/* DONE TESTING */
+
+a.astraeus-target {
+  float: right;
+}
+
+ul.ead_daos > li > a:before {
+  content: 'View online: '; 
+}
+
+
+/*Fix a set height overflow and word wrap issue with finding aids*/
+
+html.js fieldset.collapsed .fieldset-legend, html.js fieldset.collapsible .fieldset-legend {
+    height: auto;
+}
+
+fieldset.ead-component legend {
+    white-space: break-spaces;
+    height: auto;
+}
+
+.block-islandora-manuscript {
+    overflow: hidden;
+    height: auto;
+}
+
+.jstree-anchor {
+    white-space: break-spaces;
+}
+
+.jstree-default .jstree-anchor {
+    height: auto;
+	font-size:17px;
+}
+
