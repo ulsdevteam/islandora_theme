@@ -1587,3 +1587,6 @@ fieldset.ead-component legend {
 	font-size:17px;
 }
 
+div#col1 {
+    max-width: 550px;
+}
