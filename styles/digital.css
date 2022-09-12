@@ -1477,12 +1477,9 @@ div.ead-leaf-wrapper {
 
 div.ead-leaf-notdid h3, fieldset.ead-component h3, div.ead-leaf-did h3 {
   font-size: 14px;
-}
-
-div.ead-leaf-notdid > h3 {
-  margin-top: .5em;
+  margin-top: unset;
+  margin-bottom: -0.5em;
   line-height: unset;
-  margin-bottom: -.25em;
 }
 
 div.fieldset-wrapper > div.ead-leaf-container:first-of-type {
